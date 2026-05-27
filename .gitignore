@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/processed/
+data/indexes/
+data/warehouse/*.duckdb
+experiments/results/
+.DS_Store
+.pytest_cache/
+.streamlit/
+*.log

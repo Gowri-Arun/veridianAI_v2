@@ -1,0 +1,14 @@
+app:
+  name: Veridian AI
+  environment: development
+  version: 0.1.0
+
+logging:
+  level: INFO
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  indexes: data/indexes
+  warehouse: data/warehouse
+  benchmarks: benchmarks
