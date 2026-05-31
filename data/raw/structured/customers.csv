@@ -1,0 +1,401 @@
+customer_id,customer_name,region,segment,industry,signup_quarter,status
+CUST_001,Finance_001,EMEA,SMB,Finance,Q1_2025,Active
+CUST_002,Tech_002,LATAM,Enterprise,Tech,Q2_2025,Active
+CUST_003,Retail_003,North America,Mid-Market,Retail,Q1_2025,Active
+CUST_004,Finance_004,North America,Mid-Market,Finance,Q4_2025,Active
+CUST_005,Tech_005,APAC,SMB,Tech,Q3_2025,Active
+CUST_006,Education_006,APAC,Enterprise,Education,Q3_2025,Churned
+CUST_007,Healthcare_007,APAC,SMB,Healthcare,Q1_2025,Active
+CUST_008,Logistics_008,LATAM,SMB,Logistics,Q4_2025,Active
+CUST_009,Education_009,North America,Enterprise,Education,Q1_2025,Active
+CUST_010,Tech_010,North America,SMB,Tech,Q1_2025,Active
+CUST_011,Education_011,APAC,SMB,Education,Q2_2025,Active
+CUST_012,Healthcare_012,LATAM,Enterprise,Healthcare,Q1_2025,Active
+CUST_013,Tech_013,North America,Enterprise,Tech,Q4_2025,Active
+CUST_014,Education_014,APAC,Mid-Market,Education,Q3_2025,Active
+CUST_015,Logistics_015,APAC,Mid-Market,Logistics,Q1_2025,Active
+CUST_016,Logistics_016,APAC,SMB,Logistics,Q3_2025,Active
+CUST_017,Finance_017,EMEA,SMB,Finance,Q4_2025,Active
+CUST_018,Education_018,EMEA,SMB,Education,Q4_2025,Active
+CUST_019,Retail_019,EMEA,Mid-Market,Retail,Q3_2025,Active
+CUST_020,Education_020,EMEA,Mid-Market,Education,Q4_2025,Active
+CUST_021,Tech_021,North America,Mid-Market,Tech,Q4_2025,Active
+CUST_022,Tech_022,APAC,Mid-Market,Tech,Q3_2025,Active
+CUST_023,Education_023,EMEA,SMB,Education,Q1_2025,Active
+CUST_024,Healthcare_024,EMEA,SMB,Healthcare,Q2_2025,Active
+CUST_025,Logistics_025,EMEA,SMB,Logistics,Q4_2025,Active
+CUST_026,Tech_026,North America,Mid-Market,Tech,Q1_2025,Active
+CUST_027,Logistics_027,APAC,SMB,Logistics,Q4_2025,Churned
+CUST_028,Tech_028,EMEA,Enterprise,Tech,Q1_2025,Active
+CUST_029,Finance_029,North America,SMB,Finance,Q1_2025,Churned
+CUST_030,Retail_030,APAC,SMB,Retail,Q2_2025,Active
+CUST_031,Tech_031,North America,SMB,Tech,Q1_2025,Active
+CUST_032,Logistics_032,APAC,Mid-Market,Logistics,Q4_2025,Active
+CUST_033,Finance_033,APAC,Mid-Market,Finance,Q4_2025,Active
+CUST_034,Tech_034,LATAM,SMB,Tech,Q4_2025,Active
+CUST_035,Healthcare_035,LATAM,SMB,Healthcare,Q3_2025,Active
+CUST_036,Retail_036,North America,Mid-Market,Retail,Q1_2025,Active
+CUST_037,Tech_037,EMEA,SMB,Tech,Q2_2025,Active
+CUST_038,Finance_038,APAC,Mid-Market,Finance,Q3_2025,Active
+CUST_039,Healthcare_039,North America,Mid-Market,Healthcare,Q2_2025,Active
+CUST_040,Education_040,EMEA,SMB,Education,Q1_2025,Active
+CUST_041,Finance_041,APAC,SMB,Finance,Q2_2025,Churned
+CUST_042,Finance_042,EMEA,Enterprise,Finance,Q2_2025,Active
+CUST_043,Healthcare_043,APAC,SMB,Healthcare,Q4_2025,Active
+CUST_044,Finance_044,LATAM,SMB,Finance,Q4_2025,Active
+CUST_045,Healthcare_045,EMEA,Mid-Market,Healthcare,Q2_2025,Active
+CUST_046,Tech_046,North America,Enterprise,Tech,Q3_2025,Active
+CUST_047,Healthcare_047,EMEA,Enterprise,Healthcare,Q3_2025,Active
+CUST_048,Healthcare_048,EMEA,Mid-Market,Healthcare,Q1_2025,Active
+CUST_049,Retail_049,EMEA,SMB,Retail,Q4_2025,Active
+CUST_050,Healthcare_050,APAC,SMB,Healthcare,Q4_2025,Active
+CUST_051,Healthcare_051,LATAM,Mid-Market,Healthcare,Q2_2025,Active
+CUST_052,Education_052,North America,Mid-Market,Education,Q2_2025,Active
+CUST_053,Tech_053,LATAM,SMB,Tech,Q1_2025,Active
+CUST_054,Retail_054,LATAM,Enterprise,Retail,Q2_2025,Active
+CUST_055,Education_055,North America,SMB,Education,Q1_2025,Churned
+CUST_056,Logistics_056,LATAM,SMB,Logistics,Q4_2025,Active
+CUST_057,Tech_057,APAC,SMB,Tech,Q1_2025,Churned
+CUST_058,Tech_058,APAC,SMB,Tech,Q2_2025,Churned
+CUST_059,Logistics_059,APAC,SMB,Logistics,Q4_2025,Active
+CUST_060,Healthcare_060,EMEA,SMB,Healthcare,Q3_2025,Active
+CUST_061,Education_061,EMEA,SMB,Education,Q1_2025,Active
+CUST_062,Finance_062,EMEA,Mid-Market,Finance,Q1_2025,Active
+CUST_063,Retail_063,North America,Mid-Market,Retail,Q1_2025,Active
+CUST_064,Finance_064,EMEA,Mid-Market,Finance,Q3_2025,Active
+CUST_065,Logistics_065,EMEA,Enterprise,Logistics,Q1_2025,Active
+CUST_066,Tech_066,EMEA,SMB,Tech,Q2_2025,Active
+CUST_067,Tech_067,APAC,SMB,Tech,Q4_2025,Active
+CUST_068,Retail_068,North America,Enterprise,Retail,Q1_2025,Active
+CUST_069,Tech_069,APAC,SMB,Tech,Q4_2025,Active
+CUST_070,Tech_070,LATAM,Enterprise,Tech,Q4_2025,Active
+CUST_071,Retail_071,North America,SMB,Retail,Q1_2025,Churned
+CUST_072,Education_072,APAC,Enterprise,Education,Q4_2025,Active
+CUST_073,Education_073,APAC,SMB,Education,Q2_2025,Active
+CUST_074,Retail_074,North America,Enterprise,Retail,Q4_2025,Active
+CUST_075,Logistics_075,North America,Mid-Market,Logistics,Q3_2025,Active
+CUST_076,Tech_076,North America,Enterprise,Tech,Q3_2025,Active
+CUST_077,Tech_077,North America,SMB,Tech,Q2_2025,Churned
+CUST_078,Logistics_078,APAC,Mid-Market,Logistics,Q4_2025,Active
+CUST_079,Education_079,EMEA,Enterprise,Education,Q3_2025,Active
+CUST_080,Healthcare_080,APAC,Mid-Market,Healthcare,Q2_2025,Active
+CUST_081,Healthcare_081,LATAM,Mid-Market,Healthcare,Q4_2025,Active
+CUST_082,Healthcare_082,North America,Mid-Market,Healthcare,Q1_2025,Active
+CUST_083,Education_083,EMEA,SMB,Education,Q1_2025,Active
+CUST_084,Education_084,APAC,Mid-Market,Education,Q1_2025,Active
+CUST_085,Logistics_085,EMEA,Mid-Market,Logistics,Q2_2025,Churned
+CUST_086,Tech_086,EMEA,Enterprise,Tech,Q1_2025,Active
+CUST_087,Logistics_087,North America,SMB,Logistics,Q4_2025,Active
+CUST_088,Logistics_088,North America,SMB,Logistics,Q1_2025,Active
+CUST_089,Education_089,LATAM,Enterprise,Education,Q3_2025,Active
+CUST_090,Healthcare_090,EMEA,Enterprise,Healthcare,Q1_2025,Active
+CUST_091,Finance_091,APAC,SMB,Finance,Q4_2025,Churned
+CUST_092,Tech_092,North America,Mid-Market,Tech,Q4_2025,Active
+CUST_093,Education_093,North America,SMB,Education,Q2_2025,Active
+CUST_094,Healthcare_094,North America,SMB,Healthcare,Q4_2025,Active
+CUST_095,Finance_095,North America,SMB,Finance,Q1_2025,Active
+CUST_096,Finance_096,EMEA,SMB,Finance,Q4_2025,Active
+CUST_097,Education_097,EMEA,Mid-Market,Education,Q1_2025,Active
+CUST_098,Retail_098,EMEA,SMB,Retail,Q4_2025,Active
+CUST_099,Tech_099,APAC,Enterprise,Tech,Q1_2025,Active
+CUST_100,Finance_100,APAC,Enterprise,Finance,Q3_2025,Active
+CUST_101,Education_101,APAC,Mid-Market,Education,Q3_2025,Active
+CUST_102,Education_102,North America,Mid-Market,Education,Q1_2025,Active
+CUST_103,Healthcare_103,EMEA,SMB,Healthcare,Q1_2025,Churned
+CUST_104,Retail_104,EMEA,Mid-Market,Retail,Q1_2025,Active
+CUST_105,Tech_105,LATAM,Mid-Market,Tech,Q2_2025,Active
+CUST_106,Logistics_106,APAC,SMB,Logistics,Q3_2025,Churned
+CUST_107,Healthcare_107,EMEA,Enterprise,Healthcare,Q1_2025,Active
+CUST_108,Finance_108,North America,Mid-Market,Finance,Q2_2025,Active
+CUST_109,Finance_109,APAC,Enterprise,Finance,Q1_2025,Active
+CUST_110,Healthcare_110,APAC,Mid-Market,Healthcare,Q4_2025,Active
+CUST_111,Education_111,EMEA,Mid-Market,Education,Q1_2025,Active
+CUST_112,Finance_112,APAC,SMB,Finance,Q1_2025,Churned
+CUST_113,Retail_113,LATAM,Enterprise,Retail,Q1_2025,Active
+CUST_114,Tech_114,North America,Enterprise,Tech,Q2_2025,Active
+CUST_115,Retail_115,North America,SMB,Retail,Q4_2025,Active
+CUST_116,Finance_116,LATAM,SMB,Finance,Q2_2025,Active
+CUST_117,Logistics_117,North America,SMB,Logistics,Q1_2025,Churned
+CUST_118,Tech_118,APAC,Mid-Market,Tech,Q3_2025,Active
+CUST_119,Tech_119,LATAM,Enterprise,Tech,Q3_2025,Active
+CUST_120,Healthcare_120,EMEA,SMB,Healthcare,Q1_2025,Active
+CUST_121,Healthcare_121,North America,Mid-Market,Healthcare,Q3_2025,Active
+CUST_122,Logistics_122,LATAM,SMB,Logistics,Q4_2025,Active
+CUST_123,Education_123,EMEA,Enterprise,Education,Q1_2025,Active
+CUST_124,Tech_124,APAC,Mid-Market,Tech,Q3_2025,Active
+CUST_125,Logistics_125,APAC,Mid-Market,Logistics,Q3_2025,Churned
+CUST_126,Healthcare_126,EMEA,SMB,Healthcare,Q2_2025,Active
+CUST_127,Healthcare_127,North America,SMB,Healthcare,Q1_2025,Active
+CUST_128,Tech_128,LATAM,SMB,Tech,Q1_2025,Active
+CUST_129,Retail_129,APAC,SMB,Retail,Q4_2025,Active
+CUST_130,Finance_130,EMEA,Enterprise,Finance,Q4_2025,Active
+CUST_131,Healthcare_131,EMEA,Mid-Market,Healthcare,Q3_2025,Active
+CUST_132,Education_132,APAC,Enterprise,Education,Q2_2025,Churned
+CUST_133,Education_133,APAC,Enterprise,Education,Q3_2025,Active
+CUST_134,Healthcare_134,EMEA,Mid-Market,Healthcare,Q3_2025,Active
+CUST_135,Retail_135,LATAM,Mid-Market,Retail,Q2_2025,Active
+CUST_136,Retail_136,EMEA,Enterprise,Retail,Q1_2025,Active
+CUST_137,Logistics_137,EMEA,Mid-Market,Logistics,Q4_2025,Active
+CUST_138,Education_138,North America,SMB,Education,Q2_2025,Active
+CUST_139,Logistics_139,EMEA,SMB,Logistics,Q4_2025,Active
+CUST_140,Education_140,LATAM,SMB,Education,Q1_2025,Active
+CUST_141,Finance_141,LATAM,Enterprise,Finance,Q1_2025,Active
+CUST_142,Finance_142,EMEA,Mid-Market,Finance,Q1_2025,Active
+CUST_143,Tech_143,EMEA,SMB,Tech,Q2_2025,Active
+CUST_144,Logistics_144,EMEA,Mid-Market,Logistics,Q4_2025,Active
+CUST_145,Healthcare_145,EMEA,Mid-Market,Healthcare,Q1_2025,Active
+CUST_146,Logistics_146,APAC,SMB,Logistics,Q4_2025,Active
+CUST_147,Healthcare_147,North America,SMB,Healthcare,Q2_2025,Churned
+CUST_148,Retail_148,EMEA,Mid-Market,Retail,Q4_2025,Active
+CUST_149,Logistics_149,APAC,Mid-Market,Logistics,Q1_2025,Active
+CUST_150,Retail_150,EMEA,Mid-Market,Retail,Q4_2025,Active
+CUST_151,Finance_151,LATAM,Mid-Market,Finance,Q3_2025,Active
+CUST_152,Finance_152,APAC,Enterprise,Finance,Q1_2025,Active
+CUST_153,Tech_153,APAC,Mid-Market,Tech,Q1_2025,Active
+CUST_154,Logistics_154,EMEA,Mid-Market,Logistics,Q4_2025,Active
+CUST_155,Retail_155,LATAM,Enterprise,Retail,Q4_2025,Active
+CUST_156,Healthcare_156,APAC,SMB,Healthcare,Q1_2025,Active
+CUST_157,Finance_157,North America,SMB,Finance,Q3_2025,Churned
+CUST_158,Finance_158,North America,SMB,Finance,Q4_2025,Active
+CUST_159,Healthcare_159,APAC,Mid-Market,Healthcare,Q4_2025,Active
+CUST_160,Retail_160,North America,Mid-Market,Retail,Q4_2025,Active
+CUST_161,Retail_161,EMEA,Mid-Market,Retail,Q3_2025,Active
+CUST_162,Logistics_162,North America,SMB,Logistics,Q2_2025,Active
+CUST_163,Logistics_163,North America,SMB,Logistics,Q2_2025,Active
+CUST_164,Education_164,EMEA,SMB,Education,Q2_2025,Active
+CUST_165,Education_165,APAC,SMB,Education,Q3_2025,Churned
+CUST_166,Tech_166,North America,Mid-Market,Tech,Q3_2025,Active
+CUST_167,Finance_167,EMEA,SMB,Finance,Q1_2025,Active
+CUST_168,Logistics_168,APAC,SMB,Logistics,Q4_2025,Active
+CUST_169,Retail_169,APAC,Enterprise,Retail,Q3_2025,Active
+CUST_170,Healthcare_170,North America,SMB,Healthcare,Q3_2025,Churned
+CUST_171,Retail_171,North America,Mid-Market,Retail,Q2_2025,Active
+CUST_172,Finance_172,APAC,Mid-Market,Finance,Q2_2025,Churned
+CUST_173,Education_173,EMEA,SMB,Education,Q1_2025,Active
+CUST_174,Retail_174,APAC,Mid-Market,Retail,Q1_2025,Active
+CUST_175,Tech_175,North America,Enterprise,Tech,Q1_2025,Active
+CUST_176,Finance_176,APAC,Enterprise,Finance,Q1_2025,Active
+CUST_177,Education_177,North America,SMB,Education,Q2_2025,Churned
+CUST_178,Healthcare_178,EMEA,Enterprise,Healthcare,Q2_2025,Active
+CUST_179,Education_179,LATAM,SMB,Education,Q1_2025,Active
+CUST_180,Tech_180,APAC,SMB,Tech,Q3_2025,Active
+CUST_181,Finance_181,EMEA,SMB,Finance,Q1_2025,Active
+CUST_182,Healthcare_182,APAC,Enterprise,Healthcare,Q4_2025,Active
+CUST_183,Tech_183,LATAM,SMB,Tech,Q4_2025,Churned
+CUST_184,Education_184,LATAM,SMB,Education,Q1_2025,Churned
+CUST_185,Tech_185,EMEA,Mid-Market,Tech,Q2_2025,Active
+CUST_186,Finance_186,North America,SMB,Finance,Q1_2025,Churned
+CUST_187,Logistics_187,North America,SMB,Logistics,Q3_2025,Active
+CUST_188,Tech_188,North America,SMB,Tech,Q3_2025,Active
+CUST_189,Tech_189,EMEA,SMB,Tech,Q1_2025,Active
+CUST_190,Education_190,APAC,SMB,Education,Q3_2025,Churned
+CUST_191,Education_191,APAC,SMB,Education,Q1_2025,Active
+CUST_192,Healthcare_192,LATAM,Mid-Market,Healthcare,Q1_2025,Active
+CUST_193,Education_193,LATAM,SMB,Education,Q3_2025,Active
+CUST_194,Retail_194,North America,SMB,Retail,Q2_2025,Active
+CUST_195,Finance_195,EMEA,Enterprise,Finance,Q3_2025,Active
+CUST_196,Finance_196,EMEA,SMB,Finance,Q2_2025,Churned
+CUST_197,Logistics_197,North America,Mid-Market,Logistics,Q4_2025,Active
+CUST_198,Logistics_198,LATAM,SMB,Logistics,Q1_2025,Active
+CUST_199,Finance_199,LATAM,SMB,Finance,Q2_2025,Active
+CUST_200,Logistics_200,North America,SMB,Logistics,Q3_2025,Active
+CUST_201,Healthcare_201,North America,SMB,Healthcare,Q2_2025,Active
+CUST_202,Education_202,APAC,SMB,Education,Q4_2025,Active
+CUST_203,Finance_203,APAC,SMB,Finance,Q3_2025,Active
+CUST_204,Logistics_204,LATAM,SMB,Logistics,Q3_2025,Active
+CUST_205,Finance_205,North America,SMB,Finance,Q3_2025,Active
+CUST_206,Retail_206,APAC,SMB,Retail,Q4_2025,Active
+CUST_207,Tech_207,APAC,SMB,Tech,Q4_2025,Active
+CUST_208,Education_208,North America,SMB,Education,Q3_2025,Churned
+CUST_209,Finance_209,APAC,Mid-Market,Finance,Q3_2025,Active
+CUST_210,Tech_210,APAC,Mid-Market,Tech,Q1_2025,Active
+CUST_211,Logistics_211,EMEA,SMB,Logistics,Q1_2025,Active
+CUST_212,Tech_212,North America,Mid-Market,Tech,Q3_2025,Churned
+CUST_213,Education_213,North America,Mid-Market,Education,Q1_2025,Active
+CUST_214,Finance_214,APAC,SMB,Finance,Q2_2025,Churned
+CUST_215,Retail_215,North America,Enterprise,Retail,Q1_2025,Active
+CUST_216,Logistics_216,APAC,Enterprise,Logistics,Q2_2025,Active
+CUST_217,Finance_217,EMEA,SMB,Finance,Q3_2025,Active
+CUST_218,Education_218,North America,SMB,Education,Q4_2025,Active
+CUST_219,Logistics_219,North America,Mid-Market,Logistics,Q1_2025,Active
+CUST_220,Healthcare_220,North America,Mid-Market,Healthcare,Q2_2025,Active
+CUST_221,Tech_221,North America,SMB,Tech,Q4_2025,Active
+CUST_222,Education_222,North America,SMB,Education,Q1_2025,Churned
+CUST_223,Healthcare_223,APAC,SMB,Healthcare,Q4_2025,Active
+CUST_224,Finance_224,EMEA,SMB,Finance,Q2_2025,Active
+CUST_225,Retail_225,EMEA,Mid-Market,Retail,Q2_2025,Active
+CUST_226,Logistics_226,APAC,SMB,Logistics,Q4_2025,Active
+CUST_227,Tech_227,LATAM,SMB,Tech,Q1_2025,Active
+CUST_228,Logistics_228,EMEA,Mid-Market,Logistics,Q3_2025,Active
+CUST_229,Finance_229,LATAM,SMB,Finance,Q4_2025,Churned
+CUST_230,Logistics_230,North America,SMB,Logistics,Q1_2025,Active
+CUST_231,Tech_231,North America,Mid-Market,Tech,Q3_2025,Active
+CUST_232,Finance_232,EMEA,Enterprise,Finance,Q4_2025,Active
+CUST_233,Logistics_233,North America,Mid-Market,Logistics,Q1_2025,Active
+CUST_234,Retail_234,EMEA,Mid-Market,Retail,Q4_2025,Active
+CUST_235,Education_235,APAC,SMB,Education,Q3_2025,Churned
+CUST_236,Finance_236,North America,SMB,Finance,Q3_2025,Active
+CUST_237,Education_237,EMEA,Mid-Market,Education,Q3_2025,Active
+CUST_238,Finance_238,APAC,SMB,Finance,Q1_2025,Active
+CUST_239,Retail_239,North America,SMB,Retail,Q4_2025,Active
+CUST_240,Education_240,APAC,SMB,Education,Q4_2025,Active
+CUST_241,Healthcare_241,LATAM,SMB,Healthcare,Q3_2025,Churned
+CUST_242,Tech_242,LATAM,SMB,Tech,Q3_2025,Churned
+CUST_243,Healthcare_243,LATAM,SMB,Healthcare,Q3_2025,Active
+CUST_244,Logistics_244,EMEA,SMB,Logistics,Q2_2025,Active
+CUST_245,Retail_245,APAC,SMB,Retail,Q3_2025,Active
+CUST_246,Healthcare_246,LATAM,Enterprise,Healthcare,Q3_2025,Active
+CUST_247,Finance_247,EMEA,Mid-Market,Finance,Q3_2025,Active
+CUST_248,Logistics_248,LATAM,Mid-Market,Logistics,Q3_2025,Active
+CUST_249,Logistics_249,LATAM,Mid-Market,Logistics,Q2_2025,Active
+CUST_250,Healthcare_250,LATAM,SMB,Healthcare,Q1_2025,Active
+CUST_251,Healthcare_251,EMEA,SMB,Healthcare,Q1_2025,Active
+CUST_252,Retail_252,EMEA,Mid-Market,Retail,Q2_2025,Active
+CUST_253,Tech_253,LATAM,Mid-Market,Tech,Q3_2025,Active
+CUST_254,Healthcare_254,EMEA,Mid-Market,Healthcare,Q3_2025,Active
+CUST_255,Healthcare_255,APAC,SMB,Healthcare,Q3_2025,Churned
+CUST_256,Education_256,North America,SMB,Education,Q2_2025,Active
+CUST_257,Finance_257,LATAM,SMB,Finance,Q3_2025,Active
+CUST_258,Education_258,North America,SMB,Education,Q2_2025,Churned
+CUST_259,Education_259,North America,Mid-Market,Education,Q2_2025,Active
+CUST_260,Logistics_260,APAC,Mid-Market,Logistics,Q3_2025,Active
+CUST_261,Tech_261,North America,SMB,Tech,Q4_2025,Active
+CUST_262,Finance_262,LATAM,Enterprise,Finance,Q2_2025,Active
+CUST_263,Retail_263,APAC,Mid-Market,Retail,Q1_2025,Active
+CUST_264,Retail_264,EMEA,SMB,Retail,Q1_2025,Churned
+CUST_265,Healthcare_265,LATAM,SMB,Healthcare,Q1_2025,Churned
+CUST_266,Healthcare_266,North America,SMB,Healthcare,Q3_2025,Active
+CUST_267,Retail_267,North America,SMB,Retail,Q2_2025,Active
+CUST_268,Healthcare_268,North America,SMB,Healthcare,Q2_2025,Active
+CUST_269,Tech_269,EMEA,SMB,Tech,Q2_2025,Active
+CUST_270,Education_270,EMEA,SMB,Education,Q1_2025,Active
+CUST_271,Healthcare_271,North America,SMB,Healthcare,Q2_2025,Active
+CUST_272,Logistics_272,North America,Enterprise,Logistics,Q1_2025,Active
+CUST_273,Healthcare_273,LATAM,SMB,Healthcare,Q2_2025,Active
+CUST_274,Finance_274,LATAM,Mid-Market,Finance,Q1_2025,Active
+CUST_275,Tech_275,EMEA,SMB,Tech,Q4_2025,Churned
+CUST_276,Finance_276,EMEA,Enterprise,Finance,Q1_2025,Active
+CUST_277,Finance_277,North America,SMB,Finance,Q4_2025,Active
+CUST_278,Logistics_278,North America,SMB,Logistics,Q2_2025,Churned
+CUST_279,Tech_279,North America,Enterprise,Tech,Q4_2025,Active
+CUST_280,Tech_280,North America,Enterprise,Tech,Q3_2025,Active
+CUST_281,Tech_281,LATAM,Mid-Market,Tech,Q3_2025,Active
+CUST_282,Tech_282,EMEA,SMB,Tech,Q3_2025,Active
+CUST_283,Tech_283,EMEA,SMB,Tech,Q2_2025,Active
+CUST_284,Logistics_284,APAC,Mid-Market,Logistics,Q2_2025,Active
+CUST_285,Healthcare_285,North America,Enterprise,Healthcare,Q2_2025,Active
+CUST_286,Finance_286,APAC,Mid-Market,Finance,Q3_2025,Active
+CUST_287,Tech_287,EMEA,Mid-Market,Tech,Q1_2025,Active
+CUST_288,Healthcare_288,EMEA,SMB,Healthcare,Q2_2025,Active
+CUST_289,Healthcare_289,EMEA,Mid-Market,Healthcare,Q3_2025,Active
+CUST_290,Finance_290,North America,SMB,Finance,Q3_2025,Churned
+CUST_291,Logistics_291,APAC,SMB,Logistics,Q3_2025,Churned
+CUST_292,Retail_292,APAC,SMB,Retail,Q3_2025,Active
+CUST_293,Retail_293,North America,Mid-Market,Retail,Q4_2025,Active
+CUST_294,Healthcare_294,EMEA,SMB,Healthcare,Q1_2025,Active
+CUST_295,Education_295,APAC,SMB,Education,Q2_2025,Active
+CUST_296,Education_296,EMEA,Mid-Market,Education,Q2_2025,Active
+CUST_297,Finance_297,North America,SMB,Finance,Q2_2025,Churned
+CUST_298,Retail_298,APAC,Mid-Market,Retail,Q4_2025,Active
+CUST_299,Healthcare_299,North America,SMB,Healthcare,Q1_2025,Active
+CUST_300,Logistics_300,APAC,SMB,Logistics,Q3_2025,Churned
+CUST_301,Retail_301,APAC,Mid-Market,Retail,Q2_2025,Active
+CUST_302,Healthcare_302,EMEA,SMB,Healthcare,Q3_2025,Active
+CUST_303,Healthcare_303,EMEA,SMB,Healthcare,Q3_2025,Active
+CUST_304,Tech_304,North America,SMB,Tech,Q2_2025,Active
+CUST_305,Logistics_305,North America,SMB,Logistics,Q2_2025,Active
+CUST_306,Tech_306,LATAM,Enterprise,Tech,Q2_2025,Active
+CUST_307,Finance_307,EMEA,SMB,Finance,Q1_2025,Churned
+CUST_308,Tech_308,EMEA,Mid-Market,Tech,Q2_2025,Active
+CUST_309,Tech_309,North America,SMB,Tech,Q1_2025,Active
+CUST_310,Retail_310,EMEA,Mid-Market,Retail,Q2_2025,Active
+CUST_311,Education_311,EMEA,Mid-Market,Education,Q3_2025,Active
+CUST_312,Healthcare_312,APAC,Mid-Market,Healthcare,Q3_2025,Active
+CUST_313,Logistics_313,APAC,SMB,Logistics,Q3_2025,Active
+CUST_314,Tech_314,LATAM,SMB,Tech,Q1_2025,Active
+CUST_315,Logistics_315,North America,SMB,Logistics,Q3_2025,Active
+CUST_316,Education_316,North America,Enterprise,Education,Q2_2025,Active
+CUST_317,Education_317,EMEA,Mid-Market,Education,Q2_2025,Active
+CUST_318,Tech_318,APAC,Enterprise,Tech,Q4_2025,Active
+CUST_319,Finance_319,APAC,SMB,Finance,Q1_2025,Active
+CUST_320,Tech_320,EMEA,Mid-Market,Tech,Q3_2025,Active
+CUST_321,Retail_321,EMEA,Enterprise,Retail,Q3_2025,Active
+CUST_322,Healthcare_322,North America,SMB,Healthcare,Q2_2025,Active
+CUST_323,Finance_323,North America,SMB,Finance,Q1_2025,Active
+CUST_324,Tech_324,EMEA,Mid-Market,Tech,Q1_2025,Active
+CUST_325,Logistics_325,LATAM,Mid-Market,Logistics,Q4_2025,Active
+CUST_326,Finance_326,North America,Mid-Market,Finance,Q2_2025,Active
+CUST_327,Finance_327,North America,SMB,Finance,Q2_2025,Active
+CUST_328,Tech_328,North America,Mid-Market,Tech,Q2_2025,Churned
+CUST_329,Finance_329,EMEA,SMB,Finance,Q3_2025,Churned
+CUST_330,Logistics_330,APAC,SMB,Logistics,Q1_2025,Active
+CUST_331,Education_331,EMEA,SMB,Education,Q2_2025,Active
+CUST_332,Finance_332,North America,Mid-Market,Finance,Q3_2025,Active
+CUST_333,Education_333,APAC,Mid-Market,Education,Q4_2025,Active
+CUST_334,Logistics_334,APAC,Mid-Market,Logistics,Q1_2025,Churned
+CUST_335,Tech_335,APAC,SMB,Tech,Q2_2025,Active
+CUST_336,Healthcare_336,APAC,Enterprise,Healthcare,Q2_2025,Active
+CUST_337,Finance_337,LATAM,SMB,Finance,Q3_2025,Active
+CUST_338,Healthcare_338,North America,Mid-Market,Healthcare,Q2_2025,Active
+CUST_339,Logistics_339,EMEA,SMB,Logistics,Q2_2025,Active
+CUST_340,Finance_340,APAC,SMB,Finance,Q3_2025,Active
+CUST_341,Education_341,EMEA,SMB,Education,Q3_2025,Active
+CUST_342,Retail_342,EMEA,SMB,Retail,Q2_2025,Active
+CUST_343,Healthcare_343,APAC,Mid-Market,Healthcare,Q4_2025,Active
+CUST_344,Finance_344,EMEA,Mid-Market,Finance,Q3_2025,Active
+CUST_345,Healthcare_345,EMEA,SMB,Healthcare,Q2_2025,Active
+CUST_346,Finance_346,North America,Enterprise,Finance,Q1_2025,Active
+CUST_347,Tech_347,North America,SMB,Tech,Q4_2025,Active
+CUST_348,Education_348,APAC,Mid-Market,Education,Q1_2025,Active
+CUST_349,Healthcare_349,EMEA,Enterprise,Healthcare,Q1_2025,Active
+CUST_350,Retail_350,North America,Mid-Market,Retail,Q1_2025,Active
+CUST_351,Retail_351,EMEA,SMB,Retail,Q3_2025,Active
+CUST_352,Logistics_352,LATAM,Enterprise,Logistics,Q1_2025,Active
+CUST_353,Finance_353,North America,Mid-Market,Finance,Q1_2025,Active
+CUST_354,Healthcare_354,APAC,SMB,Healthcare,Q1_2025,Active
+CUST_355,Logistics_355,APAC,SMB,Logistics,Q1_2025,Churned
+CUST_356,Healthcare_356,North America,Mid-Market,Healthcare,Q3_2025,Active
+CUST_357,Finance_357,APAC,Mid-Market,Finance,Q3_2025,Active
+CUST_358,Retail_358,North America,Mid-Market,Retail,Q2_2025,Active
+CUST_359,Tech_359,LATAM,Enterprise,Tech,Q2_2025,Active
+CUST_360,Retail_360,North America,Mid-Market,Retail,Q3_2025,Active
+CUST_361,Logistics_361,EMEA,SMB,Logistics,Q1_2025,Active
+CUST_362,Education_362,North America,SMB,Education,Q2_2025,Active
+CUST_363,Tech_363,EMEA,SMB,Tech,Q4_2025,Churned
+CUST_364,Logistics_364,EMEA,Mid-Market,Logistics,Q3_2025,Active
+CUST_365,Finance_365,LATAM,SMB,Finance,Q1_2025,Churned
+CUST_366,Tech_366,EMEA,Mid-Market,Tech,Q2_2025,Active
+CUST_367,Logistics_367,LATAM,Mid-Market,Logistics,Q2_2025,Active
+CUST_368,Finance_368,LATAM,Enterprise,Finance,Q2_2025,Active
+CUST_369,Retail_369,APAC,SMB,Retail,Q1_2025,Active
+CUST_370,Education_370,APAC,Mid-Market,Education,Q1_2025,Active
+CUST_371,Finance_371,APAC,SMB,Finance,Q1_2025,Churned
+CUST_372,Healthcare_372,APAC,Mid-Market,Healthcare,Q4_2025,Active
+CUST_373,Finance_373,APAC,SMB,Finance,Q3_2025,Active
+CUST_374,Finance_374,North America,SMB,Finance,Q1_2025,Churned
+CUST_375,Education_375,APAC,Mid-Market,Education,Q1_2025,Active
+CUST_376,Healthcare_376,EMEA,SMB,Healthcare,Q3_2025,Active
+CUST_377,Logistics_377,North America,SMB,Logistics,Q1_2025,Active
+CUST_378,Logistics_378,APAC,Mid-Market,Logistics,Q1_2025,Active
+CUST_379,Finance_379,North America,Mid-Market,Finance,Q4_2025,Active
+CUST_380,Healthcare_380,EMEA,Mid-Market,Healthcare,Q1_2025,Active
+CUST_381,Healthcare_381,APAC,Mid-Market,Healthcare,Q3_2025,Active
+CUST_382,Education_382,North America,Mid-Market,Education,Q4_2025,Active
+CUST_383,Retail_383,North America,SMB,Retail,Q2_2025,Churned
+CUST_384,Logistics_384,LATAM,SMB,Logistics,Q1_2025,Active
+CUST_385,Education_385,North America,SMB,Education,Q1_2025,Active
+CUST_386,Tech_386,North America,Enterprise,Tech,Q4_2025,Active
+CUST_387,Logistics_387,EMEA,Mid-Market,Logistics,Q4_2025,Active
+CUST_388,Education_388,APAC,SMB,Education,Q3_2025,Active
+CUST_389,Logistics_389,North America,SMB,Logistics,Q1_2025,Active
+CUST_390,Retail_390,North America,Enterprise,Retail,Q3_2025,Active
+CUST_391,Tech_391,LATAM,SMB,Tech,Q4_2025,Churned
+CUST_392,Retail_392,EMEA,Mid-Market,Retail,Q3_2025,Active
+CUST_393,Tech_393,EMEA,Mid-Market,Tech,Q4_2025,Active
+CUST_394,Finance_394,North America,Mid-Market,Finance,Q4_2025,Active
+CUST_395,Education_395,EMEA,SMB,Education,Q3_2025,Churned
+CUST_396,Tech_396,LATAM,Enterprise,Tech,Q3_2025,Active
+CUST_397,Retail_397,LATAM,Enterprise,Retail,Q2_2025,Active
+CUST_398,Logistics_398,EMEA,Mid-Market,Logistics,Q1_2025,Active
+CUST_399,Tech_399,North America,Mid-Market,Tech,Q3_2025,Active
+CUST_400,Education_400,North America,Enterprise,Education,Q2_2025,Active

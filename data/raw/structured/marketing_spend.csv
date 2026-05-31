@@ -1,0 +1,49 @@
+quarter,region,channel,spend,campaign_name,leads_generated
+Q1_2025,APAC,Events,15290.33,Campaign_APAC_Events_Q1,152
+Q1_2025,APAC,Paid Search,16428.56,Campaign_APAC_Paid Search_Q1,153
+Q1_2025,APAC,Content,14626.32,Campaign_APAC_Content_Q1,130
+Q1_2025,EMEA,Events,16153.75,Campaign_EMEA_Events_Q1,190
+Q1_2025,EMEA,Paid Search,14101.66,Campaign_EMEA_Paid Search_Q1,159
+Q1_2025,EMEA,Content,15573.64,Campaign_EMEA_Content_Q1,149
+Q1_2025,North America,Events,15356.97,Campaign_North America_Events_Q1,130
+Q1_2025,North America,Paid Search,15827.73,Campaign_North America_Paid Search_Q1,185
+Q1_2025,North America,Content,14542.52,Campaign_North America_Content_Q1,149
+Q1_2025,LATAM,Events,14687.88,Campaign_LATAM_Events_Q1,137
+Q1_2025,LATAM,Paid Search,16175.68,Campaign_LATAM_Paid Search_Q1,175
+Q1_2025,LATAM,Content,15155.63,Campaign_LATAM_Content_Q1,135
+Q2_2025,APAC,Events,16223.52,Campaign_APAC_Events_Q2,187
+Q2_2025,APAC,Paid Search,16417.34,Campaign_APAC_Paid Search_Q2,199
+Q2_2025,APAC,Content,17959.87,Campaign_APAC_Content_Q2,216
+Q2_2025,EMEA,Events,16296.91,Campaign_EMEA_Events_Q2,161
+Q2_2025,EMEA,Paid Search,18101.5,Campaign_EMEA_Paid Search_Q2,208
+Q2_2025,EMEA,Content,15227.62,Campaign_EMEA_Content_Q2,189
+Q2_2025,North America,Events,15363.39,Campaign_North America_Events_Q2,174
+Q2_2025,North America,Paid Search,16930.92,Campaign_North America_Paid Search_Q2,190
+Q2_2025,North America,Content,14917.72,Campaign_North America_Content_Q2,131
+Q2_2025,LATAM,Events,16056.47,Campaign_LATAM_Events_Q2,170
+Q2_2025,LATAM,Paid Search,15848.18,Campaign_LATAM_Paid Search_Q2,133
+Q2_2025,LATAM,Content,15411.38,Campaign_LATAM_Content_Q2,132
+Q3_2025,APAC,Events,18996.49,Campaign_APAC_Events_Q3,228
+Q3_2025,APAC,Paid Search,19752.22,Campaign_APAC_Paid Search_Q3,217
+Q3_2025,APAC,Content,16554.9,Campaign_APAC_Content_Q3,146
+Q3_2025,EMEA,Events,18744.03,Campaign_EMEA_Events_Q3,179
+Q3_2025,EMEA,Paid Search,16761.53,Campaign_EMEA_Paid Search_Q3,169
+Q3_2025,EMEA,Content,19010.0,Campaign_EMEA_Content_Q3,206
+Q3_2025,North America,Events,17322.08,Campaign_North America_Events_Q3,216
+Q3_2025,North America,Paid Search,16827.28,Campaign_North America_Paid Search_Q3,146
+Q3_2025,North America,Content,17790.29,Campaign_North America_Content_Q3,149
+Q3_2025,LATAM,Events,17624.55,Campaign_LATAM_Events_Q3,162
+Q3_2025,LATAM,Paid Search,17214.91,Campaign_LATAM_Paid Search_Q3,182
+Q3_2025,LATAM,Content,16886.61,Campaign_LATAM_Content_Q3,179
+Q4_2025,APAC,Events,30510.55,Campaign_APAC_Events_Q4,254
+Q4_2025,APAC,Paid Search,31217.6,Campaign_APAC_Paid Search_Q4,354
+Q4_2025,APAC,Content,27474.29,Campaign_APAC_Content_Q4,323
+Q4_2025,EMEA,Events,25667.15,Campaign_EMEA_Events_Q4,232
+Q4_2025,EMEA,Paid Search,27582.93,Campaign_EMEA_Paid Search_Q4,342
+Q4_2025,EMEA,Content,25465.39,Campaign_EMEA_Content_Q4,257
+Q4_2025,North America,Events,20108.61,Campaign_North America_Events_Q4,196
+Q4_2025,North America,Paid Search,20229.45,Campaign_North America_Paid Search_Q4,190
+Q4_2025,North America,Content,18006.35,Campaign_North America_Content_Q4,160
+Q4_2025,LATAM,Events,18030.61,Campaign_LATAM_Events_Q4,167
+Q4_2025,LATAM,Paid Search,19172.97,Campaign_LATAM_Paid Search_Q4,190
+Q4_2025,LATAM,Content,21072.86,Campaign_LATAM_Content_Q4,182
