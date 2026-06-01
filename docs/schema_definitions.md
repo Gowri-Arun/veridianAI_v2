@@ -1,139 +1,217 @@
-# NovaCloud Analytics - Schema Definitions
+# NovaCloud Analytics — Schema Definitions
 
-This document details the relational database schema representing NovaCloud Analytics' enterprise operations. It provides precise specifications for each table and documents key metric ambiguities to prevent analytical errors.
+This document defines every table in the relational data world, with column types, purpose, known ambiguities, and cross-table relationships.
 
 ---
 
 ## Metric Confusions & Ambiguities
 
-To perform accurate analysis on NovaCloud Analytics' data, it is critical to understand the following differences:
+These six distinctions are critical for correct analysis. The dataset deliberately blurs them to test whether the system can disambiguate:
 
 1. **Recognized Revenue is NOT Bookings**
-   - *Bookings* represent the total committed contract value (TCV) signed by a client. No services have necessarily been delivered yet.
-   - *Recognized Revenue* is the actual amount of money NovaCloud can declare as earned under accounting principles (ASC 606) when service milestones or time-based subscription delivery actually occur. A $120,000 annual booking in Q4 recognizes only $10,000 of revenue in Q4 (assuming straight-line recognition).
+   - Recognized Revenue = money earned under ASC 606 based on delivered services.
+   - Bookings = signed contract value (TCV/ACV). A $120K annual contract booked in Q4 recognizes only ~$10K in Q4 under straight-line recognition.
 
 2. **Bookings are NOT Pipeline**
-   - *Pipeline* is the total estimated value of active sales opportunities currently being pursued. It is speculative.
-   - *Bookings* are finalized, legally binding signed contracts (Closed-Won deals).
+   - Bookings are closed-won, legally binding commitments.
+   - Pipeline is speculative — opportunities that may or may not close.
 
 3. **Pipeline is NOT Guaranteed Revenue**
-   - Pipeline values are weighted or unweighted expectations of future sales. Deals in the pipeline can be lost (Closed-Lost) or have their deal sizes drastically reduced during negotiation.
+   - Pipeline can be inflated, stale, or lost. Weighted pipeline gives a more realistic view, but even that is not reliable.
 
 4. **Churn is NOT the Same as Support Tickets**
-   - *Support Tickets* reflect operational friction and customer queries.
-   - *Churn* is the ultimate failure event—the loss of the customer contract and its associated ARR. High support ticket volume/latency is a *leading indicator* of churn, but not every ticket leads to churn, and some customers churn silently without submitting tickets.
+   - Support tickets are operational events; churn is a terminal contract outcome.
+   - High support volume/latency is a *leading indicator* of churn, but not all tickets lead to churn, and some churn happens without any tickets.
 
 5. **Marketing Spend Does NOT Always Cause Revenue Growth**
-   - There is often a significant time lag (2 to 4 quarters) between marketing spend and recognized revenue due to sales cycle lengths. Additionally, bad targeting, poor product releases, or pricing issues can completely neutralize marketing investments.
+   - Marketing investment may take 2–4 quarters to convert to revenue. Poor retention, pricing issues, or product quality can completely neutralize it.
 
 6. **ARR is NOT Quarterly Recognized Revenue**
-   - *Annual Recurring Revenue (ARR)* represents the annualized run-rate of recurring subscription contracts active at a point in time (e.g., $10,000 recurring monthly fee = $120,000 ARR).
-   - *Quarterly Recognized Revenue* is the historical amount actually earned during that specific 3-month period, which can include non-recurring setup fees, seasonal adjustments, and credits.
+   - ARR = annualized run-rate of active subscriptions at a point in time.
+   - Quarterly recognized revenue = actual earnings in that 3-month window, which includes one-time fees, credits, and partial-quarter effects.
 
 ---
 
-## Database Schema
+## Table Definitions
 
 ### 1. `revenue`
-- **Purpose**: Records historical quarterly recognized revenue by customer, product, region, segment, and quarter.
-- **Columns**:
-  - `revenue_id` (VARCHAR, PRIMARY KEY): Unique identifier for the revenue record.
-  - `customer_id` (VARCHAR, FOREIGN KEY): Links to `customers`.
-  - `product_id` (VARCHAR): The specific product tier or module (InsightOS, MetricHub, FlowOps).
-  - `region` (VARCHAR): The geographic region (APAC, EMEA, NA, LATAM).
-  - `segment` (VARCHAR): The customer segment (SMB, Mid-Market, Enterprise).
-  - `quarter` (VARCHAR): The time period (Q1_2025, Q2_2025, etc.).
-  - `amount` (DECIMAL): The actual recognized revenue amount in USD.
-- **Known Ambiguity**: This table represents recognized revenue, which differs from bookings. If a customer churns mid-quarter, their recognized revenue may still be non-zero for that quarter up to the termination date.
+
+| Column       | Type         | Description                                           |
+|--------------|--------------|-------------------------------------------------------|
+| revenue_id   | VARCHAR(20)  | Primary key, e.g. `REV-APAC-EN-2025-Q4-001`           |
+| customer_id  | VARCHAR(20)  | Foreign key → `customers.customer_id`                  |
+| product_id   | VARCHAR(20)  | One of `InsightOS`, `MetricHub`, `FlowOps`             |
+| region       | VARCHAR(10)  | APAC, EMEA, NA, LATAM                                  |
+| segment      | VARCHAR(15)  | SMB, Mid-Market, Enterprise                            |
+| quarter      | VARCHAR(10)  | Q1_2025, Q2_2025, Q3_2025, Q4_2025                    |
+| amount       | DECIMAL(12,2)| Recognized revenue in USD                              |
+
+**Purpose**: Records historical quarterly recognized revenue at customer-product granularity.
+
+**Known Ambiguity**: If a customer churns mid-quarter, their recognized revenue for that quarter may be non-zero up to the termination date. Also, one-time setup fees and credits are included in `amount`, making it not purely recurring.
+
+---
 
 ### 2. `customers`
-- **Purpose**: Details core customer profiles, segment classification, geographical location, and date of first acquisition.
-- **Columns**:
-  - `customer_id` (VARCHAR, PRIMARY KEY): Unique customer identifier.
-  - `customer_name` (VARCHAR): Name of the client organization.
-  - `segment` (VARCHAR): SMB, Mid-Market, or Enterprise.
-  - `region` (VARCHAR): APAC, EMEA, NA, or LATAM.
-  - `signup_quarter` (VARCHAR): The quarter the customer originally signed up (e.g., Q1_2025).
-  - `status` (VARCHAR): Customer health status (Active, Churned).
-- **Known Ambiguity**: Customers can change segments over time (e.g., growing from Mid-Market to Enterprise), but this table captures their current status. Historical segment mappings may require analyzing transaction or historical logs.
+
+| Column          | Type         | Description                                  |
+|-----------------|--------------|----------------------------------------------|
+| customer_id     | VARCHAR(20)  | Primary key, e.g. `CUST-APAC-SMB-001`         |
+| customer_name   | VARCHAR(100) | Client organization name                      |
+| segment         | VARCHAR(15)  | SMB, Mid-Market, Enterprise                   |
+| region          | VARCHAR(10)  | APAC, EMEA, NA, LATAM                         |
+| signup_quarter  | VARCHAR(10)  | Quarter of first subscription (e.g. Q1_2025)  |
+| status          | VARCHAR(10)  | Active or Churned                             |
+
+**Purpose**: Core customer profile data.
+
+**Known Ambiguity**: Customers may change segments over time (e.g., a Mid-Market firm grows into Enterprise). This table stores the *current* or *latest known* segment. Historical analysis must use `revenue` or `subscriptions` tables for per-quarter segment attribution.
+
+---
 
 ### 3. `marketing_spend`
-- **Purpose**: Tracks operational marketing budget allocation by region, target segment, and quarter.
-- **Columns**:
-  - `spend_id` (VARCHAR, PRIMARY KEY): Unique record identifier.
-  - `quarter` (VARCHAR): Time period.
-  - `region` (VARCHAR): Region targeted by the campaign.
-  - `segment` (VARCHAR): Customer segment targeted.
-  - `channel` (VARCHAR): The medium (Events, Paid Search, Content, Outbound).
-  - `amount` (DECIMAL): The marketing spend in USD.
-- **Known Ambiguity**: Marketing spend is hard to attribute cleanly. A global marketing campaign may target APAC and EMEA jointly, but the spend is split arbitrarily or assigned to a single region.
+
+| Column    | Type         | Description                                      |
+|-----------|--------------|--------------------------------------------------|
+| spend_id  | VARCHAR(20)  | Primary key, e.g. `SPND-NA-EN-2025-Q1-001`        |
+| quarter   | VARCHAR(10)  | Time period                                       |
+| region    | VARCHAR(10)  | Target region                                     |
+| segment   | VARCHAR(15)  | Target segment                                    |
+| channel   | VARCHAR(20)  | Events, Paid Search, Content, Outbound            |
+| amount    | DECIMAL(12,2)| Spend amount in USD                                |
+
+**Purpose**: Captures marketing budget deployment by target region, segment, and channel.
+
+**Known Ambiguity**: Spend attribution is inherently fuzzy. A global brand campaign may be split arbitrarily across regions. This table records the *planned allocation*, which may not perfectly match actual regional impact.
+
+---
 
 ### 4. `churn`
-- **Purpose**: Logs contract cancellation events and the associated ARR lost.
-- **Columns**:
-  - `churn_id` (VARCHAR, PRIMARY KEY): Unique churn record identifier.
-  - `customer_id` (VARCHAR, FOREIGN KEY): Links to `customers`.
-  - `churn_quarter` (VARCHAR): The quarter in which the churn event was finalized.
-  - `arr_lost` (DECIMAL): The ARR value lost due to this cancellation.
-  - `reason` (VARCHAR): Categorized reason (Pricing, Competitor, Support, Product Instability, Out of Business).
-- **Known Ambiguity**: A customer might cancel their subscription (churn) in Q3, but because they paid in advance, they continue using the product until Q4. The churn event date is when the contract terminates, not necessarily when the decision was communicated.
+
+| Column         | Type         | Description                                       |
+|----------------|--------------|----------------------------------------------------|
+| churn_id       | VARCHAR(20)  | Primary key, e.g. `CHRN-APAC-EN-2025-Q4-001`       |
+| customer_id    | VARCHAR(20)  | Foreign key → `customers.customer_id`               |
+| churn_quarter  | VARCHAR(10)  | Quarter the churn was finalized                     |
+| arr_lost       | DECIMAL(12,2)| ARR lost from this churn event                      |
+| reason         | VARCHAR(25)  | Pricing, Competitor, Support, Product Instability, Out of Business |
+
+**Purpose**: Logs contract cancellation events and their associated ARR impact.
+
+**Known Ambiguity**: Churn quarter is when the contract *ended*, not when the customer *decided* to leave. The decision may have been made 1–2 quarters earlier (visible through usage decline or support tickets). Also, a customer may churn from one product but keep another.
+
+---
 
 ### 5. `support_tickets`
-- **Purpose**: Captures customer support operational metrics, tracking resolution times and escalation events.
-- **Columns**:
-  - `ticket_id` (VARCHAR, PRIMARY KEY): Unique ticket identifier.
-  - `customer_id` (VARCHAR, FOREIGN KEY): Links to `customers`.
-  - `product_id` (VARCHAR): Product associated with the issue.
-  - `quarter` (VARCHAR): The quarter the ticket was created.
-  - `severity` (VARCHAR): Low, Medium, High, or Critical.
-  - `is_escalated` (BOOLEAN): TRUE if the ticket required engineering or executive escalation.
-  - `response_time_hours` (DECIMAL): Hours elapsed from ticket creation to first human response.
-  - `resolution_time_hours` (DECIMAL): Total hours elapsed until ticket closure.
-- **Known Ambiguity**: A high response time doesn't always mean a poor customer experience (e.g., if the problem was extremely complex), but it acts as a strong statistical proxy.
+
+| Column                | Type         | Description                                        |
+|-----------------------|--------------|----------------------------------------------------|
+| ticket_id             | VARCHAR(20)  | Primary key, e.g. `TKT-NA-SMB-2025-Q1-0001`         |
+| customer_id           | VARCHAR(20)  | Foreign key → `customers.customer_id`               |
+| product_id            | VARCHAR(20)  | InsightOS, MetricHub, FlowOps                       |
+| quarter               | VARCHAR(10)  | Quarter the ticket was opened                        |
+| severity              | VARCHAR(10)  | Low, Medium, High, Critical                          |
+| is_escalated          | BOOLEAN      | TRUE if escalated to engineering/exec                |
+| response_time_hours   | DECIMAL(8,2) | Hours from creation to first human response          |
+| resolution_time_hours | DECIMAL(8,2) | Hours from creation to ticket closure                |
+
+**Purpose**: Tracks support operational metrics — responsiveness, escalation rates, and resolution efficiency.
+
+**Known Ambiguity**: High response time may indicate either poor service or an extremely complex issue that required research. Missing tickets (customers who left without submitting) are not captured. A drop in ticket volume may mean service improved — or that customers gave up.
+
+---
 
 ### 6. `product_usage`
-- **Purpose**: Monitors feature adoption, user activity, and technical performance indicators.
-- **Columns**:
-  - `usage_id` (VARCHAR, PRIMARY KEY): Unique usage record identifier.
-  - `customer_id` (VARCHAR, FOREIGN KEY): Links to `customers`.
-  - `product_id` (VARCHAR): InsightOS, MetricHub, or FlowOps.
-  - `quarter` (VARCHAR): Time period.
-  - `active_users_count` (INTEGER): Number of unique monthly active users (MAU).
-  - `features_used` (INTEGER): Number of distinct advanced product features activated.
-  - `api_error_count` (INTEGER): Number of failed API calls or pipeline errors encountered.
-- **Known Ambiguity**: A customer can have high product usage but still churn if they are performing operations inefficiently, encountering high error rates, or are unhappy with price.
+
+| Column             | Type         | Description                                          |
+|--------------------|--------------|------------------------------------------------------|
+| usage_id           | VARCHAR(20)  | Primary key, e.g. `USG-NA-MID-2025-Q1-001`            |
+| customer_id        | VARCHAR(20)  | Foreign key → `customers.customer_id`                 |
+| product_id         | VARCHAR(20)  | InsightOS, MetricHub, FlowOps                         |
+| quarter            | VARCHAR(10)  | Time period                                           |
+| active_users_count | INT          | Monthly active users (MAU) for that quarter            |
+| features_used      | INT          | Number of distinct advanced features used              |
+| api_error_count    | INT          | Failed API calls or pipeline errors                    |
+
+**Purpose**: Monitors product adoption, engagement depth, and technical health.
+
+**Known Ambiguity**: High usage does not guarantee satisfaction (users may be forced to use a buggy product). Low usage may indicate churn risk or seasonal patterns. `api_error_count` is a leading indicator for support escalations and churn.
+
+---
 
 ### 7. `sales_pipeline`
-- **Purpose**: Tracks potential sales opportunities, stages, deal values, and cycle times.
-- **Columns**:
-  - `opportunity_id` (VARCHAR, PRIMARY KEY): Unique opportunity identifier.
-  - `customer_name` (VARCHAR): Name of prospective client organization.
-  - `region` (VARCHAR): Geolocation.
-  - `segment` (VARCHAR): Target segment.
-  - `quarter` (VARCHAR): Quarter the opportunity was created or updated.
-  - `stage` (VARCHAR): Current funnel stage (Prospecting, Qualification, Proposal, Negotiation, Closed-Won, Closed-Lost).
-  - `deal_value` (DECIMAL): Estimated annual contract value of the deal.
-  - `deal_cycle_days` (INTEGER): Days elapsed since opportunity creation.
-  - `win_probability` (DECIMAL): Likelihood of closing (0.00 to 1.00).
-- **Known Ambiguity**: Representatives may manipulate `win_probability` or `deal_value` to satisfy administrative pipeline requirements, making historical conversions and cycle lengths a better predictor of actual sales.
+
+| Column          | Type         | Description                                         |
+|-----------------|--------------|-----------------------------------------------------|
+| opportunity_id  | VARCHAR(20)  | Primary key, e.g. `OPP-EMEA-EN-2025-Q4-001`          |
+| customer_name   | VARCHAR(100) | Prospective client name (not yet an FK to customers) |
+| region          | VARCHAR(10)  | Geographic region                                    |
+| segment         | VARCHAR(15)  | Target segment                                       |
+| quarter         | VARCHAR(10)  | Quarter the opportunity was created/updated           |
+| stage           | VARCHAR(20)  | Prospecting, Qualification, Proposal, Negotiation, Closed-Won, Closed-Lost |
+| deal_value      | DECIMAL(12,2)| Estimated annual contract value                      |
+| deal_cycle_days | INT          | Days since opportunity creation                       |
+| win_probability | DECIMAL(3,2) | Estimated close likelihood (0.00 to 1.00)            |
+
+**Purpose**: Tracks sales opportunities through the funnel from prospecting to close.
+
+**Known Ambiguity**: `customer_name` is free text, not a foreign key — prospects may not yet exist in `customers`. `win_probability` is often inflated by sales reps. `deal_value` may be speculative, especially under pipeline generation pressure. Historical conversion rates and cycle lengths are more reliable than stated win probabilities.
+
+---
 
 ### 8. `subscriptions`
-- **Purpose**: Manages active contract terms, annual contract values, and renewal dates.
-- **Columns**:
-  - `subscription_id` (VARCHAR, PRIMARY KEY): Unique subscription ID.
-  - `customer_id` (VARCHAR, FOREIGN KEY): Links to `customers`.
-  - `product_id` (VARCHAR): Product being licensed.
-  - `arr` (DECIMAL): Annual Recurring Revenue rate of the contract.
-  - `start_date` (DATE): Contract start date.
-  - `end_date` (DATE): Contract end/renewal date.
-- **Known Ambiguity**: Subscriptions with multi-year terms might have flat ARR figures but escalating billing structures (e.g., $100k Year 1, $110k Year 2), which is not captured in a simple static ARR field.
+
+| Column          | Type         | Description                                      |
+|-----------------|--------------|--------------------------------------------------|
+| subscription_id | VARCHAR(20)  | Primary key, e.g. `SUB-APAC-EN-2025-001`          |
+| customer_id     | VARCHAR(20)  | Foreign key → `customers.customer_id`             |
+| product_id      | VARCHAR(20)  | InsightOS, MetricHub, FlowOps                     |
+| arr             | DECIMAL(12,2)| Annual Recurring Revenue rate                     |
+| start_date      | DATE         | Contract start date                                |
+| end_date        | DATE         | Contract end / renewal date                        |
+
+**Purpose**: Manages active contract terms, ARR rates, and renewal timelines.
+
+**Known Ambiguity**: Multi-year contracts may have escalating pricing (e.g., $100K Y1, $110K Y2) not captured in a single static `arr` field. A customer may have multiple active subscriptions for different products. `end_date` before the end of a quarter does not guarantee churn — the contract may be in renewal negotiation.
+
+---
 
 ### 9. `region_targets`
-- **Purpose**: Sets performance benchmarks for ARR goals per region, customer segment, and quarter.
-- **Columns**:
-  - `target_id` (VARCHAR, PRIMARY KEY): Unique target record ID.
-  - `quarter` (VARCHAR): Target time period.
-  - `region` (VARCHAR): Target region.
-  - `segment` (VARCHAR): Target customer segment.
-  - `target_arr` (DECIMAL): The target ARR goal in USD.
-- **Known Ambiguity**: Region targets are static expectations and are sometimes adjusted mid-year due to macroeconomic changes, which can lead to target discrepancy versions.
+
+| Column     | Type         | Description                                       |
+|------------|--------------|---------------------------------------------------|
+| target_id  | VARCHAR(20)  | Primary key, e.g. `TGT-NA-SMB-2025-Q1`             |
+| quarter    | VARCHAR(10)  | Target time period                                  |
+| region     | VARCHAR(10)  | Target region                                       |
+| segment    | VARCHAR(15)  | Target customer segment                             |
+| target_arr | DECIMAL(12,2)| Target ARR goal in USD                               |
+
+**Purpose**: Sets quarterly ARR performance targets by region and segment for measuring plan vs. actual.
+
+**Known Ambiguity**: Targets are static expectations set at the beginning of the fiscal year. They may be adjusted mid-year (e.g., due to macroeconomic changes), creating versioning discrepancies. Comparing recognized revenue against target_arr requires understanding revenue recognition timing.
+
+---
+
+## Cross-Table Relationship Map
+
+| From               | To                 | Via                    | Relationship |
+|--------------------|--------------------|------------------------|--------------|
+| `revenue`          | `customers`        | `customer_id`          | M:1          |
+| `subscriptions`    | `customers`        | `customer_id`          | M:1          |
+| `churn`            | `customers`        | `customer_id`          | M:1          |
+| `support_tickets`  | `customers`        | `customer_id`          | M:1          |
+| `product_usage`    | `customers`        | `customer_id`          | M:1          |
+| `revenue`          | `subscriptions`    | `customer_id`          | M:M (indirect via customer) |
+
+**Tables without direct FKs**: `sales_pipeline` (uses `customer_name` text), `marketing_spend` (filter-based joins on region + segment), `region_targets` (filter-based joins on region + segment + quarter).
+
+---
+
+## Narrative-to-Table Mapping
+
+| Narrative                          | Primary Tables                                    | Secondary Tables             |
+|------------------------------------|---------------------------------------------------|------------------------------|
+| APAC Enterprise Revenue Drop       | `revenue`, `churn`, `support_tickets`             | `marketing_spend`, `subscriptions`, `sales_pipeline` |
+| EMEA Pipeline Illusion             | `sales_pipeline`, `revenue`                      | `region_targets`, `subscriptions` |
+| SMB Churn After Support Slowdown   | `churn`, `support_tickets`, `product_usage`       | `revenue`                    |
+| FlowOps Release Side Effect        | `product_usage`, `support_tickets`, `revenue`     | `churn`                      |

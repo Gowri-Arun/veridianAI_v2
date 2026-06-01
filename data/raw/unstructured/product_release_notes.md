@@ -23,3 +23,7 @@ Customers must update their API schemas to support the new thread pool model. Fa
 
 ## Post-Release Engineering Notes
 We are monitoring pipeline stalls among Enterprise accounts. If performance issues occur, customer success teams should guide clients to implement temporary thread limits until a patch is deployed in Q1 2026.
+
+## Related Documents
+- [flowops_release_incident.md](flowops_release_incident.md) — contains the detailed incident report on the thread-pool memory contention bug
+- [support_escalation_report.md](support_escalation_report.md) — shows the volume of support escalations triggered by the v2.0 release

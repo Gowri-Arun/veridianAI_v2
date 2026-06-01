@@ -25,3 +25,7 @@ Usage tracking indicates a steady drop in SMB usage scores. Decreasing feature a
 
 ## APAC Enterprise Friction
 Our APAC teams report customer friction regarding pricing updates introduced this quarter. Several enterprise accounts expressed strong objections to the forced subscription migration, indicating contract renewal risks.
+
+## Related Documents
+- [customer_success_notes.md](customer_success_notes.md) — identifies the leading usage indicators that preceded SMB churn in Q3
+- [smb_churn_review.md](smb_churn_review.md) — shows how the Q3 support friction trend culminated in 20% SMB churn by Q4

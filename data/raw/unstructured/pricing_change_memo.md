@@ -23,3 +23,7 @@ While SMB and Mid-Market accounts adopted the pricing models, several APAC Enter
 
 ## Compliance and Renewal Warning
 Sales representatives are cautioned not to offer ad-hoc pricing discounts to circumvent pricing blocks without executive approval. However, retention reports show that rigid enforcement of the new tiers is the primary driver of APAC Enterprise churn.
+
+## Related Documents
+- [q4_apac_revenue_report.md](q4_apac_revenue_report.md) — shows the revenue impact of Enterprise churn driven by the pricing restructure
+- [enterprise_retention_notes.md](enterprise_retention_notes.md) — provides exit survey data linking pricing objections to APAC cancellations

@@ -1,79 +1,120 @@
-# NovaCloud Analytics - Enterprise Data Design
+# NovaCloud Analytics — Enterprise Data Design
 
 ## Company Overview
-NovaCloud Analytics is a leading provider of a next-generation B2B SaaS analytics platform. The company's mission is to empower data-driven decisions by providing real-time data ingestion, transformation, and business intelligence capabilities directly integrated into enterprise workflows.
+NovaCloud Analytics is a B2B SaaS analytics platform headquartered in San Francisco, with regional offices in London, Singapore, and São Paulo. The company provides a suite of data products that help organizations ingest, model, visualize, and act on their operational data in real time. NovaCloud serves over 2,000 customers across four continents and operates on a subscription-based pricing model with tiered service levels.
 
-### Products
-- **InsightOS**: The core operating system for data visualization, dashboarding, and interactive reporting. It serves as the main user interface and entry point for daily analytical tasks.
-- **MetricHub**: A centralized metric store and semantic layer that ensures a single source of truth for key performance indicators (KPIs) across various departments.
-- **FlowOps**: A data orchestration and ingestion engine designed to automate pipelines, manage ETL processes, and monitor data health in real time.
+## Products
 
-### Regions
-- **APAC** (Asia-Pacific)
-- **EMEA** (Europe, Middle East, and Africa)
-- **North America** (NA)
-- **LATAM** (Latin America)
+| Product     | Description                                                                 | Primary Users         |
+|-------------|-----------------------------------------------------------------------------|------------------------|
+| **InsightOS** | Core BI and visualization platform. Dashboards, ad-hoc queries, report scheduling. | Analysts, Executives   |
+| **MetricHub** | Semantic metric store and governance layer. Single source of truth for KPIs. | Data Engineers, Analysts |
+| **FlowOps**   | Data orchestration and ETL engine. Pipeline automation, monitoring, alerting. | Data Engineers, Ops    |
 
-### Customer Segments
-- **SMB** (Small and Medium-sized Businesses): Typically high transaction count, low deal size, shorter sales cycles, and self-serve onboarding.
-- **Mid-Market**: Moderate deal size, hybrid high-touch and self-serve, and steady growth potential.
-- **Enterprise**: High-value annual contracts, long sales cycles, highly customized integrations, and dedicated Customer Success Manager (CSM) support.
+## Regions
 
-### Time Periods
-- **Q1_2025**
-- **Q2_2025**
-- **Q3_2025**
-- **Q4_2025**
+| Region       | Headquarters  | Primary Timezone | Maturity   |
+|--------------|---------------|------------------|------------|
+| **APAC**     | Singapore     | SGT (UTC+8)      | Growth     |
+| **EMEA**     | London        | GMT/BST (UTC+0/+1) | Mature    |
+| **North America (NA)** | San Francisco | PT (UTC-8/-7) | Core      |
+| **LATAM**    | São Paulo     | BRT (UTC-3)      | Emerging   |
 
----
+## Customer Segments
+
+| Segment       | Customer Count Share | Average Deal Size | Sales Cycle | Support Model        |
+|---------------|----------------------|-------------------|-------------|----------------------|
+| **SMB**       | ~60%                 | $5K–$20K ARR      | 1–4 weeks   | Self-serve + Chat    |
+| **Mid-Market**| ~25%                 | $20K–$100K ARR    | 4–12 weeks  | Shared CSM           |
+| **Enterprise**| ~15%                 | $100K–$1M+ ARR    | 12–24 weeks | Dedicated CSM + TAM  |
+
+## Time Periods
+All structured data covers four fiscal quarters:
+
+- **Q1_2025** (Jan–Mar)
+- **Q2_2025** (Apr–Jun)
+- **Q3_2025** (Jul–Sep)
+- **Q4_2025** (Oct–Dec)
 
 ## Core Business Metrics
-To accurately evaluate NovaCloud's health, we track a set of fundamental operational metrics:
-- **Recognized Revenue**: Revenue recognized in a quarter for services actually delivered. Not to be confused with billings or contract signings.
-- **Bookings**: The total contract value (TCV) or annual contract value (ACV) of signed customer agreements. Represents committed future revenue, but is not recognized immediately.
-- **Sales Pipeline**: The aggregate value of potential deals at various stages of the sales cycle (e.g., Prospecting, Qualification, Proposal, Negotiation).
-- **Annual Recurring Revenue (ARR)**: The annualized value of recurring revenue from active subscriptions.
-- **Churn Rate**: The percentage of revenue (Gross/Net Revenue Churn) or customers (Customer Churn) lost over a given period.
-- **Retention Rate**: The percentage of revenue or customers retained (Net Retention Rate - NRR, Gross Retention Rate - GRR).
-- **Marketing Spend**: Financial resources allocated to demand generation, paid campaigns, events, and advertising.
-- **Conversion Rate**: The percentage of pipeline deals or marketing leads that successfully convert into signed customers.
-- **Support Escalations / Tickets**: The frequency and severity of support cases submitted by customers. High response time and ticket volumes correlate strongly with churn.
-- **Product Usage / Adoption**: Weekly/Monthly Active Users (WAU/MAU) and feature-specific interactions (e.g., pipeline runs in FlowOps, dashboard views in InsightOS).
 
----
+| Metric                | Definition                                                                 | Data Source              |
+|-----------------------|----------------------------------------------------------------------------|--------------------------|
+| Recognized Revenue    | Revenue earned under ASC 606 from delivered subscriptions/services         | `revenue` table          |
+| Bookings              | Signed contract value (TCV/ACV) committed by customers                     | `subscriptions` / `sales_pipeline` |
+| Pipeline              | Aggregate value of open sales opportunities at any stage                   | `sales_pipeline` table   |
+| ARR                   | Annualized recurring revenue from active subscriptions                     | `subscriptions` table    |
+| Churn Rate            | % of customers or ARR lost in a period                                      | `churn` table            |
+| Retention Rate        | % of customers or ARR retained (gross and net)                             | `churn` + `subscriptions`|
+| Marketing Spend       | Dollars spent on demand generation, events, paid search, content           | `marketing_spend` table  |
+| Conversion Rate       | % of pipeline deals that close won                                        | `sales_pipeline` table   |
+| Support Escalations   | Tickets requiring senior or engineering intervention                       | `support_tickets` table  |
+| Product Usage         | Active users, feature adoption, API error rates                            | `product_usage` table    |
+| Gross Margin          | (Revenue – COGS) / Revenue                                                | Derived from financials  |
 
-## Data Architecture & Design Principles
+## Structured Tables
 
-### Design Principles
-1. **Internal Consistency**: All metrics across structured tables and unstructured documents must be cross-referencable. For example, if a narrative discusses a revenue dip in Q4_2025 for APAC Enterprise, the underlying `revenue`, `customers`, and `support_tickets` tables must quantitatively reflect this.
-2. **Realism**: Data must simulate real SaaS dynamics, such as seasonal effects, support latency, customer churn following product issues, and delayed conversions.
-3. **Traceability**: Every qualitative business narrative must have a quantitative "breadcrumb trail" through keys such as `region`, `segment`, `product_id`, and `quarter`.
+| Table               | Grain                         | Key Entities                          |
+|---------------------|-------------------------------|----------------------------------------|
+| `revenue`           | One row per customer per product per quarter | customer_id, product_id, quarter       |
+| `customers`         | One row per customer          | customer_id, segment, region, status   |
+| `marketing_spend`   | One row per region-segment-channel per quarter | quarter, region, segment, channel      |
+| `churn`             | One row per churn event       | customer_id, churn_quarter, reason     |
+| `support_tickets`   | One row per support ticket    | ticket_id, customer_id, severity       |
+| `product_usage`     | One row per customer per product per quarter | customer_id, product_id, quarter       |
+| `sales_pipeline`    | One row per opportunity       | opportunity_id, region, segment, stage |
+| `subscriptions`     | One row per subscription      | subscription_id, customer_id, arr      |
+| `region_targets`    | One row per region-segment per quarter | quarter, region, segment, target_arr |
 
-### Structured Tables defined in the Schema
-- **`revenue`**: Records quarterly recognized revenue details.
-- **`customers`**: Details customer metadata, segment, region, and signup status.
-- **`marketing_spend`**: Tracks outbound spend by region, segment, and quarter.
-- **`churn`**: Logs customer churn events, reasons, and associated ARR loss.
-- **`support_tickets`**: Tracks customer support requests, resolution times, and escalations.
-- **`product_usage`**: Captures adoption metrics, active users, and API error counts.
-- **`sales_pipeline`**: Logs pipeline opportunities, stages, deal sizes, and cycle lengths.
-- **`subscriptions`**: Manages contract terms, recurring fees, and products purchased.
-- **`region_targets`**: Stores expected ARR targets per region and segment to measure performance.
+### Table Relationships
 
-### Unstructured Documents
-The data world is enriched with unstructured contexts:
-- **QBR (Quarterly Business Review) Presentations**: PDF/text summaries of regional performances.
-- **Support Escalation Logs**: Transcripts and post-mortems of critical service disruptions.
-- **Product Release Notes**: Logs documenting major product rollouts and stability issues.
-- **Internal Slack/Email Communications**: Contextualizing sudden changes in client sentiment or sales cycle delays.
+```
+customers ──< subscriptions
+customers ──< revenue
+customers ──< churn
+customers ──< support_tickets
+customers ──< product_usage
+region_targets ─── (no direct FK; filtered by region + segment)
+sales_pipeline ─── (references customer_name, no FK to customers)
+marketing_spend ── (no direct FK; filtered by region + segment)
+```
 
----
+## Unstructured Documents
 
-## Hidden Business Narratives Overview
-The dataset contains four specific complex scenarios that require multi-table joining and unstructured document analysis to properly diagnose:
-1. **APAC Enterprise Revenue Drop**: Q4_2025 revenue decline driven by high-touch support issues and churn post-pricing change.
-2. **EMEA Pipeline Illusion**: A misleading pipeline surge in Q4_2025 that masked declining conversion rates and longer sales cycles.
-3. **SMB Churn After Support Slowdown**: Q3/Q4_2025 SMB churn spike directly trailing increased support response times and dropping product usage.
-4. **FlowOps Release Side Effect**: A major Q4_2025 FlowOps update that caused system instability and subsequent Enterprise client friction.
+The following unstructured artifacts complement the structured tables and contain narrative context for the hidden business stories:
 
-*(For detailed breakdowns of these stories, please see [business_narratives.md](file:///c:/Users/gowri/veridianAI_v2/docs/business_narratives.md))*
+| Document Type                 | Content Description                                          | Narrative Relevance          |
+|-------------------------------|--------------------------------------------------------------|------------------------------|
+| QBR Presentations             | Regional quarterly business reviews with commentary           | All narratives               |
+| Support Escalation Logs       | Post-mortem write-ups for critical outages                   | Narratives 1, 3, 4           |
+| Product Release Notes         | Changelogs for FlowOps v2.0 and other releases               | Narrative 4                  |
+| Internal Slack / Email Threads| Sales and engineering communications about deals and bugs    | Narratives 2, 4              |
+| Customer Exit Surveys         | Churn reason collection from departing customers             | Narratives 1, 3              |
+| Compliance Memoranda          | Legal/regulatory updates affecting sales cycles              | Narrative 2                  |
+
+## Hidden Narratives Overview
+
+Four business storylines are woven into the dataset. Each requires joining multiple tables and reading unstructured documents to fully diagnose:
+
+1. **APAC Enterprise Revenue Drop** — Q4_2025 revenue decline despite increased marketing spend, driven by pricing-changes, onboarding failures, and support gaps.
+2. **EMEA Pipeline Illusion** — Q4_2025 pipeline surge masks declining conversion rates and lengthening sales cycles.
+3. **SMB Churn After Support Slowdown** — Q3/Q4_2025 SMB churn spike follows support reallocation away from SMB and declining product usage.
+4. **FlowOps Release Side Effect** — Q4_2025 FlowOps v2.0 release causes instability, support escalations, and Enterprise usage drop.
+
+## Design Principles
+
+1. **Internal Consistency**: Every quantitative figure in structured tables must cross-reference the narratives. If APAC Enterprise revenue drops in Q4_2025, the `revenue`, `churn`, `support_tickets`, and `marketing_spend` tables must collectively reflect that reality without contradiction.
+
+2. **Traceability**: Each narrative has a breadcrumb trail through `region`, `segment`, `product_id`, and `quarter` keys. An analyst should be able to start from any table and recursively join to discover the full story.
+
+3. **Realistic SaaS Dynamics**: Data simulates real-world patterns — seasonality, support-to-churn lag, delayed revenue recognition, sales pipeline inflation, and product-release side effects. No "perfect" linear trends.
+
+4. **Multi-Table Diagnosis**: No single table tells a complete story. Every narrative requires at least 3 structured tables plus at least one unstructured document to diagnose correctly.
+
+5. **Leading vs. Lagging Indicators**: Metrics are arranged so that leading indicators (product usage, support response time) appear in earlier quarters than the lagging outcomes (churn, revenue drop). This enables predictive analysis workflows.
+
+6. **Metric Ambiguity**: Deliberately confusable metrics (e.g., bookings vs. recognized revenue, pipeline vs. guaranteed revenue) are included to test whether the system correctly disambiguates terms.
+
+7. **Nulls and Edge Cases**: Foreign keys may not always resolve (e.g., pipeline opportunities referencing prospects not yet in `customers`). This mirrors real data quality challenges.
+
+8. **No Single Source of Truth Violations**: When metrics disagree (e.g., marketing spend up but revenue down), there is always a causal explanation in the unstructured documents — the data never contradicts itself without reason.

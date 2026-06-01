@@ -16,7 +16,7 @@ def parse_frontmatter(markdown_text: str) -> tuple[dict[str, Any], str]:
         return {}, markdown_text
 
     # Match everything between the first two '---' markers
-    match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", markdown_text, re.DOTALL)
+    match = re.match(r"^---\s*\n(.*?)\n---[\s]*\n(.*)$", markdown_text.lstrip(), re.DOTALL)
     if not match:
         raise ValueError("Malformed or unclosed YAML frontmatter boundary.")
 

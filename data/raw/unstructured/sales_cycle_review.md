@@ -23,3 +23,7 @@ The primary driver of sales cycle latency was new regulatory compliance reviews.
 
 ## Sales Pipeline Impact
 Because deals remained stuck in legal review, EMEA's Q4 pipeline appeared inflated. This pipeline did not convert into closed contracts, leaving recognized revenue flat for the quarter.
+
+## Related Documents
+- [emea_pipeline_review.md](emea_pipeline_review.md) — quantifies the pipeline inflation and declining conversion rates in EMEA
+- [q4_business_review.md](q4_business_review.md) — covers the EMEA pipeline illusion in the broader Q4 narrative

@@ -64,3 +64,57 @@ Purpose: Support ticketing queue logs.
 - `escalated` (BOOLEAN): Support escalation flag.
 - `response_time_hours` (DECIMAL): First response duration.
 - `resolution_time_hours` (DECIMAL): Close-out duration.
+
+### 5. marketing_spend
+Purpose: Tracks marketing budget allocation by region, channel, and quarter.
+- `quarter` (VARCHAR): Time period key.
+- `region` (VARCHAR): Target region.
+- `channel` (VARCHAR): Marketing channel (Events, Paid Search, Content).
+- `spend` (DECIMAL): Budget spent in USD.
+- `campaign_name` (VARCHAR): Internal campaign identifier.
+- `leads_generated` (INTEGER): Number of leads attributed to the campaign.
+
+### 6. churn
+Purpose: Logs contract cancellation events and churn rates by region and segment.
+- `quarter` (VARCHAR): Churn event quarter.
+- `region` (VARCHAR): Customer region.
+- `segment` (VARCHAR): Customer segment.
+- `churn_rate` (DECIMAL): Percentage of customers lost.
+- `churned_customers` (INTEGER): Count of customers lost.
+- `starting_customers` (INTEGER): Customer count at quarter start.
+- `retention_rate` (DECIMAL): Percentage retained (1 - churn_rate).
+
+### 7. product_usage
+Purpose: Monitors product adoption, engagement depth, and account health.
+- `quarter` (VARCHAR): Time period key.
+- `region` (VARCHAR): Customer region.
+- `segment` (VARCHAR): Customer segment.
+- `product` (VARCHAR): Product catalog line.
+- `active_users` (INTEGER): Monthly active user count.
+- `usage_score` (DECIMAL): Account health index (0-100).
+- `feature_adoption_rate` (DECIMAL): Fraction of features actively used.
+- `avg_sessions_per_account` (DECIMAL): Average login sessions per account.
+
+### 8. sales_pipeline
+Purpose: Tracks sales opportunities through the deal funnel.
+- `quarter` (VARCHAR): Quarter of opportunity record.
+- `region` (VARCHAR): Target region.
+- `segment` (VARCHAR): Target segment.
+- `pipeline_value` (DECIMAL): Estimated total deal value.
+- `opportunities_created` (INTEGER): Count of new opportunities.
+- `win_rate` (DECIMAL): Fraction of deals that close won.
+- `conversion_rate` (DECIMAL): Pipeline-to-closed-won conversion fraction.
+- `avg_sales_cycle_days` (INTEGER): Average days from creation to close.
+
+### 9. region_targets
+Purpose: Sets quarterly ARR and revenue benchmarks per region.
+- `quarter` (VARCHAR): Target period.
+- `region` (VARCHAR): Target region.
+- `revenue_target` (DECIMAL): Expected recognized revenue in USD.
+- `pipeline_target` (DECIMAL): Expected pipeline value in USD.
+- `churn_target` (DECIMAL): Maximum acceptable churn rate.
+- `gross_margin_target` (DECIMAL): Minimum acceptable gross margin.
+
+## Related Documents
+- [kpi_definitions.md](kpi_definitions.md) — definitions of each metric stored in these tables
+- [known_metric_confusions.md](known_metric_confusions.md) — common misinterpretations of table-level data

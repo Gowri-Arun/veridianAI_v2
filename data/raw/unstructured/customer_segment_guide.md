@@ -26,3 +26,7 @@ Moderate contract value with steady growth. Mid-Market accounts are stable but h
 
 ### SMB
 High-volume, self-serve contracts. SMB accounts are highly sensitive to support response times. When support response times exceed 24 hours, SMB accounts experience rapid silent churn.
+
+## Related Documents
+- [regional_taxonomy.md](regional_taxonomy.md) — how segments map to regions
+- [known_metric_confusions.md](known_metric_confusions.md) — traps in segment-level metric analysis

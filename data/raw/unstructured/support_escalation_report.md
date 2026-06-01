@@ -23,3 +23,8 @@ SMB support queues remained backlogged following support staff reassignments. Re
 
 ## 3. FlowOps Escalation Spike
 The release of FlowOps v2.0 triggered a massive influx of High and Critical severity tickets. Because of the technical complexity of the release, all logged FlowOps tickets in Q4 required engineering escalation.
+
+## Related Documents
+- [q4_apac_revenue_report.md](q4_apac_revenue_report.md) — links APAC support delays to the Enterprise revenue decline
+- [smb_churn_review.md](smb_churn_review.md) — connects support queue latency to the 20% SMB churn rate
+- [flowops_release_incident.md](flowops_release_incident.md) — explains the technical root cause of the FlowOps escalation spike

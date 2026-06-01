@@ -24,3 +24,8 @@ Actual conversion rates dropped below 10% in Q4. Investigation shows that sales 
 
 ## Lengthening Sales Cycles
 The average sales cycle duration for EMEA Enterprise accounts stretched past 160 days. New security and data privacy reviews slowed down procurement, preventing pipeline opportunities from converting to closed contracts.
+
+## Related Documents
+- [sales_cycle_review.md](sales_cycle_review.md) — dives deeper into the regulatory delays lengthening EMEA sales cycles
+- [q4_business_review.md](q4_business_review.md) — summarizes the EMEA pipeline illusion in the broader Q4 context
+- [known_metric_confusions.md](known_metric_confusions.md) — warns against treating inflated pipeline value as committed revenue

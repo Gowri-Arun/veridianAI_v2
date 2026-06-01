@@ -38,6 +38,9 @@ The annualized run-rate of recurring subscription software fees. ARR is calculat
 ### Gross Margin
 Gross Margin measures the profitability of software delivery, calculated as: `(Recognized Revenue - Cost of Goods Sold) / Recognized Revenue`. COGS includes hosting costs and customer support personnel.
 
+### Marketing Spend
+Total marketing budget deployed across channels (Events, Paid Search, Content) including campaign costs and associated lead generation. Marketing spend is tracked per region and quarter. It is a lagging investment — spend in one quarter typically generates pipeline that converts 2–4 quarters later. As seen in APAC Q4_2025, increased spend does not guarantee short-term revenue growth if downstream retention or product stability is compromised.
+
 ## Operational & Sales Funnel Metrics
 
 ### Pipeline Value
@@ -57,3 +60,7 @@ Support tickets of high severity that cannot be resolved by primary agents and a
 
 ### Usage Score
 An indexed metric (0 to 100) that calculates account health based on weekly active users (WAU) and the variety of advanced features accessed.
+
+## Related Documents
+- [schema_definitions.md](schema_definitions.md) — describes the tables that store these metrics
+- [known_metric_confusions.md](known_metric_confusions.md) — traps to avoid when interpreting these KPIs

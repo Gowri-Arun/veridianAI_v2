@@ -24,3 +24,6 @@ A reassignment of support specialists to Enterprise dedicated queues has increas
 
 ## Strategic Outlook
 We are monitoring customer sensitivity to new pricing models being prepared for Q3. Regional heads are advised to ensure customer success teams maintain touchpoints with SMB customers to prevent silent churn.
+
+## Related Documents
+- [pricing_change_memo.md](pricing_change_memo.md) — describes the pricing restructure introduced in Q3 that triggered Enterprise churn

@@ -98,3 +98,47 @@ def test_load_tables_missing_csv(tmp_path):
     # Try to load all tables from tmp_path, should raise FileNotFoundError mentioning customers (or whichever is next required file)
     with pytest.raises(FileNotFoundError, match="customers.csv|missing"):
         load_tables(tmp_path)
+
+
+def test_load_table_rejects_directory(tmp_path):
+    """Passing a directory path to load_table should raise an error.
+    On Windows directories have st_size == 0, so the empty-CSV check triggers."""
+    with pytest.raises((IsADirectoryError, PermissionError, ValueError)):
+        load_table(tmp_path)
+
+
+def test_load_table_rejects_wrong_csv_content(tmp_path):
+    """A CSV with completely wrong columns should be rejected
+    by validate_table_schema."""
+    csv_path = tmp_path / "revenue.csv"
+    csv_path.write_text("a,b,c\n1,2,3\n")
+    with pytest.raises(ValueError, match="missing required columns"):
+        load_table(csv_path)
+
+
+def test_validate_table_schema_all_tables():
+    """validate_table_schema should accept valid DataFrames for all 9 known tables."""
+    from app.ingestion.table_loader import SCHEMAS
+    for table_name, cols in SCHEMAS.items():
+        df = pd.DataFrame({col: ["dummy"] for col in cols})
+        validate_table_schema(table_name, df)
+
+
+def test_load_table_string_and_path():
+    """load_table should accept both string and Path arguments, returning identical DataFrames."""
+    csv_path = Path("data/raw/structured/revenue.csv")
+    df1 = load_table(str(csv_path))
+    df2 = load_table(csv_path)
+    assert len(df1) == len(df2)
+    assert list(df1.columns) == list(df2.columns)
+
+
+def test_load_tables_all_have_required_columns_explicit():
+    """Every loaded table should have all its required schema columns explicitly verified."""
+    from app.ingestion.table_loader import SCHEMAS
+    tables = load_tables(Path("data/raw/structured"))
+    for table_name, df in tables.items():
+        expected_cols = SCHEMAS[table_name]
+        actual_cols = list(df.columns)
+        for col in expected_cols:
+            assert col in actual_cols, f"Missing column '{col}' in table '{table_name}'"

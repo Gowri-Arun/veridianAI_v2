@@ -69,6 +69,92 @@ def test_duckdb_build_integration():
     
     con.close()
 
+def test_duckdb_narrative2_emea_pipeline_illusion():
+    """EMEA pipeline illusion: Q4 pipeline_value high but conversion_rate drops and cycle lengthens."""
+    from scripts.build_duckdb import build_duckdb
+    build_duckdb()
+    db_path = Path("data/warehouse/veridian.duckdb")
+    con = duckdb.connect(str(db_path))
+    res = con.execute("""
+        SELECT quarter,
+               SUM(pipeline_value) AS pipeline_value,
+               AVG(conversion_rate) AS conversion_rate,
+               AVG(avg_sales_cycle_days) AS avg_sales_cycle_days
+        FROM sales_pipeline
+        WHERE region = 'EMEA'
+        GROUP BY quarter
+        ORDER BY quarter
+    """).fetchall()
+    assert len(res) == 4, f"Expected 4 quarters of EMEA pipeline data, got {len(res)}"
+    quarters = [r[0] for r in res]
+    q_data = {r[0]: {"pipeline_value": r[1], "conversion_rate": r[2], "avg_sales_cycle_days": r[3]} for r in res}
+    # Q4 conversion_rate drops vs Q3 (pipeline illusion: high pipeline, low conversion)
+    assert q_data[quarters[-1]]["conversion_rate"] < q_data[quarters[-2]]["conversion_rate"], \
+        "EMEA Q4 conversion_rate should drop (pipeline illusion narrative)"
+    con.close()
+
+
+def test_duckdb_narrative3_smb_churn_increase():
+    """SMB churn rate increases in later quarters (support slowdown narrative)."""
+    from scripts.build_duckdb import build_duckdb
+    build_duckdb()
+    db_path = Path("data/warehouse/veridian.duckdb")
+    con = duckdb.connect(str(db_path))
+    res = con.execute("""
+        SELECT quarter, churn_rate
+        FROM churn
+        WHERE region = 'North America' AND segment = 'SMB'
+        ORDER BY quarter
+    """).fetchall()
+    assert len(res) >= 2, f"Expected at least 2 quarters of SMB churn data, got {len(res)}"
+    quarters = [r[0] for r in res]
+    q_data = {r[0]: r[1] for r in res}
+    assert q_data[quarters[-1]] > q_data[quarters[-2]], \
+        "SMB churn_rate should increase in later quarters (support slowdown narrative)"
+    con.close()
+
+
+def test_duckdb_narrative4_flowops_usage_drop():
+    """FlowOps Enterprise usage score drops in Q4 (release side-effect narrative)."""
+    from scripts.build_duckdb import build_duckdb
+    build_duckdb()
+    db_path = Path("data/warehouse/veridian.duckdb")
+    con = duckdb.connect(str(db_path))
+    res = con.execute("""
+        SELECT quarter,
+               AVG(usage_score) AS usage_score,
+               SUM(active_users) AS active_users,
+               AVG(feature_adoption_rate) AS feature_adoption_rate
+        FROM product_usage
+        WHERE product = 'FlowOps' AND segment = 'Enterprise'
+        GROUP BY quarter
+        ORDER BY quarter
+    """).fetchall()
+    assert len(res) == 4, f"Expected 4 quarters of FlowOps Enterprise data, got {len(res)}"
+    quarters = [r[0] for r in res]
+    q_data = {r[0]: {"usage_score": r[1], "active_users": r[2], "feature_adoption_rate": r[3]} for r in res}
+    # Q4 usage_score drops from Q3
+    assert q_data[quarters[-1]]["usage_score"] < q_data[quarters[-2]]["usage_score"], \
+        "FlowOps Enterprise Q4 usage_score should drop (release side-effect narrative)"
+    con.close()
+
+
+def test_duckdb_cross_table_join():
+    """Revenue-customers JOIN should work across the warehouse."""
+    from scripts.build_duckdb import build_duckdb
+    build_duckdb()
+    db_path = Path("data/warehouse/veridian.duckdb")
+    con = duckdb.connect(str(db_path))
+    res = con.execute("""
+        SELECT r.quarter, r.region, r.segment, r.recognized_revenue
+        FROM revenue r
+        JOIN customers c ON r.region = c.region AND r.segment = c.segment
+        LIMIT 5
+    """).fetchall()
+    assert len(res) > 0, "Cross-table JOIN should return at least 1 row"
+    con.close()
+
+
 def test_table_profiling_integration():
     import json
     from scripts.profile_tables import profile_tables

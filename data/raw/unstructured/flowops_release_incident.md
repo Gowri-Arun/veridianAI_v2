@@ -23,3 +23,8 @@ While SMB accounts with low data volumes were unaffected, Enterprise accounts ex
 
 ## Corrective Actions
 Engineering has identified a patch to resolve the thread contention issue. Customer Success teams must work with Enterprise accounts to implement temporary configurations until the patch is deployed in Q1 2026.
+
+## Related Documents
+- [product_release_notes.md](product_release_notes.md) — describes the FlowOps v2.0 architectural changes that introduced the thread-pool executor
+- [support_escalation_report.md](support_escalation_report.md) — shows the spike in High and Critical severity tickets caused by the release
+- [enterprise_retention_notes.md](enterprise_retention_notes.md) — analyzes the downstream retention impact on Enterprise accounts

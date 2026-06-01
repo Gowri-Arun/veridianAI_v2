@@ -1,6 +1,6 @@
 {
   "number_of_documents": 20,
-  "number_of_chunks": 90,
+  "number_of_chunks": 120,
   "document_types": {
     "reference_document": 5,
     "operations_report": 5,
@@ -65,5 +65,5 @@
     "smb_churn_review.md",
     "support_escalation_report.md"
   ],
-  "generated_at": "2026-05-31T13:55:25.530403+00:00"
+  "generated_at": "2026-06-01T06:19:39.337978+00:00"
 }

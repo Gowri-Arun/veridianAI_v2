@@ -24,3 +24,9 @@ SMB clients encounter minor configuration errors, find support queues unresponsi
 
 ## Tactical Recommendations
 We must establish a dedicated SMB support team. Resolving support response times is the single most critical factor required to stabilize SMB churn in 2026.
+
+## Related Documents
+- [customer_success_notes.md](customer_success_notes.md) — identifies leading usage indicators that predict SMB churn before cancellation
+- [support_escalation_report.md](support_escalation_report.md) — provides the queue latency data that correlates with the 20% churn rate
+- [q3_business_review.md](q3_business_review.md) — shows the Q3 origins of the SMB support friction trend
+- [q4_business_review.md](q4_business_review.md) — places SMB churn alongside other Q4 structural issues

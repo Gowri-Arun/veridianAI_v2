@@ -58,7 +58,7 @@ The chunking pipeline is section-aware and preserves document identity, title, d
 
 Current processed artifacts:
 
-- `document_chunks.jsonl`: 90 document chunks
+- `document_chunks.jsonl`: 120 document chunks
 - `document_metadata.jsonl`: 20 document metadata records
 - `table_profiles.json`: profiles for 9 structured tables
 - `schema_snapshot.json`: document counts, chunk counts, document type counts, quarter coverage, region coverage, segment coverage, related metrics, source files, and generation timestamp
@@ -79,7 +79,7 @@ Expected tables:
 - `subscriptions`
 - `region_targets`
 
-The Week 2 validation gate confirms table presence, key row counts, revenue aggregation, and the APAC Enterprise Q4 revenue decline narrative.
+The `validate_week2_data.py` gate confirms table presence, key row counts, revenue aggregation, JSONL validity, schema snapshot taxonomy, metric coverage, benchmark alignment, banned keyword absence, and the APAC Enterprise Q4 revenue decline business narrative.
 
 ## 9. Benchmark Alignment
 

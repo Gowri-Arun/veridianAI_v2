@@ -24,3 +24,8 @@ The FlowOps v2.0 update caused high-volume pipeline failures for several large a
 
 ## Onboarding Delays
 Onboarding teams report that FlowOps stability issues have delayed customer deployments, pushing back the milestone dates required to recognize revenue for newly signed contracts.
+
+## Related Documents
+- [q4_apac_revenue_report.md](q4_apac_revenue_report.md) — quantifies the APAC Enterprise revenue impact of delayed onboarding milestones
+- [flowops_release_incident.md](flowops_release_incident.md) — details the technical failures that stalled Enterprise customer deployments
+- [support_escalation_report.md](support_escalation_report.md) — documents the escalation volume from Enterprise accounts after the FlowOps release

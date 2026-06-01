@@ -76,6 +76,36 @@ This is the content under section 2.""",
         assert FORBIDDEN_KEYWORD not in chunk.text
         assert FORBIDDEN_KEYWORD not in chunk.chunk_id
 
+def test_chunk_document_avoids_empty_chunks():
+    """chunk_document should return zero chunks for a document with only whitespace."""
+    doc = Document(
+        doc_id="empty_doc",
+        title="Empty",
+        doc_type="doc",
+        text="   \n\n   \n",
+        metadata={"quarter": "All", "region": "Global", "segment": "All", "related_metrics": [], "source": "test"},
+        source_path="/path/empty.md"
+    )
+    chunks = chunk_document(doc)
+    assert len(chunks) == 0, "Should not create chunks from empty text"
+
+
+def test_chunk_document_avoids_empty_section():
+    """A section with only whitespace after a heading should not produce a chunk."""
+    doc = Document(
+        doc_id="sectioned_doc",
+        title="Sectioned",
+        doc_type="doc",
+        text="# Heading A\n\nSome real content.\n\n## Heading B\n   \n\n# Heading C\nMore content.",
+        metadata={"quarter": "All", "region": "Global", "segment": "All", "related_metrics": [], "source": "test"},
+        source_path="/path/sectioned.md"
+    )
+    chunks = chunk_document(doc)
+    # Should produce 2 chunks (Heading A content and Heading C content), not a chunk for empty Heading B
+    assert len(chunks) == 2
+    assert FORBIDDEN_KEYWORD not in " ".join(c.text for c in chunks)
+
+
 def test_chunk_documents_works_for_multiple():
     doc1 = Document(
         doc_id="doc1",

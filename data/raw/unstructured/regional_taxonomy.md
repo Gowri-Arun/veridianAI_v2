@@ -28,3 +28,7 @@ APAC is an emerging market presenting high potential. Historically, APAC has suf
 
 ### LATAM (Latin America)
 A highly segment-focused market where Mid-Market accounts drive the majority of regional bookings. Operations are highly cost-sensitive, requiring efficient support SLA management.
+
+## Related Documents
+- [customer_segment_guide.md](customer_segment_guide.md) — details on segment behavior across regions
+- [kpi_definitions.md](kpi_definitions.md) — definitions of metrics used in regional reporting

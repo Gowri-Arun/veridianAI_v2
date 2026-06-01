@@ -23,3 +23,7 @@ Friction in self-serve onboarding, combined with support response times exceedin
 
 ## Proposed CS Interventions
 We must automate alerts in our CRM when an SMB account's weekly usage score drops below 50. Reallocating support resources back to the general queue is necessary to resolve response delays.
+
+## Related Documents
+- [smb_churn_review.md](smb_churn_review.md) — confirms the correlation between support delays and SMB churn at 20%
+- [support_escalation_report.md](support_escalation_report.md) — provides the operational data on SMB ticket response times

@@ -28,3 +28,9 @@ The Q4 release of FlowOps v2.0 caused critical technical issues for high-through
 
 ## 4. SMB Churn Escalation
 SMB segment churn reached a peak of 20% due to ongoing support queue delays, completing a trend that started in Q2.
+
+## Related Documents
+- [q4_apac_revenue_report.md](q4_apac_revenue_report.md) — drills into the APAC Enterprise revenue decline mentioned in section 1
+- [emea_pipeline_review.md](emea_pipeline_review.md) — provides the detailed pipeline data behind the EMEA pipeline illusion in section 2
+- [smb_churn_review.md](smb_churn_review.md) — contains the full analysis of the 20% SMB churn rate in section 4
+- [flowops_release_incident.md](flowops_release_incident.md) — documents the technical root cause of the FlowOps instability in section 3

@@ -28,3 +28,7 @@ All key regions met or exceeded their initial recognized revenue targets. Insigh
 
 ## Regional Operational Highlights
 North America and EMEA led bookings growth. Support escalations remained low, with an average initial response time of 2.4 hours globally. There are no major technical disruptions to report.
+
+## Related Documents
+- [kpi_definitions.md](kpi_definitions.md) — defines all metrics referenced in this review
+- [regional_taxonomy.md](regional_taxonomy.md) — regional profiles for the markets discussed
