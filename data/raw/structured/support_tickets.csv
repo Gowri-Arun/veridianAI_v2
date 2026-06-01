@@ -1,0 +1,448 @@
+ticket_id,customer_id,quarter,region,segment,product,issue_type,severity,escalated,response_time_hours,resolution_time_hours
+TKT_0001,CUST_005,Q1_2025,APAC,SMB,InsightOS,Export CSV Failed,Low,False,2.0,15.9
+TKT_0002,CUST_005,Q1_2025,APAC,SMB,InsightOS,UI Glitch,Medium,False,3.4,7.4
+TKT_0003,CUST_007,Q1_2025,APAC,SMB,FlowOps,v2.0 Migration Memory Leak,Medium,False,2.3,14.0
+TKT_0004,CUST_009,Q1_2025,North America,Enterprise,InsightOS,UI Glitch,High,False,0.6,13.0
+TKT_0005,CUST_009,Q1_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Medium,False,3.7,7.8
+TKT_0006,CUST_015,Q1_2025,APAC,Mid-Market,MetricHub,Incorrect Sum Aggregation,Medium,False,3.8,11.7
+TKT_0007,CUST_015,Q1_2025,APAC,Mid-Market,MetricHub,Semantic Layer Sync Failed,Low,False,2.3,19.5
+TKT_0008,CUST_020,Q1_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Medium,False,1.6,21.0
+TKT_0009,CUST_033,Q1_2025,APAC,Mid-Market,InsightOS,User Access Management,Low,False,2.4,23.7
+TKT_0010,CUST_036,Q1_2025,North America,Mid-Market,FlowOps,API Rate Limit Exceeded,Low,False,2.1,14.0
+TKT_0011,CUST_037,Q1_2025,EMEA,SMB,InsightOS,UI Glitch,Medium,False,2.5,22.1
+TKT_0012,CUST_038,Q1_2025,APAC,Mid-Market,InsightOS,Dashboard Load Timeout,Low,False,2.8,12.2
+TKT_0013,CUST_038,Q1_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,High,False,3.7,10.3
+TKT_0014,CUST_039,Q1_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,Low,False,2.0,20.6
+TKT_0015,CUST_042,Q1_2025,EMEA,Enterprise,MetricHub,SQL Generation Error,Low,False,2.0,7.3
+TKT_0016,CUST_045,Q1_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Medium,False,3.4,15.3
+TKT_0017,CUST_050,Q1_2025,APAC,SMB,InsightOS,Dashboard Load Timeout,Low,True,1.8,5.8
+TKT_0018,CUST_052,Q1_2025,North America,Mid-Market,InsightOS,Export CSV Failed,Medium,False,3.5,8.5
+TKT_0019,CUST_063,Q1_2025,North America,Mid-Market,InsightOS,Export CSV Failed,Medium,False,2.6,9.1
+TKT_0020,CUST_067,Q1_2025,APAC,SMB,MetricHub,SQL Generation Error,High,False,1.2,5.7
+TKT_0021,CUST_067,Q1_2025,APAC,SMB,MetricHub,Semantic Layer Sync Failed,High,False,1.1,6.8
+TKT_0022,CUST_077,Q1_2025,North America,SMB,MetricHub,Incorrect Sum Aggregation,Low,False,3.9,15.2
+TKT_0023,CUST_079,Q1_2025,EMEA,Enterprise,FlowOps,v2.0 Migration Memory Leak,Medium,False,2.8,5.5
+TKT_0024,CUST_083,Q1_2025,EMEA,SMB,InsightOS,UI Glitch,Low,False,0.9,11.1
+TKT_0025,CUST_086,Q1_2025,EMEA,Enterprise,MetricHub,SQL Generation Error,Low,False,3.4,4.8
+TKT_0026,CUST_090,Q1_2025,EMEA,Enterprise,FlowOps,Connection Lost to Database,Medium,False,1.3,21.7
+TKT_0027,CUST_095,Q1_2025,North America,SMB,MetricHub,SQL Generation Error,Medium,False,3.1,20.5
+TKT_0028,CUST_097,Q1_2025,EMEA,Mid-Market,InsightOS,Dashboard Load Timeout,Medium,False,3.7,9.0
+TKT_0029,CUST_097,Q1_2025,EMEA,Mid-Market,FlowOps,Connection Lost to Database,Medium,False,1.6,15.5
+TKT_0030,CUST_109,Q1_2025,APAC,Enterprise,FlowOps,v2.0 Migration Memory Leak,Low,False,0.6,16.1
+TKT_0031,CUST_113,Q1_2025,LATAM,Enterprise,InsightOS,User Access Management,Low,False,2.4,12.3
+TKT_0032,CUST_114,Q1_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Medium,False,0.8,11.9
+TKT_0033,CUST_116,Q1_2025,LATAM,SMB,MetricHub,Semantic Layer Sync Failed,Low,False,3.4,23.0
+TKT_0034,CUST_122,Q1_2025,LATAM,SMB,InsightOS,UI Glitch,Low,False,3.1,22.9
+TKT_0035,CUST_125,Q1_2025,APAC,Mid-Market,InsightOS,Export CSV Failed,Medium,True,0.7,14.7
+TKT_0036,CUST_130,Q1_2025,EMEA,Enterprise,MetricHub,Caching Stale Data,Low,False,1.6,9.2
+TKT_0037,CUST_132,Q1_2025,APAC,Enterprise,InsightOS,Export CSV Failed,Medium,False,1.5,10.6
+TKT_0038,CUST_133,Q1_2025,APAC,Enterprise,InsightOS,UI Glitch,Medium,False,2.9,15.1
+TKT_0039,CUST_137,Q1_2025,EMEA,Mid-Market,MetricHub,Incorrect Sum Aggregation,Low,False,0.9,7.4
+TKT_0040,CUST_138,Q1_2025,North America,SMB,FlowOps,Connection Lost to Database,High,False,3.9,10.9
+TKT_0041,CUST_141,Q1_2025,LATAM,Enterprise,MetricHub,Incorrect Sum Aggregation,High,False,1.0,14.9
+TKT_0042,CUST_148,Q1_2025,EMEA,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,1.1,11.0
+TKT_0043,CUST_148,Q1_2025,EMEA,Mid-Market,InsightOS,Export CSV Failed,Medium,False,3.9,19.4
+TKT_0044,CUST_160,Q1_2025,North America,Mid-Market,FlowOps,Pipeline Execution Stalled,Medium,False,1.2,17.0
+TKT_0045,CUST_160,Q1_2025,North America,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,2.3,5.2
+TKT_0046,CUST_175,Q1_2025,North America,Enterprise,InsightOS,UI Glitch,Medium,False,2.8,8.2
+TKT_0047,CUST_177,Q1_2025,North America,SMB,MetricHub,Incorrect Sum Aggregation,Low,False,1.9,6.5
+TKT_0048,CUST_177,Q1_2025,North America,SMB,InsightOS,Dashboard Load Timeout,Medium,False,3.4,13.7
+TKT_0049,CUST_184,Q1_2025,LATAM,SMB,InsightOS,User Access Management,Low,False,2.4,20.8
+TKT_0050,CUST_184,Q1_2025,LATAM,SMB,MetricHub,SQL Generation Error,High,False,1.0,21.0
+TKT_0051,CUST_194,Q1_2025,North America,SMB,FlowOps,API Rate Limit Exceeded,High,False,0.9,12.8
+TKT_0052,CUST_201,Q1_2025,North America,SMB,FlowOps,Connection Lost to Database,Medium,False,3.6,16.9
+TKT_0053,CUST_201,Q1_2025,North America,SMB,FlowOps,Connection Lost to Database,Low,False,0.5,10.5
+TKT_0054,CUST_203,Q1_2025,APAC,SMB,InsightOS,UI Glitch,Critical,False,2.3,5.7
+TKT_0055,CUST_210,Q1_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Critical,False,2.4,21.5
+TKT_0056,CUST_215,Q1_2025,North America,Enterprise,MetricHub,SQL Generation Error,Medium,False,1.8,18.8
+TKT_0057,CUST_225,Q1_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,Medium,False,1.2,6.5
+TKT_0058,CUST_235,Q1_2025,APAC,SMB,MetricHub,Incorrect Sum Aggregation,High,True,2.2,17.8
+TKT_0059,CUST_243,Q1_2025,LATAM,SMB,InsightOS,UI Glitch,Medium,False,1.7,22.8
+TKT_0060,CUST_243,Q1_2025,LATAM,SMB,MetricHub,Incorrect Sum Aggregation,Medium,False,3.9,20.7
+TKT_0061,CUST_252,Q1_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,Low,False,2.1,5.5
+TKT_0062,CUST_253,Q1_2025,LATAM,Mid-Market,InsightOS,Dashboard Load Timeout,Low,False,3.8,21.5
+TKT_0063,CUST_260,Q1_2025,APAC,Mid-Market,MetricHub,SQL Generation Error,Medium,False,1.2,7.6
+TKT_0064,CUST_260,Q1_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,Medium,False,3.5,9.9
+TKT_0065,CUST_262,Q1_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,Medium,False,0.6,11.3
+TKT_0066,CUST_262,Q1_2025,LATAM,Enterprise,FlowOps,v2.0 Migration Memory Leak,Low,False,1.5,14.6
+TKT_0067,CUST_271,Q1_2025,North America,SMB,MetricHub,Incorrect Sum Aggregation,Medium,False,1.2,10.3
+TKT_0068,CUST_271,Q1_2025,North America,SMB,MetricHub,Semantic Layer Sync Failed,Low,False,1.2,17.6
+TKT_0069,CUST_274,Q1_2025,LATAM,Mid-Market,MetricHub,Incorrect Sum Aggregation,Medium,False,4.0,4.2
+TKT_0070,CUST_274,Q1_2025,LATAM,Mid-Market,InsightOS,Dashboard Load Timeout,Low,False,2.7,10.8
+TKT_0071,CUST_275,Q1_2025,EMEA,SMB,InsightOS,User Access Management,Medium,False,2.6,4.5
+TKT_0072,CUST_275,Q1_2025,EMEA,SMB,MetricHub,Incorrect Sum Aggregation,Low,False,2.1,19.0
+TKT_0073,CUST_277,Q1_2025,North America,SMB,FlowOps,Connection Lost to Database,Medium,False,3.3,15.1
+TKT_0074,CUST_277,Q1_2025,North America,SMB,FlowOps,Connection Lost to Database,Medium,False,2.6,12.3
+TKT_0075,CUST_279,Q1_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Medium,False,1.1,5.2
+TKT_0076,CUST_286,Q1_2025,APAC,Mid-Market,MetricHub,SQL Generation Error,Low,False,0.7,12.0
+TKT_0077,CUST_292,Q1_2025,APAC,SMB,FlowOps,Pipeline Execution Stalled,Medium,False,1.2,9.2
+TKT_0078,CUST_293,Q1_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,High,False,2.3,13.0
+TKT_0079,CUST_297,Q1_2025,North America,SMB,InsightOS,Export CSV Failed,Medium,False,2.9,7.3
+TKT_0080,CUST_301,Q1_2025,APAC,Mid-Market,MetricHub,Caching Stale Data,Low,False,1.1,5.1
+TKT_0081,CUST_305,Q1_2025,North America,SMB,MetricHub,Caching Stale Data,Critical,True,3.9,15.0
+TKT_0082,CUST_306,Q1_2025,LATAM,Enterprise,InsightOS,Dashboard Load Timeout,Low,True,2.7,8.2
+TKT_0083,CUST_310,Q1_2025,EMEA,Mid-Market,InsightOS,Dashboard Load Timeout,Medium,False,1.6,17.7
+TKT_0084,CUST_316,Q1_2025,North America,Enterprise,MetricHub,Caching Stale Data,High,False,3.1,11.4
+TKT_0085,CUST_316,Q1_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Low,False,3.9,21.8
+TKT_0086,CUST_325,Q1_2025,LATAM,Mid-Market,FlowOps,API Rate Limit Exceeded,Medium,False,0.9,12.2
+TKT_0087,CUST_333,Q1_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Low,False,0.7,20.5
+TKT_0088,CUST_344,Q1_2025,EMEA,Mid-Market,InsightOS,UI Glitch,Low,False,1.1,10.4
+TKT_0089,CUST_346,Q1_2025,North America,Enterprise,InsightOS,UI Glitch,Low,False,1.0,15.5
+TKT_0090,CUST_346,Q1_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Medium,False,1.9,14.4
+TKT_0091,CUST_350,Q1_2025,North America,Mid-Market,MetricHub,SQL Generation Error,Medium,False,2.6,9.9
+TKT_0092,CUST_352,Q1_2025,LATAM,Enterprise,FlowOps,API Rate Limit Exceeded,Low,False,2.6,15.8
+TKT_0093,CUST_354,Q1_2025,APAC,SMB,MetricHub,SQL Generation Error,Medium,False,2.5,4.3
+TKT_0094,CUST_356,Q1_2025,North America,Mid-Market,InsightOS,UI Glitch,Low,False,1.4,10.7
+TKT_0095,CUST_367,Q1_2025,LATAM,Mid-Market,InsightOS,User Access Management,Low,True,3.7,4.5
+TKT_0096,CUST_397,Q1_2025,LATAM,Enterprise,InsightOS,UI Glitch,Low,False,3.6,20.9
+TKT_0097,CUST_400,Q1_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Low,False,0.8,16.0
+TKT_0098,CUST_400,Q1_2025,North America,Enterprise,MetricHub,Caching Stale Data,Medium,False,3.5,19.7
+TKT_0099,CUST_009,Q2_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Low,True,2.1,5.7
+TKT_0100,CUST_022,Q2_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Critical,False,0.8,7.9
+TKT_0101,CUST_033,Q2_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,Medium,False,1.0,10.1
+TKT_0102,CUST_033,Q2_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Medium,False,1.6,5.4
+TKT_0103,CUST_042,Q2_2025,EMEA,Enterprise,InsightOS,UI Glitch,Low,True,1.4,14.6
+TKT_0104,CUST_048,Q2_2025,EMEA,Mid-Market,MetricHub,Caching Stale Data,Medium,False,3.5,14.6
+TKT_0105,CUST_048,Q2_2025,EMEA,Mid-Market,InsightOS,User Access Management,Medium,False,3.6,21.1
+TKT_0106,CUST_054,Q2_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,High,False,0.5,11.5
+TKT_0107,CUST_058,Q2_2025,APAC,SMB,MetricHub,Incorrect Sum Aggregation,Medium,False,0.9,5.4
+TKT_0108,CUST_058,Q2_2025,APAC,SMB,FlowOps,API Rate Limit Exceeded,High,False,0.9,14.2
+TKT_0109,CUST_059,Q2_2025,APAC,SMB,InsightOS,User Access Management,Medium,False,0.6,23.9
+TKT_0110,CUST_059,Q2_2025,APAC,SMB,MetricHub,Incorrect Sum Aggregation,Low,False,0.6,11.8
+TKT_0111,CUST_067,Q2_2025,APAC,SMB,FlowOps,API Rate Limit Exceeded,High,False,2.5,9.6
+TKT_0112,CUST_071,Q2_2025,North America,SMB,MetricHub,Incorrect Sum Aggregation,High,False,3.8,6.4
+TKT_0113,CUST_071,Q2_2025,North America,SMB,FlowOps,v2.0 Migration Memory Leak,Low,False,1.3,8.7
+TKT_0114,CUST_072,Q2_2025,APAC,Enterprise,InsightOS,User Access Management,Low,False,1.8,21.5
+TKT_0115,CUST_086,Q2_2025,EMEA,Enterprise,MetricHub,Semantic Layer Sync Failed,Low,False,2.4,5.6
+TKT_0116,CUST_089,Q2_2025,LATAM,Enterprise,MetricHub,Semantic Layer Sync Failed,Low,False,3.2,22.7
+TKT_0117,CUST_090,Q2_2025,EMEA,Enterprise,FlowOps,Connection Lost to Database,Low,False,1.5,11.5
+TKT_0118,CUST_090,Q2_2025,EMEA,Enterprise,MetricHub,SQL Generation Error,Medium,False,2.9,7.4
+TKT_0119,CUST_099,Q2_2025,APAC,Enterprise,FlowOps,v2.0 Migration Memory Leak,Low,False,3.8,11.0
+TKT_0120,CUST_102,Q2_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,Medium,False,3.9,11.6
+TKT_0121,CUST_102,Q2_2025,North America,Mid-Market,InsightOS,UI Glitch,Low,False,1.2,6.9
+TKT_0122,CUST_132,Q2_2025,APAC,Enterprise,FlowOps,Pipeline Execution Stalled,Medium,False,3.0,11.2
+TKT_0123,CUST_134,Q2_2025,EMEA,Mid-Market,InsightOS,Dashboard Load Timeout,Low,False,0.5,13.7
+TKT_0124,CUST_136,Q2_2025,EMEA,Enterprise,MetricHub,Semantic Layer Sync Failed,Critical,False,3.1,14.9
+TKT_0125,CUST_138,Q2_2025,North America,SMB,MetricHub,SQL Generation Error,Low,False,1.6,11.4
+TKT_0126,CUST_138,Q2_2025,North America,SMB,InsightOS,Export CSV Failed,Low,False,3.1,15.9
+TKT_0127,CUST_139,Q2_2025,EMEA,SMB,FlowOps,Pipeline Execution Stalled,Medium,False,3.1,22.4
+TKT_0128,CUST_141,Q2_2025,LATAM,Enterprise,InsightOS,User Access Management,Low,False,2.4,10.0
+TKT_0129,CUST_154,Q2_2025,EMEA,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,2.7,13.6
+TKT_0130,CUST_172,Q2_2025,APAC,Mid-Market,MetricHub,Caching Stale Data,Low,False,1.7,11.8
+TKT_0131,CUST_174,Q2_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Medium,False,3.5,12.4
+TKT_0132,CUST_174,Q2_2025,APAC,Mid-Market,MetricHub,Incorrect Sum Aggregation,High,False,2.2,7.6
+TKT_0133,CUST_175,Q2_2025,North America,Enterprise,MetricHub,Caching Stale Data,Low,False,2.4,15.7
+TKT_0134,CUST_175,Q2_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,High,True,1.7,17.6
+TKT_0135,CUST_182,Q2_2025,APAC,Enterprise,InsightOS,Export CSV Failed,High,False,3.8,18.8
+TKT_0136,CUST_188,Q2_2025,North America,SMB,InsightOS,Dashboard Load Timeout,Medium,False,2.2,5.1
+TKT_0137,CUST_188,Q2_2025,North America,SMB,InsightOS,Export CSV Failed,Medium,False,3.6,15.7
+TKT_0138,CUST_192,Q2_2025,LATAM,Mid-Market,FlowOps,Connection Lost to Database,Low,False,1.9,9.6
+TKT_0139,CUST_197,Q2_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,High,False,3.3,6.7
+TKT_0140,CUST_203,Q2_2025,APAC,SMB,MetricHub,Caching Stale Data,High,True,2.4,18.8
+TKT_0141,CUST_215,Q2_2025,North America,Enterprise,InsightOS,Dashboard Load Timeout,Medium,True,2.5,6.4
+TKT_0142,CUST_232,Q2_2025,EMEA,Enterprise,InsightOS,User Access Management,Critical,False,3.5,16.0
+TKT_0143,CUST_240,Q2_2025,APAC,SMB,InsightOS,UI Glitch,Medium,False,2.6,14.9
+TKT_0144,CUST_251,Q2_2025,EMEA,SMB,MetricHub,Caching Stale Data,Medium,False,2.5,19.3
+TKT_0145,CUST_252,Q2_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,High,False,1.0,10.2
+TKT_0146,CUST_275,Q2_2025,EMEA,SMB,InsightOS,User Access Management,Low,False,3.7,11.8
+TKT_0147,CUST_276,Q2_2025,EMEA,Enterprise,MetricHub,Incorrect Sum Aggregation,Medium,False,2.9,11.3
+TKT_0148,CUST_276,Q2_2025,EMEA,Enterprise,MetricHub,Caching Stale Data,Low,False,3.0,19.3
+TKT_0149,CUST_278,Q2_2025,North America,SMB,FlowOps,Connection Lost to Database,Low,False,1.5,10.1
+TKT_0150,CUST_280,Q2_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Low,False,2.0,21.4
+TKT_0151,CUST_287,Q2_2025,EMEA,Mid-Market,MetricHub,Caching Stale Data,High,False,1.5,11.4
+TKT_0152,CUST_290,Q2_2025,North America,SMB,MetricHub,Caching Stale Data,Medium,True,1.7,19.9
+TKT_0153,CUST_294,Q2_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,Medium,False,3.1,10.2
+TKT_0154,CUST_306,Q2_2025,LATAM,Enterprise,FlowOps,Connection Lost to Database,Medium,False,0.6,18.5
+TKT_0155,CUST_306,Q2_2025,LATAM,Enterprise,FlowOps,Connection Lost to Database,Low,False,0.7,20.5
+TKT_0156,CUST_312,Q2_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,Medium,False,1.1,10.7
+TKT_0157,CUST_314,Q2_2025,LATAM,SMB,InsightOS,User Access Management,Low,False,2.1,18.2
+TKT_0158,CUST_317,Q2_2025,EMEA,Mid-Market,MetricHub,SQL Generation Error,Low,True,0.6,19.5
+TKT_0159,CUST_317,Q2_2025,EMEA,Mid-Market,MetricHub,Caching Stale Data,Medium,False,2.0,4.5
+TKT_0160,CUST_330,Q2_2025,APAC,SMB,MetricHub,Incorrect Sum Aggregation,Low,False,1.0,15.6
+TKT_0161,CUST_330,Q2_2025,APAC,SMB,InsightOS,UI Glitch,Low,False,4.0,5.1
+TKT_0162,CUST_335,Q2_2025,APAC,SMB,InsightOS,UI Glitch,High,False,3.0,11.9
+TKT_0163,CUST_338,Q2_2025,North America,Mid-Market,FlowOps,Pipeline Execution Stalled,Medium,False,2.6,22.8
+TKT_0164,CUST_338,Q2_2025,North America,Mid-Market,InsightOS,UI Glitch,Low,False,2.9,19.0
+TKT_0165,CUST_344,Q2_2025,EMEA,Mid-Market,InsightOS,User Access Management,Low,False,0.7,9.4
+TKT_0166,CUST_344,Q2_2025,EMEA,Mid-Market,MetricHub,Incorrect Sum Aggregation,Low,True,2.8,6.7
+TKT_0167,CUST_346,Q2_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Low,False,0.6,10.7
+TKT_0168,CUST_354,Q2_2025,APAC,SMB,MetricHub,Semantic Layer Sync Failed,Medium,False,2.5,21.3
+TKT_0169,CUST_378,Q2_2025,APAC,Mid-Market,InsightOS,Dashboard Load Timeout,Low,False,2.2,10.4
+TKT_0170,CUST_378,Q2_2025,APAC,Mid-Market,MetricHub,Incorrect Sum Aggregation,Low,False,1.9,12.9
+TKT_0171,CUST_382,Q2_2025,North America,Mid-Market,FlowOps,API Rate Limit Exceeded,Low,False,0.7,15.9
+TKT_0172,CUST_382,Q2_2025,North America,Mid-Market,FlowOps,API Rate Limit Exceeded,Low,False,0.6,20.9
+TKT_0173,CUST_386,Q2_2025,North America,Enterprise,InsightOS,Export CSV Failed,Low,False,2.4,6.5
+TKT_0174,CUST_391,Q2_2025,LATAM,SMB,InsightOS,UI Glitch,Low,False,3.8,20.0
+TKT_0175,CUST_397,Q2_2025,LATAM,Enterprise,InsightOS,UI Glitch,Low,False,1.6,5.2
+TKT_0176,CUST_397,Q2_2025,LATAM,Enterprise,MetricHub,Incorrect Sum Aggregation,Low,False,1.7,17.9
+TKT_0177,CUST_399,Q2_2025,North America,Mid-Market,MetricHub,SQL Generation Error,Critical,False,3.5,5.1
+TKT_0178,CUST_399,Q2_2025,North America,Mid-Market,InsightOS,Dashboard Load Timeout,Medium,False,2.1,11.9
+TKT_0179,CUST_009,Q3_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Low,False,0.9,17.0
+TKT_0180,CUST_012,Q3_2025,LATAM,Enterprise,FlowOps,Connection Lost to Database,Low,False,2.7,10.0
+TKT_0181,CUST_012,Q3_2025,LATAM,Enterprise,MetricHub,SQL Generation Error,Medium,False,0.6,14.0
+TKT_0182,CUST_016,Q3_2025,APAC,SMB,InsightOS,Export CSV Failed,High,False,31.0,119.9
+TKT_0183,CUST_019,Q3_2025,EMEA,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,3.7,12.7
+TKT_0184,CUST_019,Q3_2025,EMEA,Mid-Market,InsightOS,Dashboard Load Timeout,Medium,False,1.6,16.4
+TKT_0185,CUST_021,Q3_2025,North America,Mid-Market,MetricHub,Caching Stale Data,Low,False,3.9,13.1
+TKT_0186,CUST_022,Q3_2025,APAC,Mid-Market,InsightOS,User Access Management,High,False,2.0,13.3
+TKT_0187,CUST_022,Q3_2025,APAC,Mid-Market,InsightOS,UI Glitch,High,True,2.9,18.5
+TKT_0188,CUST_025,Q3_2025,EMEA,SMB,FlowOps,API Rate Limit Exceeded,Medium,False,47.5,113.7
+TKT_0189,CUST_028,Q3_2025,EMEA,Enterprise,InsightOS,UI Glitch,Medium,True,2.0,13.4
+TKT_0190,CUST_041,Q3_2025,APAC,SMB,FlowOps,v2.0 Migration Memory Leak,Medium,True,44.7,80.3
+TKT_0191,CUST_047,Q3_2025,EMEA,Enterprise,InsightOS,Export CSV Failed,Medium,False,0.9,22.2
+TKT_0192,CUST_047,Q3_2025,EMEA,Enterprise,InsightOS,UI Glitch,Medium,True,3.5,12.8
+TKT_0193,CUST_054,Q3_2025,LATAM,Enterprise,FlowOps,API Rate Limit Exceeded,Medium,False,0.6,5.0
+TKT_0194,CUST_068,Q3_2025,North America,Enterprise,MetricHub,Caching Stale Data,Medium,False,3.9,16.6
+TKT_0195,CUST_070,Q3_2025,LATAM,Enterprise,MetricHub,Caching Stale Data,Medium,False,3.0,20.7
+TKT_0196,CUST_074,Q3_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Critical,True,2.5,7.3
+TKT_0197,CUST_076,Q3_2025,North America,Enterprise,InsightOS,User Access Management,High,False,1.0,19.2
+TKT_0198,CUST_089,Q3_2025,LATAM,Enterprise,InsightOS,Export CSV Failed,Low,False,1.4,22.3
+TKT_0199,CUST_089,Q3_2025,LATAM,Enterprise,InsightOS,Export CSV Failed,High,False,2.8,22.1
+TKT_0200,CUST_090,Q3_2025,EMEA,Enterprise,InsightOS,User Access Management,High,False,1.6,7.8
+TKT_0201,CUST_102,Q3_2025,North America,Mid-Market,MetricHub,Caching Stale Data,Low,False,2.4,17.5
+TKT_0202,CUST_103,Q3_2025,EMEA,SMB,InsightOS,UI Glitch,Low,False,43.0,119.4
+TKT_0203,CUST_104,Q3_2025,EMEA,Mid-Market,MetricHub,Caching Stale Data,Critical,False,2.9,8.9
+TKT_0204,CUST_112,Q3_2025,APAC,SMB,MetricHub,Caching Stale Data,High,False,40.1,66.2
+TKT_0205,CUST_114,Q3_2025,North America,Enterprise,MetricHub,SQL Generation Error,Medium,False,3.0,4.6
+TKT_0206,CUST_117,Q3_2025,North America,SMB,FlowOps,v2.0 Migration Memory Leak,Medium,False,18.5,113.5
+TKT_0207,CUST_117,Q3_2025,North America,SMB,MetricHub,Caching Stale Data,Low,False,38.4,65.0
+TKT_0208,CUST_123,Q3_2025,EMEA,Enterprise,MetricHub,SQL Generation Error,Low,False,1.2,9.2
+TKT_0209,CUST_132,Q3_2025,APAC,Enterprise,FlowOps,API Rate Limit Exceeded,Medium,False,2.2,20.9
+TKT_0210,CUST_133,Q3_2025,APAC,Enterprise,FlowOps,API Rate Limit Exceeded,Low,False,2.3,6.6
+TKT_0211,CUST_147,Q3_2025,North America,SMB,MetricHub,Semantic Layer Sync Failed,Low,False,36.7,111.5
+TKT_0212,CUST_153,Q3_2025,APAC,Mid-Market,MetricHub,Caching Stale Data,Medium,False,1.2,19.0
+TKT_0213,CUST_192,Q3_2025,LATAM,Mid-Market,MetricHub,SQL Generation Error,High,False,1.1,10.0
+TKT_0214,CUST_199,Q3_2025,LATAM,SMB,MetricHub,Semantic Layer Sync Failed,Low,False,27.2,117.3
+TKT_0215,CUST_199,Q3_2025,LATAM,SMB,FlowOps,Pipeline Execution Stalled,Low,False,30.4,55.2
+TKT_0216,CUST_211,Q3_2025,EMEA,SMB,FlowOps,API Rate Limit Exceeded,Low,True,22.4,59.5
+TKT_0217,CUST_211,Q3_2025,EMEA,SMB,InsightOS,UI Glitch,Low,False,36.7,57.6
+TKT_0218,CUST_219,Q3_2025,North America,Mid-Market,FlowOps,Pipeline Execution Stalled,Medium,False,3.3,21.0
+TKT_0219,CUST_219,Q3_2025,North America,Mid-Market,InsightOS,UI Glitch,Critical,True,1.0,14.8
+TKT_0220,CUST_227,Q3_2025,LATAM,SMB,InsightOS,Dashboard Load Timeout,High,True,33.0,53.2
+TKT_0221,CUST_228,Q3_2025,EMEA,Mid-Market,MetricHub,SQL Generation Error,Medium,False,2.8,7.4
+TKT_0222,CUST_228,Q3_2025,EMEA,Mid-Market,FlowOps,Pipeline Execution Stalled,Medium,False,3.9,14.4
+TKT_0223,CUST_231,Q3_2025,North America,Mid-Market,InsightOS,User Access Management,High,False,3.1,21.3
+TKT_0224,CUST_234,Q3_2025,EMEA,Mid-Market,InsightOS,User Access Management,Low,False,3.7,19.3
+TKT_0225,CUST_247,Q3_2025,EMEA,Mid-Market,MetricHub,SQL Generation Error,Low,False,2.1,6.3
+TKT_0226,CUST_247,Q3_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,High,False,0.8,7.8
+TKT_0227,CUST_262,Q3_2025,LATAM,Enterprise,InsightOS,Export CSV Failed,Medium,False,3.9,19.5
+TKT_0228,CUST_262,Q3_2025,LATAM,Enterprise,FlowOps,v2.0 Migration Memory Leak,Medium,False,2.1,8.2
+TKT_0229,CUST_276,Q3_2025,EMEA,Enterprise,MetricHub,Semantic Layer Sync Failed,Low,False,3.8,22.3
+TKT_0230,CUST_277,Q3_2025,North America,SMB,MetricHub,Caching Stale Data,Medium,False,23.7,68.3
+TKT_0231,CUST_277,Q3_2025,North America,SMB,InsightOS,Export CSV Failed,Medium,False,35.5,100.9
+TKT_0232,CUST_280,Q3_2025,North America,Enterprise,FlowOps,Pipeline Execution Stalled,Critical,False,2.9,5.0
+TKT_0233,CUST_280,Q3_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Low,False,3.5,16.1
+TKT_0234,CUST_287,Q3_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Medium,False,0.9,21.0
+TKT_0235,CUST_293,Q3_2025,North America,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,1.1,17.5
+TKT_0236,CUST_294,Q3_2025,EMEA,SMB,FlowOps,Connection Lost to Database,Low,False,43.1,59.1
+TKT_0237,CUST_295,Q3_2025,APAC,SMB,InsightOS,UI Glitch,Low,False,19.7,58.2
+TKT_0238,CUST_295,Q3_2025,APAC,SMB,FlowOps,Connection Lost to Database,Low,False,18.3,111.5
+TKT_0239,CUST_296,Q3_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,Medium,False,0.9,11.8
+TKT_0240,CUST_301,Q3_2025,APAC,Mid-Market,MetricHub,SQL Generation Error,Medium,False,2.9,7.1
+TKT_0241,CUST_303,Q3_2025,EMEA,SMB,FlowOps,API Rate Limit Exceeded,Medium,False,46.4,66.6
+TKT_0242,CUST_303,Q3_2025,EMEA,SMB,MetricHub,SQL Generation Error,Medium,True,30.0,73.3
+TKT_0243,CUST_308,Q3_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,Medium,False,1.8,6.1
+TKT_0244,CUST_308,Q3_2025,EMEA,Mid-Market,InsightOS,Export CSV Failed,Low,False,3.2,11.8
+TKT_0245,CUST_310,Q3_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Low,False,2.8,17.0
+TKT_0246,CUST_318,Q3_2025,APAC,Enterprise,InsightOS,User Access Management,Medium,True,2.1,7.5
+TKT_0247,CUST_320,Q3_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,Medium,False,3.4,8.3
+TKT_0248,CUST_326,Q3_2025,North America,Mid-Market,FlowOps,API Rate Limit Exceeded,Low,False,1.7,22.6
+TKT_0249,CUST_326,Q3_2025,North America,Mid-Market,InsightOS,User Access Management,Medium,False,2.8,9.1
+TKT_0250,CUST_332,Q3_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,Medium,False,2.0,23.3
+TKT_0251,CUST_343,Q3_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Medium,False,1.8,12.9
+TKT_0252,CUST_343,Q3_2025,APAC,Mid-Market,MetricHub,Caching Stale Data,Medium,False,1.8,14.5
+TKT_0253,CUST_346,Q3_2025,North America,Enterprise,InsightOS,UI Glitch,Medium,False,0.6,16.4
+TKT_0254,CUST_348,Q3_2025,APAC,Mid-Market,MetricHub,SQL Generation Error,Medium,False,2.9,21.4
+TKT_0255,CUST_349,Q3_2025,EMEA,Enterprise,MetricHub,SQL Generation Error,Low,False,0.8,6.5
+TKT_0256,CUST_349,Q3_2025,EMEA,Enterprise,MetricHub,Semantic Layer Sync Failed,Medium,False,1.4,16.9
+TKT_0257,CUST_358,Q3_2025,North America,Mid-Market,FlowOps,Pipeline Execution Stalled,Medium,False,3.9,14.8
+TKT_0258,CUST_370,Q3_2025,APAC,Mid-Market,InsightOS,UI Glitch,Low,False,3.7,8.2
+TKT_0259,CUST_370,Q3_2025,APAC,Mid-Market,FlowOps,Pipeline Execution Stalled,Medium,False,3.9,21.8
+TKT_0260,CUST_397,Q3_2025,LATAM,Enterprise,InsightOS,UI Glitch,High,True,1.7,21.1
+TKT_0261,CUST_398,Q3_2025,EMEA,Mid-Market,InsightOS,User Access Management,Medium,False,1.4,21.7
+TKT_0262,CUST_399,Q3_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,Low,False,1.9,19.7
+TKT_0263,CUST_006,Q4_2025,APAC,Enterprise,InsightOS,Dashboard Load Timeout,Critical,True,16.8,44.6
+TKT_0264,CUST_009,Q4_2025,North America,Enterprise,FlowOps,Connection Lost to Database,High,True,7.8,35.1
+TKT_0265,CUST_014,Q4_2025,APAC,Mid-Market,MetricHub,Caching Stale Data,Low,False,3.8,18.5
+TKT_0266,CUST_014,Q4_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,High,True,6.3,60.0
+TKT_0267,CUST_018,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,5.5,66.8
+TKT_0268,CUST_019,Q4_2025,EMEA,Mid-Market,InsightOS,Export CSV Failed,Medium,False,3.4,4.7
+TKT_0269,CUST_025,Q4_2025,EMEA,SMB,MetricHub,Semantic Layer Sync Failed,Medium,False,47.4,59.2
+TKT_0270,CUST_025,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,8.9,35.2
+TKT_0271,CUST_027,Q4_2025,APAC,SMB,FlowOps,Pipeline Execution Stalled,High,True,6.2,71.0
+TKT_0272,CUST_030,Q4_2025,APAC,SMB,FlowOps,Pipeline Execution Stalled,High,True,4.3,66.3
+TKT_0273,CUST_032,Q4_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,Critical,True,6.4,45.7
+TKT_0274,CUST_034,Q4_2025,LATAM,SMB,FlowOps,API Rate Limit Exceeded,High,True,5.8,26.4
+TKT_0275,CUST_034,Q4_2025,LATAM,SMB,InsightOS,Dashboard Load Timeout,Medium,False,40.5,67.6
+TKT_0276,CUST_035,Q4_2025,LATAM,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,6.3,69.0
+TKT_0277,CUST_035,Q4_2025,LATAM,SMB,FlowOps,Connection Lost to Database,High,True,6.0,58.8
+TKT_0278,CUST_042,Q4_2025,EMEA,Enterprise,MetricHub,Incorrect Sum Aggregation,Medium,False,2.8,14.5
+TKT_0279,CUST_043,Q4_2025,APAC,SMB,FlowOps,API Rate Limit Exceeded,High,True,5.3,67.1
+TKT_0280,CUST_044,Q4_2025,LATAM,SMB,FlowOps,API Rate Limit Exceeded,High,True,3.1,38.2
+TKT_0281,CUST_044,Q4_2025,LATAM,SMB,InsightOS,UI Glitch,Low,False,46.0,76.4
+TKT_0282,CUST_045,Q4_2025,EMEA,Mid-Market,MetricHub,SQL Generation Error,Low,False,2.5,16.1
+TKT_0283,CUST_046,Q4_2025,North America,Enterprise,MetricHub,Incorrect Sum Aggregation,Low,False,1.6,17.9
+TKT_0284,CUST_047,Q4_2025,EMEA,Enterprise,FlowOps,v2.0 Migration Memory Leak,Critical,True,6.5,59.6
+TKT_0285,CUST_051,Q4_2025,LATAM,Mid-Market,FlowOps,Connection Lost to Database,High,True,7.3,67.4
+TKT_0286,CUST_054,Q4_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,Critical,True,2.6,63.7
+TKT_0287,CUST_055,Q4_2025,North America,SMB,FlowOps,Pipeline Execution Stalled,High,True,3.3,51.0
+TKT_0288,CUST_056,Q4_2025,LATAM,SMB,FlowOps,Pipeline Execution Stalled,High,True,8.0,72.0
+TKT_0289,CUST_056,Q4_2025,LATAM,SMB,FlowOps,Pipeline Execution Stalled,Critical,True,5.7,27.0
+TKT_0290,CUST_057,Q4_2025,APAC,SMB,FlowOps,Connection Lost to Database,High,True,8.5,26.4
+TKT_0291,CUST_063,Q4_2025,North America,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Critical,True,8.9,51.1
+TKT_0292,CUST_065,Q4_2025,EMEA,Enterprise,InsightOS,UI Glitch,Low,False,4.0,7.8
+TKT_0293,CUST_067,Q4_2025,APAC,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,2.8,26.6
+TKT_0294,CUST_070,Q4_2025,LATAM,Enterprise,MetricHub,Incorrect Sum Aggregation,Medium,False,3.3,22.6
+TKT_0295,CUST_072,Q4_2025,APAC,Enterprise,FlowOps,v2.0 Migration Memory Leak,High,True,5.1,29.1
+TKT_0296,CUST_072,Q4_2025,APAC,Enterprise,FlowOps,Connection Lost to Database,High,True,6.1,43.3
+TKT_0297,CUST_073,Q4_2025,APAC,SMB,InsightOS,Export CSV Failed,Medium,False,47.8,93.3
+TKT_0298,CUST_073,Q4_2025,APAC,SMB,FlowOps,Pipeline Execution Stalled,High,True,3.2,36.7
+TKT_0299,CUST_074,Q4_2025,North America,Enterprise,FlowOps,API Rate Limit Exceeded,Critical,True,2.2,24.5
+TKT_0300,CUST_075,Q4_2025,North America,Mid-Market,FlowOps,Connection Lost to Database,High,True,6.1,46.9
+TKT_0301,CUST_076,Q4_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,High,True,8.9,54.2
+TKT_0302,CUST_078,Q4_2025,APAC,Mid-Market,InsightOS,User Access Management,Low,False,0.7,5.2
+TKT_0303,CUST_079,Q4_2025,EMEA,Enterprise,FlowOps,Connection Lost to Database,Critical,True,3.4,64.8
+TKT_0304,CUST_081,Q4_2025,LATAM,Mid-Market,InsightOS,Export CSV Failed,Medium,False,0.8,12.5
+TKT_0305,CUST_082,Q4_2025,North America,Mid-Market,FlowOps,Connection Lost to Database,Critical,True,7.4,26.3
+TKT_0306,CUST_085,Q4_2025,EMEA,Mid-Market,FlowOps,Pipeline Execution Stalled,Critical,True,4.9,50.0
+TKT_0307,CUST_085,Q4_2025,EMEA,Mid-Market,InsightOS,Export CSV Failed,Critical,False,1.9,23.1
+TKT_0308,CUST_092,Q4_2025,North America,Mid-Market,MetricHub,Caching Stale Data,High,False,1.1,11.6
+TKT_0309,CUST_094,Q4_2025,North America,SMB,InsightOS,User Access Management,High,False,32.1,59.3
+TKT_0310,CUST_097,Q4_2025,EMEA,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,3.7,10.9
+TKT_0311,CUST_098,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,4.0,62.7
+TKT_0312,CUST_099,Q4_2025,APAC,Enterprise,FlowOps,v2.0 Migration Memory Leak,Critical,True,6.8,47.7
+TKT_0313,CUST_099,Q4_2025,APAC,Enterprise,MetricHub,Incorrect Sum Aggregation,Critical,True,22.9,87.8
+TKT_0314,CUST_100,Q4_2025,APAC,Enterprise,InsightOS,User Access Management,Critical,True,13.9,77.3
+TKT_0315,CUST_101,Q4_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,9.1,45.8
+TKT_0316,CUST_108,Q4_2025,North America,Mid-Market,FlowOps,Pipeline Execution Stalled,High,True,9.8,34.6
+TKT_0317,CUST_109,Q4_2025,APAC,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,6.9,38.9
+TKT_0318,CUST_113,Q4_2025,LATAM,Enterprise,FlowOps,API Rate Limit Exceeded,High,True,3.6,70.0
+TKT_0319,CUST_114,Q4_2025,North America,Enterprise,FlowOps,Connection Lost to Database,Critical,True,5.3,33.2
+TKT_0320,CUST_118,Q4_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,2.6,37.4
+TKT_0321,CUST_118,Q4_2025,APAC,Mid-Market,MetricHub,Caching Stale Data,Low,False,2.8,7.2
+TKT_0322,CUST_119,Q4_2025,LATAM,Enterprise,InsightOS,User Access Management,Medium,False,3.8,6.7
+TKT_0323,CUST_119,Q4_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,6.9,61.0
+TKT_0324,CUST_120,Q4_2025,EMEA,SMB,FlowOps,Pipeline Execution Stalled,High,True,7.0,57.6
+TKT_0325,CUST_123,Q4_2025,EMEA,Enterprise,FlowOps,Connection Lost to Database,High,True,5.8,71.6
+TKT_0326,CUST_123,Q4_2025,EMEA,Enterprise,FlowOps,v2.0 Migration Memory Leak,Critical,True,3.8,68.3
+TKT_0327,CUST_124,Q4_2025,APAC,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,2.3,7.5
+TKT_0328,CUST_127,Q4_2025,North America,SMB,MetricHub,Semantic Layer Sync Failed,Low,False,46.0,61.2
+TKT_0329,CUST_130,Q4_2025,EMEA,Enterprise,FlowOps,v2.0 Migration Memory Leak,High,True,7.7,69.0
+TKT_0330,CUST_130,Q4_2025,EMEA,Enterprise,FlowOps,API Rate Limit Exceeded,Critical,True,8.9,29.3
+TKT_0331,CUST_131,Q4_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,High,True,9.0,55.8
+TKT_0332,CUST_132,Q4_2025,APAC,Enterprise,FlowOps,v2.0 Migration Memory Leak,High,True,8.7,68.6
+TKT_0333,CUST_132,Q4_2025,APAC,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,4.6,59.8
+TKT_0334,CUST_133,Q4_2025,APAC,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,8.1,71.6
+TKT_0335,CUST_135,Q4_2025,LATAM,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,4.7,70.2
+TKT_0336,CUST_136,Q4_2025,EMEA,Enterprise,MetricHub,Caching Stale Data,Low,False,1.8,16.8
+TKT_0337,CUST_141,Q4_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,4.9,27.2
+TKT_0338,CUST_144,Q4_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,High,True,3.7,59.4
+TKT_0339,CUST_145,Q4_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Critical,True,3.6,70.1
+TKT_0340,CUST_151,Q4_2025,LATAM,Mid-Market,MetricHub,Caching Stale Data,Medium,False,2.8,4.3
+TKT_0341,CUST_152,Q4_2025,APAC,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,5.0,47.7
+TKT_0342,CUST_154,Q4_2025,EMEA,Mid-Market,MetricHub,Semantic Layer Sync Failed,Low,False,0.9,5.6
+TKT_0343,CUST_155,Q4_2025,LATAM,Enterprise,FlowOps,Connection Lost to Database,High,True,4.6,28.5
+TKT_0344,CUST_156,Q4_2025,APAC,SMB,FlowOps,API Rate Limit Exceeded,Critical,True,7.5,36.0
+TKT_0345,CUST_158,Q4_2025,North America,SMB,FlowOps,Pipeline Execution Stalled,High,True,4.0,63.6
+TKT_0346,CUST_161,Q4_2025,EMEA,Mid-Market,MetricHub,SQL Generation Error,Medium,False,2.8,7.0
+TKT_0347,CUST_163,Q4_2025,North America,SMB,FlowOps,Connection Lost to Database,High,True,8.9,24.3
+TKT_0348,CUST_164,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,6.3,45.0
+TKT_0349,CUST_167,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,5.1,64.2
+TKT_0350,CUST_169,Q4_2025,APAC,Enterprise,FlowOps,Connection Lost to Database,High,True,4.7,30.6
+TKT_0351,CUST_170,Q4_2025,North America,SMB,InsightOS,UI Glitch,Medium,False,21.3,76.6
+TKT_0352,CUST_170,Q4_2025,North America,SMB,FlowOps,Pipeline Execution Stalled,High,True,8.7,30.0
+TKT_0353,CUST_172,Q4_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,2.9,53.3
+TKT_0354,CUST_176,Q4_2025,APAC,Enterprise,FlowOps,v2.0 Migration Memory Leak,High,True,2.7,29.7
+TKT_0355,CUST_177,Q4_2025,North America,SMB,InsightOS,Dashboard Load Timeout,Low,False,19.8,90.5
+TKT_0356,CUST_181,Q4_2025,EMEA,SMB,FlowOps,Connection Lost to Database,High,True,3.9,51.5
+TKT_0357,CUST_181,Q4_2025,EMEA,SMB,MetricHub,Incorrect Sum Aggregation,Low,False,45.6,52.0
+TKT_0358,CUST_182,Q4_2025,APAC,Enterprise,MetricHub,Semantic Layer Sync Failed,High,True,27.1,80.1
+TKT_0359,CUST_184,Q4_2025,LATAM,SMB,FlowOps,Pipeline Execution Stalled,High,True,8.8,71.9
+TKT_0360,CUST_186,Q4_2025,North America,SMB,InsightOS,Export CSV Failed,Low,False,45.4,108.5
+TKT_0361,CUST_187,Q4_2025,North America,SMB,MetricHub,SQL Generation Error,Medium,False,32.2,50.8
+TKT_0362,CUST_194,Q4_2025,North America,SMB,InsightOS,User Access Management,Low,False,35.3,50.9
+TKT_0363,CUST_195,Q4_2025,EMEA,Enterprise,MetricHub,Incorrect Sum Aggregation,High,False,1.0,15.1
+TKT_0364,CUST_195,Q4_2025,EMEA,Enterprise,InsightOS,UI Glitch,Low,False,1.2,19.1
+TKT_0365,CUST_197,Q4_2025,North America,Mid-Market,MetricHub,SQL Generation Error,Low,False,2.5,20.2
+TKT_0366,CUST_203,Q4_2025,APAC,SMB,FlowOps,Connection Lost to Database,Critical,True,3.4,39.5
+TKT_0367,CUST_209,Q4_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,High,True,3.4,53.8
+TKT_0368,CUST_211,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,Critical,True,2.8,25.6
+TKT_0369,CUST_211,Q4_2025,EMEA,SMB,MetricHub,SQL Generation Error,Medium,False,18.5,54.6
+TKT_0370,CUST_213,Q4_2025,North America,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,9.4,24.3
+TKT_0371,CUST_216,Q4_2025,APAC,Enterprise,InsightOS,UI Glitch,Critical,True,14.1,74.0
+TKT_0372,CUST_220,Q4_2025,North America,Mid-Market,MetricHub,SQL Generation Error,Critical,False,2.1,4.9
+TKT_0373,CUST_223,Q4_2025,APAC,SMB,InsightOS,User Access Management,Medium,False,36.1,88.3
+TKT_0374,CUST_225,Q4_2025,EMEA,Mid-Market,InsightOS,Export CSV Failed,Medium,False,1.8,6.1
+TKT_0375,CUST_231,Q4_2025,North America,Mid-Market,InsightOS,UI Glitch,High,False,2.1,4.6
+TKT_0376,CUST_231,Q4_2025,North America,Mid-Market,FlowOps,Connection Lost to Database,High,True,6.4,34.5
+TKT_0377,CUST_234,Q4_2025,EMEA,Mid-Market,FlowOps,Pipeline Execution Stalled,Critical,True,4.5,29.5
+TKT_0378,CUST_236,Q4_2025,North America,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,9.5,67.5
+TKT_0379,CUST_244,Q4_2025,EMEA,SMB,FlowOps,Pipeline Execution Stalled,Critical,True,8.7,46.6
+TKT_0380,CUST_246,Q4_2025,LATAM,Enterprise,MetricHub,SQL Generation Error,High,False,3.5,4.7
+TKT_0381,CUST_247,Q4_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,High,True,7.3,66.3
+TKT_0382,CUST_248,Q4_2025,LATAM,Mid-Market,FlowOps,Connection Lost to Database,Critical,True,4.4,52.8
+TKT_0383,CUST_249,Q4_2025,LATAM,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,5.3,59.8
+TKT_0384,CUST_249,Q4_2025,LATAM,Mid-Market,FlowOps,Pipeline Execution Stalled,Critical,True,5.9,51.4
+TKT_0385,CUST_260,Q4_2025,APAC,Mid-Market,FlowOps,v2.0 Migration Memory Leak,High,True,8.4,56.1
+TKT_0386,CUST_262,Q4_2025,LATAM,Enterprise,InsightOS,User Access Management,Low,False,1.9,17.0
+TKT_0387,CUST_264,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,4.7,36.6
+TKT_0388,CUST_265,Q4_2025,LATAM,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,7.0,59.0
+TKT_0389,CUST_268,Q4_2025,North America,SMB,FlowOps,Connection Lost to Database,Critical,True,4.5,30.2
+TKT_0390,CUST_270,Q4_2025,EMEA,SMB,FlowOps,Pipeline Execution Stalled,High,True,3.2,68.2
+TKT_0391,CUST_271,Q4_2025,North America,SMB,FlowOps,Pipeline Execution Stalled,High,True,8.3,64.3
+TKT_0392,CUST_279,Q4_2025,North America,Enterprise,InsightOS,User Access Management,Medium,True,3.7,15.4
+TKT_0393,CUST_279,Q4_2025,North America,Enterprise,FlowOps,Connection Lost to Database,High,True,6.2,43.3
+TKT_0394,CUST_280,Q4_2025,North America,Enterprise,MetricHub,SQL Generation Error,Low,False,1.7,15.8
+TKT_0395,CUST_281,Q4_2025,LATAM,Mid-Market,FlowOps,Pipeline Execution Stalled,High,True,8.4,66.0
+TKT_0396,CUST_282,Q4_2025,EMEA,SMB,FlowOps,Pipeline Execution Stalled,Critical,True,8.4,37.0
+TKT_0397,CUST_284,Q4_2025,APAC,Mid-Market,InsightOS,User Access Management,High,False,3.2,11.2
+TKT_0398,CUST_285,Q4_2025,North America,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,5.8,40.0
+TKT_0399,CUST_286,Q4_2025,APAC,Mid-Market,FlowOps,Pipeline Execution Stalled,High,True,6.7,41.7
+TKT_0400,CUST_296,Q4_2025,EMEA,Mid-Market,FlowOps,Pipeline Execution Stalled,High,True,3.5,45.2
+TKT_0401,CUST_297,Q4_2025,North America,SMB,FlowOps,API Rate Limit Exceeded,High,True,3.0,61.8
+TKT_0402,CUST_297,Q4_2025,North America,SMB,FlowOps,Connection Lost to Database,Critical,True,7.4,71.3
+TKT_0403,CUST_298,Q4_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,5.8,61.9
+TKT_0404,CUST_299,Q4_2025,North America,SMB,InsightOS,UI Glitch,Medium,False,19.1,87.7
+TKT_0405,CUST_300,Q4_2025,APAC,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,7.7,42.5
+TKT_0406,CUST_307,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,4.3,35.3
+TKT_0407,CUST_308,Q4_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,3.9,68.9
+TKT_0408,CUST_310,Q4_2025,EMEA,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,6.6,27.2
+TKT_0409,CUST_311,Q4_2025,EMEA,Mid-Market,FlowOps,Connection Lost to Database,High,True,3.3,32.4
+TKT_0410,CUST_311,Q4_2025,EMEA,Mid-Market,InsightOS,Export CSV Failed,Medium,False,0.9,17.8
+TKT_0411,CUST_312,Q4_2025,APAC,Mid-Market,MetricHub,SQL Generation Error,Low,False,1.7,7.4
+TKT_0412,CUST_312,Q4_2025,APAC,Mid-Market,MetricHub,Semantic Layer Sync Failed,Medium,False,0.5,10.3
+TKT_0413,CUST_315,Q4_2025,North America,SMB,FlowOps,Pipeline Execution Stalled,High,True,7.5,41.3
+TKT_0414,CUST_318,Q4_2025,APAC,Enterprise,FlowOps,Connection Lost to Database,High,True,3.5,60.4
+TKT_0415,CUST_318,Q4_2025,APAC,Enterprise,FlowOps,Connection Lost to Database,High,True,6.7,49.0
+TKT_0416,CUST_319,Q4_2025,APAC,SMB,FlowOps,Pipeline Execution Stalled,Critical,True,5.5,24.9
+TKT_0417,CUST_321,Q4_2025,EMEA,Enterprise,FlowOps,API Rate Limit Exceeded,High,True,2.2,47.0
+TKT_0418,CUST_323,Q4_2025,North America,SMB,FlowOps,v2.0 Migration Memory Leak,High,True,5.2,38.3
+TKT_0419,CUST_324,Q4_2025,EMEA,Mid-Market,FlowOps,Connection Lost to Database,High,True,8.6,30.0
+TKT_0420,CUST_327,Q4_2025,North America,SMB,InsightOS,UI Glitch,Medium,False,32.6,81.3
+TKT_0421,CUST_329,Q4_2025,EMEA,SMB,FlowOps,Pipeline Execution Stalled,Critical,True,8.7,47.5
+TKT_0422,CUST_330,Q4_2025,APAC,SMB,FlowOps,Pipeline Execution Stalled,High,True,7.6,55.2
+TKT_0423,CUST_333,Q4_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,6.6,44.3
+TKT_0424,CUST_334,Q4_2025,APAC,Mid-Market,FlowOps,API Rate Limit Exceeded,High,True,2.7,53.1
+TKT_0425,CUST_336,Q4_2025,APAC,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,8.7,64.8
+TKT_0426,CUST_337,Q4_2025,LATAM,SMB,FlowOps,Connection Lost to Database,High,True,3.3,59.8
+TKT_0427,CUST_340,Q4_2025,APAC,SMB,FlowOps,Connection Lost to Database,High,True,4.1,47.9
+TKT_0428,CUST_341,Q4_2025,EMEA,SMB,FlowOps,API Rate Limit Exceeded,High,True,6.5,65.2
+TKT_0429,CUST_342,Q4_2025,EMEA,SMB,FlowOps,v2.0 Migration Memory Leak,Critical,True,4.6,70.2
+TKT_0430,CUST_347,Q4_2025,North America,SMB,FlowOps,Pipeline Execution Stalled,Critical,True,2.7,55.2
+TKT_0431,CUST_348,Q4_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,High,True,6.1,35.1
+TKT_0432,CUST_349,Q4_2025,EMEA,Enterprise,FlowOps,Connection Lost to Database,High,True,3.4,39.2
+TKT_0433,CUST_349,Q4_2025,EMEA,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,6.8,68.0
+TKT_0434,CUST_352,Q4_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,Critical,True,5.6,44.4
+TKT_0435,CUST_352,Q4_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,7.1,67.7
+TKT_0436,CUST_356,Q4_2025,North America,Mid-Market,MetricHub,Incorrect Sum Aggregation,Medium,False,2.6,17.5
+TKT_0437,CUST_359,Q4_2025,LATAM,Enterprise,FlowOps,Connection Lost to Database,High,True,5.3,43.5
+TKT_0438,CUST_359,Q4_2025,LATAM,Enterprise,FlowOps,v2.0 Migration Memory Leak,Critical,True,7.5,62.0
+TKT_0439,CUST_364,Q4_2025,EMEA,Mid-Market,FlowOps,Connection Lost to Database,High,True,7.3,38.1
+TKT_0440,CUST_368,Q4_2025,LATAM,Enterprise,FlowOps,Pipeline Execution Stalled,High,True,7.9,52.9
+TKT_0441,CUST_372,Q4_2025,APAC,Mid-Market,FlowOps,Connection Lost to Database,High,True,7.0,27.8
+TKT_0442,CUST_378,Q4_2025,APAC,Mid-Market,MetricHub,Semantic Layer Sync Failed,Low,True,1.1,23.9
+TKT_0443,CUST_386,Q4_2025,North America,Enterprise,FlowOps,v2.0 Migration Memory Leak,Critical,True,5.7,53.1
+TKT_0444,CUST_393,Q4_2025,EMEA,Mid-Market,InsightOS,Dashboard Load Timeout,Low,False,1.9,8.6
+TKT_0445,CUST_393,Q4_2025,EMEA,Mid-Market,FlowOps,v2.0 Migration Memory Leak,Critical,True,5.5,43.8
+TKT_0446,CUST_397,Q4_2025,LATAM,Enterprise,FlowOps,API Rate Limit Exceeded,High,True,2.5,39.6
+TKT_0447,CUST_399,Q4_2025,North America,Mid-Market,FlowOps,Pipeline Execution Stalled,High,True,4.5,28.2

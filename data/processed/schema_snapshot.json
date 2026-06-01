@@ -1,0 +1,69 @@
+{
+  "number_of_documents": 20,
+  "number_of_chunks": 120,
+  "document_types": {
+    "reference_document": 5,
+    "operations_report": 5,
+    "regional_report": 2,
+    "incident_report": 1,
+    "policy_memo": 2,
+    "release_notes": 1,
+    "quarterly_review": 4
+  },
+  "quarters": {
+    "All": 5,
+    "Q3_2025": 3,
+    "Q4_2025": 10,
+    "Q1_2025": 1,
+    "Q2_2025": 1
+  },
+  "regions": {
+    "Global": 16,
+    "EMEA": 2,
+    "APAC": 2,
+    "North America": 0,
+    "LATAM": 0
+  },
+  "segments": {
+    "All": 11,
+    "SMB": 2,
+    "Enterprise": 7,
+    "Mid-Market": 0
+  },
+  "related_metrics": [
+    "ARR",
+    "bookings",
+    "churn_rate",
+    "conversion_rate",
+    "gross_margin",
+    "marketing_spend",
+    "pipeline_value",
+    "recognized_revenue",
+    "retention_rate",
+    "support_escalations",
+    "usage_score"
+  ],
+  "source_files": [
+    "customer_segment_guide.md",
+    "customer_success_notes.md",
+    "emea_pipeline_review.md",
+    "enterprise_retention_notes.md",
+    "flowops_release_incident.md",
+    "known_metric_confusions.md",
+    "kpi_definitions.md",
+    "marketing_campaign_memo.md",
+    "pricing_change_memo.md",
+    "product_release_notes.md",
+    "q1_business_review.md",
+    "q2_business_review.md",
+    "q3_business_review.md",
+    "q4_apac_revenue_report.md",
+    "q4_business_review.md",
+    "regional_taxonomy.md",
+    "sales_cycle_review.md",
+    "schema_definitions.md",
+    "smb_churn_review.md",
+    "support_escalation_report.md"
+  ],
+  "generated_at": "2026-06-01T06:19:39.337978+00:00"
+}

@@ -11,3 +11,5 @@ experiments/results/
 .pytest_cache/
 .streamlit/
 *.log
+*.egg-info/
+.aider*

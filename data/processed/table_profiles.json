@@ -1,0 +1,604 @@
+[
+  {
+    "table_name": "revenue",
+    "row_count": 144,
+    "column_count": 8,
+    "columns": [
+      "quarter",
+      "region",
+      "segment",
+      "product",
+      "recognized_revenue",
+      "bookings",
+      "pipeline_value",
+      "gross_margin"
+    ],
+    "numeric_columns": [
+      "recognized_revenue",
+      "bookings",
+      "pipeline_value",
+      "gross_margin"
+    ],
+    "categorical_columns": [
+      "quarter",
+      "region",
+      "segment",
+      "product"
+    ],
+    "missing_values": {
+      "quarter": 0,
+      "region": 0,
+      "segment": 0,
+      "product": 0,
+      "recognized_revenue": 0,
+      "bookings": 0,
+      "pipeline_value": 0,
+      "gross_margin": 0
+    },
+    "sample_rows": [
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "InsightOS",
+        "recognized_revenue": 29874.07,
+        "bookings": 29389.41,
+        "pipeline_value": 90960.82,
+        "gross_margin": 0.7
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "MetricHub",
+        "recognized_revenue": 30424.9,
+        "bookings": 33304.27,
+        "pipeline_value": 87718.68,
+        "gross_margin": 0.7
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "FlowOps",
+        "recognized_revenue": 30190.98,
+        "bookings": 31684.39,
+        "pipeline_value": 93097.01,
+        "gross_margin": 0.7
+      }
+    ]
+  },
+  {
+    "table_name": "customers",
+    "row_count": 400,
+    "column_count": 7,
+    "columns": [
+      "customer_id",
+      "customer_name",
+      "region",
+      "segment",
+      "industry",
+      "signup_quarter",
+      "status"
+    ],
+    "numeric_columns": [],
+    "categorical_columns": [
+      "customer_id",
+      "customer_name",
+      "region",
+      "segment",
+      "industry",
+      "signup_quarter",
+      "status"
+    ],
+    "missing_values": {
+      "customer_id": 0,
+      "customer_name": 0,
+      "region": 0,
+      "segment": 0,
+      "industry": 0,
+      "signup_quarter": 0,
+      "status": 0
+    },
+    "sample_rows": [
+      {
+        "customer_id": "CUST_001",
+        "customer_name": "Finance_001",
+        "region": "EMEA",
+        "segment": "SMB",
+        "industry": "Finance",
+        "signup_quarter": "Q1_2025",
+        "status": "Active"
+      },
+      {
+        "customer_id": "CUST_002",
+        "customer_name": "Tech_002",
+        "region": "LATAM",
+        "segment": "Enterprise",
+        "industry": "Tech",
+        "signup_quarter": "Q2_2025",
+        "status": "Active"
+      },
+      {
+        "customer_id": "CUST_003",
+        "customer_name": "Retail_003",
+        "region": "North America",
+        "segment": "Mid-Market",
+        "industry": "Retail",
+        "signup_quarter": "Q1_2025",
+        "status": "Active"
+      }
+    ]
+  },
+  {
+    "table_name": "marketing_spend",
+    "row_count": 48,
+    "column_count": 6,
+    "columns": [
+      "quarter",
+      "region",
+      "channel",
+      "spend",
+      "campaign_name",
+      "leads_generated"
+    ],
+    "numeric_columns": [
+      "spend",
+      "leads_generated"
+    ],
+    "categorical_columns": [
+      "quarter",
+      "region",
+      "channel",
+      "campaign_name"
+    ],
+    "missing_values": {
+      "quarter": 0,
+      "region": 0,
+      "channel": 0,
+      "spend": 0,
+      "campaign_name": 0,
+      "leads_generated": 0
+    },
+    "sample_rows": [
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "channel": "Events",
+        "spend": 15290.33,
+        "campaign_name": "Campaign_APAC_Events_Q1",
+        "leads_generated": 152
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "channel": "Paid Search",
+        "spend": 16428.56,
+        "campaign_name": "Campaign_APAC_Paid Search_Q1",
+        "leads_generated": 153
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "channel": "Content",
+        "spend": 14626.32,
+        "campaign_name": "Campaign_APAC_Content_Q1",
+        "leads_generated": 130
+      }
+    ]
+  },
+  {
+    "table_name": "churn",
+    "row_count": 48,
+    "column_count": 7,
+    "columns": [
+      "quarter",
+      "region",
+      "segment",
+      "churn_rate",
+      "churned_customers",
+      "starting_customers",
+      "retention_rate"
+    ],
+    "numeric_columns": [
+      "churn_rate",
+      "churned_customers",
+      "starting_customers",
+      "retention_rate"
+    ],
+    "categorical_columns": [
+      "quarter",
+      "region",
+      "segment"
+    ],
+    "missing_values": {
+      "quarter": 0,
+      "region": 0,
+      "segment": 0,
+      "churn_rate": 0,
+      "churned_customers": 0,
+      "starting_customers": 0,
+      "retention_rate": 0
+    },
+    "sample_rows": [
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "churn_rate": 0.0676,
+        "churned_customers": 10,
+        "starting_customers": 150,
+        "retention_rate": 0.9324
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "Mid-Market",
+        "churn_rate": 0.0502,
+        "churned_customers": 3,
+        "starting_customers": 50,
+        "retention_rate": 0.9498
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "Enterprise",
+        "churn_rate": 0.0219,
+        "churned_customers": 1,
+        "starting_customers": 20,
+        "retention_rate": 0.9781
+      }
+    ]
+  },
+  {
+    "table_name": "support_tickets",
+    "row_count": 447,
+    "column_count": 11,
+    "columns": [
+      "ticket_id",
+      "customer_id",
+      "quarter",
+      "region",
+      "segment",
+      "product",
+      "issue_type",
+      "severity",
+      "escalated",
+      "response_time_hours",
+      "resolution_time_hours"
+    ],
+    "numeric_columns": [
+      "response_time_hours",
+      "resolution_time_hours"
+    ],
+    "categorical_columns": [
+      "ticket_id",
+      "customer_id",
+      "quarter",
+      "region",
+      "segment",
+      "product",
+      "issue_type",
+      "severity",
+      "escalated"
+    ],
+    "missing_values": {
+      "ticket_id": 0,
+      "customer_id": 0,
+      "quarter": 0,
+      "region": 0,
+      "segment": 0,
+      "product": 0,
+      "issue_type": 0,
+      "severity": 0,
+      "escalated": 0,
+      "response_time_hours": 0,
+      "resolution_time_hours": 0
+    },
+    "sample_rows": [
+      {
+        "ticket_id": "TKT_0001",
+        "customer_id": "CUST_005",
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "InsightOS",
+        "issue_type": "Export CSV Failed",
+        "severity": "Low",
+        "escalated": false,
+        "response_time_hours": 2.0,
+        "resolution_time_hours": 15.9
+      },
+      {
+        "ticket_id": "TKT_0002",
+        "customer_id": "CUST_005",
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "InsightOS",
+        "issue_type": "UI Glitch",
+        "severity": "Medium",
+        "escalated": false,
+        "response_time_hours": 3.4,
+        "resolution_time_hours": 7.4
+      },
+      {
+        "ticket_id": "TKT_0003",
+        "customer_id": "CUST_007",
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "FlowOps",
+        "issue_type": "v2.0 Migration Memory Leak",
+        "severity": "Medium",
+        "escalated": false,
+        "response_time_hours": 2.3,
+        "resolution_time_hours": 14.0
+      }
+    ]
+  },
+  {
+    "table_name": "product_usage",
+    "row_count": 144,
+    "column_count": 8,
+    "columns": [
+      "quarter",
+      "region",
+      "segment",
+      "product",
+      "active_users",
+      "usage_score",
+      "feature_adoption_rate",
+      "avg_sessions_per_account"
+    ],
+    "numeric_columns": [
+      "active_users",
+      "usage_score",
+      "feature_adoption_rate",
+      "avg_sessions_per_account"
+    ],
+    "categorical_columns": [
+      "quarter",
+      "region",
+      "segment",
+      "product"
+    ],
+    "missing_values": {
+      "quarter": 0,
+      "region": 0,
+      "segment": 0,
+      "product": 0,
+      "active_users": 0,
+      "usage_score": 0,
+      "feature_adoption_rate": 0,
+      "avg_sessions_per_account": 0
+    },
+    "sample_rows": [
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "InsightOS",
+        "active_users": 10,
+        "usage_score": 65.4,
+        "feature_adoption_rate": 0.598,
+        "avg_sessions_per_account": 8.1
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "MetricHub",
+        "active_users": 7,
+        "usage_score": 65.1,
+        "feature_adoption_rate": 0.494,
+        "avg_sessions_per_account": 8.6
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "product": "FlowOps",
+        "active_users": 14,
+        "usage_score": 71.2,
+        "feature_adoption_rate": 0.515,
+        "avg_sessions_per_account": 11.5
+      }
+    ]
+  },
+  {
+    "table_name": "sales_pipeline",
+    "row_count": 48,
+    "column_count": 8,
+    "columns": [
+      "quarter",
+      "region",
+      "segment",
+      "pipeline_value",
+      "opportunities_created",
+      "win_rate",
+      "conversion_rate",
+      "avg_sales_cycle_days"
+    ],
+    "numeric_columns": [
+      "pipeline_value",
+      "opportunities_created",
+      "win_rate",
+      "conversion_rate",
+      "avg_sales_cycle_days"
+    ],
+    "categorical_columns": [
+      "quarter",
+      "region",
+      "segment"
+    ],
+    "missing_values": {
+      "quarter": 0,
+      "region": 0,
+      "segment": 0,
+      "pipeline_value": 0,
+      "opportunities_created": 0,
+      "win_rate": 0,
+      "conversion_rate": 0,
+      "avg_sales_cycle_days": 0
+    },
+    "sample_rows": [
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "SMB",
+        "pipeline_value": 105726.44,
+        "opportunities_created": 81,
+        "win_rate": 0.308,
+        "conversion_rate": 0.327,
+        "avg_sales_cycle_days": 29
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "Mid-Market",
+        "pipeline_value": 258873.34,
+        "opportunities_created": 36,
+        "win_rate": 0.256,
+        "conversion_rate": 0.236,
+        "avg_sales_cycle_days": 61
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "segment": "Enterprise",
+        "pipeline_value": 657180.24,
+        "opportunities_created": 15,
+        "win_rate": 0.242,
+        "conversion_rate": 0.191,
+        "avg_sales_cycle_days": 93
+      }
+    ]
+  },
+  {
+    "table_name": "subscriptions",
+    "row_count": 496,
+    "column_count": 8,
+    "columns": [
+      "subscription_id",
+      "customer_id",
+      "product",
+      "plan_type",
+      "start_quarter",
+      "renewal_quarter",
+      "arr",
+      "status"
+    ],
+    "numeric_columns": [
+      "arr"
+    ],
+    "categorical_columns": [
+      "subscription_id",
+      "customer_id",
+      "product",
+      "plan_type",
+      "start_quarter",
+      "renewal_quarter",
+      "status"
+    ],
+    "missing_values": {
+      "subscription_id": 0,
+      "customer_id": 0,
+      "product": 0,
+      "plan_type": 0,
+      "start_quarter": 0,
+      "renewal_quarter": 0,
+      "arr": 0,
+      "status": 0
+    },
+    "sample_rows": [
+      {
+        "subscription_id": "SUB_001",
+        "customer_id": "CUST_001",
+        "product": "FlowOps",
+        "plan_type": "Standard",
+        "start_quarter": "Q1_2025",
+        "renewal_quarter": "Q1_2026",
+        "arr": 10431.77,
+        "status": "Active"
+      },
+      {
+        "subscription_id": "SUB_002",
+        "customer_id": "CUST_002",
+        "product": "InsightOS",
+        "plan_type": "Premium Enterprise",
+        "start_quarter": "Q2_2025",
+        "renewal_quarter": "Q1_2026",
+        "arr": 116405.34,
+        "status": "Active"
+      },
+      {
+        "subscription_id": "SUB_003",
+        "customer_id": "CUST_002",
+        "product": "MetricHub",
+        "plan_type": "Premium Enterprise",
+        "start_quarter": "Q2_2025",
+        "renewal_quarter": "Q1_2026",
+        "arr": 125175.58,
+        "status": "Active"
+      }
+    ]
+  },
+  {
+    "table_name": "region_targets",
+    "row_count": 16,
+    "column_count": 6,
+    "columns": [
+      "quarter",
+      "region",
+      "revenue_target",
+      "pipeline_target",
+      "churn_target",
+      "gross_margin_target"
+    ],
+    "numeric_columns": [
+      "revenue_target",
+      "pipeline_target",
+      "churn_target",
+      "gross_margin_target"
+    ],
+    "categorical_columns": [
+      "quarter",
+      "region"
+    ],
+    "missing_values": {
+      "quarter": 0,
+      "region": 0,
+      "revenue_target": 0,
+      "pipeline_target": 0,
+      "churn_target": 0,
+      "gross_margin_target": 0
+    },
+    "sample_rows": [
+      {
+        "quarter": "Q1_2025",
+        "region": "APAC",
+        "revenue_target": 400000.0,
+        "pipeline_target": 1200000.0,
+        "churn_target": 0.05,
+        "gross_margin_target": 0.78
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "EMEA",
+        "revenue_target": 600000.0,
+        "pipeline_target": 1800000.0,
+        "churn_target": 0.05,
+        "gross_margin_target": 0.78
+      },
+      {
+        "quarter": "Q1_2025",
+        "region": "North America",
+        "revenue_target": 800000.0,
+        "pipeline_target": 2500000.0,
+        "churn_target": 0.05,
+        "gross_margin_target": 0.78
+      }
+    ]
+  }
+]

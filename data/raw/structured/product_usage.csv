@@ -1,0 +1,145 @@
+quarter,region,segment,product,active_users,usage_score,feature_adoption_rate,avg_sessions_per_account
+Q1_2025,APAC,SMB,InsightOS,10,65.4,0.598,8.1
+Q1_2025,APAC,SMB,MetricHub,7,65.1,0.494,8.6
+Q1_2025,APAC,SMB,FlowOps,14,71.2,0.515,11.5
+Q1_2025,APAC,Mid-Market,InsightOS,38,85.2,0.717,24.7
+Q1_2025,APAC,Mid-Market,MetricHub,47,86.2,0.721,17.8
+Q1_2025,APAC,Mid-Market,FlowOps,39,81.6,0.729,25.8
+Q1_2025,APAC,Enterprise,InsightOS,131,93.5,0.71,25.6
+Q1_2025,APAC,Enterprise,MetricHub,98,94.0,0.824,38.7
+Q1_2025,APAC,Enterprise,FlowOps,129,92.3,0.841,41.6
+Q1_2025,EMEA,SMB,InsightOS,11,75.0,0.453,14.6
+Q1_2025,EMEA,SMB,MetricHub,9,67.3,0.602,13.1
+Q1_2025,EMEA,SMB,FlowOps,14,69.2,0.52,12.5
+Q1_2025,EMEA,Mid-Market,InsightOS,23,80.5,0.652,17.1
+Q1_2025,EMEA,Mid-Market,MetricHub,28,78.0,0.732,15.4
+Q1_2025,EMEA,Mid-Market,FlowOps,38,84.9,0.687,27.1
+Q1_2025,EMEA,Enterprise,InsightOS,129,92.5,0.73,40.5
+Q1_2025,EMEA,Enterprise,MetricHub,138,88.6,0.732,32.7
+Q1_2025,EMEA,Enterprise,FlowOps,131,89.2,0.81,27.3
+Q1_2025,North America,SMB,InsightOS,13,68.8,0.462,13.9
+Q1_2025,North America,SMB,MetricHub,5,65.4,0.465,13.4
+Q1_2025,North America,SMB,FlowOps,14,77.7,0.523,8.4
+Q1_2025,North America,Mid-Market,InsightOS,36,84.2,0.661,16.4
+Q1_2025,North America,Mid-Market,MetricHub,28,85.0,0.663,25.6
+Q1_2025,North America,Mid-Market,FlowOps,29,77.1,0.678,20.9
+Q1_2025,North America,Enterprise,InsightOS,81,86.2,0.728,27.3
+Q1_2025,North America,Enterprise,MetricHub,103,94.6,0.776,37.6
+Q1_2025,North America,Enterprise,FlowOps,104,88.2,0.703,35.0
+Q1_2025,LATAM,SMB,InsightOS,9,67.4,0.591,12.9
+Q1_2025,LATAM,SMB,MetricHub,8,67.2,0.538,15.5
+Q1_2025,LATAM,SMB,FlowOps,7,68.3,0.53,9.6
+Q1_2025,LATAM,Mid-Market,InsightOS,39,82.9,0.616,15.5
+Q1_2025,LATAM,Mid-Market,MetricHub,38,78.8,0.616,24.9
+Q1_2025,LATAM,Mid-Market,FlowOps,29,81.0,0.643,23.2
+Q1_2025,LATAM,Enterprise,InsightOS,101,94.7,0.805,27.7
+Q1_2025,LATAM,Enterprise,MetricHub,109,88.9,0.78,41.8
+Q1_2025,LATAM,Enterprise,FlowOps,120,85.6,0.798,25.2
+Q2_2025,APAC,SMB,InsightOS,12,75.0,0.477,10.9
+Q2_2025,APAC,SMB,MetricHub,12,76.8,0.488,11.0
+Q2_2025,APAC,SMB,FlowOps,10,65.1,0.421,9.3
+Q2_2025,APAC,Mid-Market,InsightOS,25,81.7,0.779,23.5
+Q2_2025,APAC,Mid-Market,MetricHub,21,81.8,0.689,16.9
+Q2_2025,APAC,Mid-Market,FlowOps,47,80.7,0.779,20.5
+Q2_2025,APAC,Enterprise,InsightOS,122,86.0,0.768,29.8
+Q2_2025,APAC,Enterprise,MetricHub,138,92.8,0.824,39.5
+Q2_2025,APAC,Enterprise,FlowOps,138,87.0,0.768,38.8
+Q2_2025,EMEA,SMB,InsightOS,11,75.7,0.456,9.0
+Q2_2025,EMEA,SMB,MetricHub,14,73.4,0.438,15.9
+Q2_2025,EMEA,SMB,FlowOps,14,67.5,0.604,17.3
+Q2_2025,EMEA,Mid-Market,InsightOS,48,86.9,0.698,19.6
+Q2_2025,EMEA,Mid-Market,MetricHub,20,75.8,0.677,20.2
+Q2_2025,EMEA,Mid-Market,FlowOps,25,80.1,0.631,26.0
+Q2_2025,EMEA,Enterprise,InsightOS,100,91.0,0.775,26.0
+Q2_2025,EMEA,Enterprise,MetricHub,145,90.3,0.749,28.2
+Q2_2025,EMEA,Enterprise,FlowOps,103,85.2,0.755,35.6
+Q2_2025,North America,SMB,InsightOS,13,75.3,0.428,9.5
+Q2_2025,North America,SMB,MetricHub,9,67.9,0.407,16.1
+Q2_2025,North America,SMB,FlowOps,5,77.5,0.436,17.7
+Q2_2025,North America,Mid-Market,InsightOS,38,84.6,0.62,26.2
+Q2_2025,North America,Mid-Market,MetricHub,45,83.5,0.69,24.4
+Q2_2025,North America,Mid-Market,FlowOps,20,82.7,0.753,19.6
+Q2_2025,North America,Enterprise,InsightOS,87,89.2,0.809,27.1
+Q2_2025,North America,Enterprise,MetricHub,94,86.5,0.82,26.3
+Q2_2025,North America,Enterprise,FlowOps,128,88.7,0.813,44.3
+Q2_2025,LATAM,SMB,InsightOS,6,69.7,0.603,10.7
+Q2_2025,LATAM,SMB,MetricHub,7,77.4,0.647,13.6
+Q2_2025,LATAM,SMB,FlowOps,7,71.0,0.443,15.6
+Q2_2025,LATAM,Mid-Market,InsightOS,43,86.4,0.605,22.3
+Q2_2025,LATAM,Mid-Market,MetricHub,26,79.4,0.741,17.5
+Q2_2025,LATAM,Mid-Market,FlowOps,39,83.5,0.772,25.1
+Q2_2025,LATAM,Enterprise,InsightOS,136,90.3,0.728,33.5
+Q2_2025,LATAM,Enterprise,MetricHub,118,91.8,0.791,32.9
+Q2_2025,LATAM,Enterprise,FlowOps,98,86.7,0.804,37.9
+Q3_2025,APAC,SMB,InsightOS,11,52.9,0.326,10.6
+Q3_2025,APAC,SMB,MetricHub,12,53.9,0.387,8.0
+Q3_2025,APAC,SMB,FlowOps,12,58.2,0.4,8.9
+Q3_2025,APAC,Mid-Market,InsightOS,33,83.4,0.722,22.3
+Q3_2025,APAC,Mid-Market,MetricHub,38,76.3,0.771,25.3
+Q3_2025,APAC,Mid-Market,FlowOps,31,82.3,0.609,15.5
+Q3_2025,APAC,Enterprise,InsightOS,97,91.9,0.828,36.2
+Q3_2025,APAC,Enterprise,MetricHub,117,89.0,0.724,27.4
+Q3_2025,APAC,Enterprise,FlowOps,133,94.3,0.769,38.2
+Q3_2025,EMEA,SMB,InsightOS,14,49.8,0.415,9.6
+Q3_2025,EMEA,SMB,MetricHub,10,52.0,0.4,10.8
+Q3_2025,EMEA,SMB,FlowOps,6,54.8,0.298,11.4
+Q3_2025,EMEA,Mid-Market,InsightOS,35,85.5,0.666,16.6
+Q3_2025,EMEA,Mid-Market,MetricHub,21,78.7,0.644,22.3
+Q3_2025,EMEA,Mid-Market,FlowOps,20,81.8,0.671,22.5
+Q3_2025,EMEA,Enterprise,InsightOS,129,91.3,0.848,27.8
+Q3_2025,EMEA,Enterprise,MetricHub,110,89.2,0.763,38.3
+Q3_2025,EMEA,Enterprise,FlowOps,114,90.2,0.765,44.8
+Q3_2025,North America,SMB,InsightOS,14,52.2,0.3,11.2
+Q3_2025,North America,SMB,MetricHub,14,52.0,0.343,11.8
+Q3_2025,North America,SMB,FlowOps,12,52.1,0.382,11.9
+Q3_2025,North America,Mid-Market,InsightOS,44,84.6,0.733,17.3
+Q3_2025,North America,Mid-Market,MetricHub,44,78.6,0.767,19.7
+Q3_2025,North America,Mid-Market,FlowOps,45,78.5,0.693,16.4
+Q3_2025,North America,Enterprise,InsightOS,126,93.4,0.808,35.5
+Q3_2025,North America,Enterprise,MetricHub,83,94.3,0.806,39.9
+Q3_2025,North America,Enterprise,FlowOps,135,92.5,0.766,39.7
+Q3_2025,LATAM,SMB,InsightOS,11,58.4,0.42,5.7
+Q3_2025,LATAM,SMB,MetricHub,8,49.1,0.298,9.5
+Q3_2025,LATAM,SMB,FlowOps,13,50.1,0.359,11.6
+Q3_2025,LATAM,Mid-Market,InsightOS,44,81.8,0.739,21.8
+Q3_2025,LATAM,Mid-Market,MetricHub,24,76.6,0.634,19.6
+Q3_2025,LATAM,Mid-Market,FlowOps,47,85.4,0.678,21.4
+Q3_2025,LATAM,Enterprise,InsightOS,98,92.0,0.82,29.8
+Q3_2025,LATAM,Enterprise,MetricHub,82,91.2,0.784,33.0
+Q3_2025,LATAM,Enterprise,FlowOps,125,90.5,0.738,33.0
+Q4_2025,APAC,SMB,InsightOS,9,58.7,0.448,11.5
+Q4_2025,APAC,SMB,MetricHub,12,55.3,0.401,11.8
+Q4_2025,APAC,SMB,FlowOps,7,43.8,0.301,8.0
+Q4_2025,APAC,Mid-Market,InsightOS,27,82.6,0.743,21.2
+Q4_2025,APAC,Mid-Market,MetricHub,43,79.7,0.769,21.9
+Q4_2025,APAC,Mid-Market,FlowOps,37,60.3,0.473,18.6
+Q4_2025,APAC,Enterprise,InsightOS,109,90.1,0.709,41.7
+Q4_2025,APAC,Enterprise,MetricHub,134,86.9,0.795,41.4
+Q4_2025,APAC,Enterprise,FlowOps,124,38.8,0.399,12.4
+Q4_2025,EMEA,SMB,InsightOS,8,51.5,0.377,6.2
+Q4_2025,EMEA,SMB,MetricHub,14,52.5,0.318,8.8
+Q4_2025,EMEA,SMB,FlowOps,7,43.8,0.256,5.1
+Q4_2025,EMEA,Mid-Market,InsightOS,27,80.7,0.605,25.0
+Q4_2025,EMEA,Mid-Market,MetricHub,38,82.8,0.698,22.7
+Q4_2025,EMEA,Mid-Market,FlowOps,48,60.1,0.456,14.0
+Q4_2025,EMEA,Enterprise,InsightOS,91,86.8,0.801,34.2
+Q4_2025,EMEA,Enterprise,MetricHub,149,87.3,0.747,44.7
+Q4_2025,EMEA,Enterprise,FlowOps,138,49.3,0.392,20.9
+Q4_2025,North America,SMB,InsightOS,9,51.1,0.425,9.1
+Q4_2025,North America,SMB,MetricHub,6,54.4,0.352,11.4
+Q4_2025,North America,SMB,FlowOps,6,46.9,0.277,6.6
+Q4_2025,North America,Mid-Market,InsightOS,24,84.1,0.767,19.9
+Q4_2025,North America,Mid-Market,MetricHub,27,82.2,0.743,15.0
+Q4_2025,North America,Mid-Market,FlowOps,38,66.2,0.493,16.7
+Q4_2025,North America,Enterprise,InsightOS,97,92.9,0.795,35.7
+Q4_2025,North America,Enterprise,MetricHub,107,87.9,0.823,34.0
+Q4_2025,North America,Enterprise,FlowOps,115,49.6,0.384,15.1
+Q4_2025,LATAM,SMB,InsightOS,6,49.9,0.413,7.0
+Q4_2025,LATAM,SMB,MetricHub,5,57.7,0.307,9.7
+Q4_2025,LATAM,SMB,FlowOps,8,40.1,0.264,4.4
+Q4_2025,LATAM,Mid-Market,InsightOS,45,81.7,0.625,18.1
+Q4_2025,LATAM,Mid-Market,MetricHub,33,77.5,0.648,21.9
+Q4_2025,LATAM,Mid-Market,FlowOps,44,64.2,0.547,21.1
+Q4_2025,LATAM,Enterprise,InsightOS,95,93.1,0.814,32.1
+Q4_2025,LATAM,Enterprise,MetricHub,149,87.6,0.738,40.4
+Q4_2025,LATAM,Enterprise,FlowOps,110,48.6,0.363,20.2
