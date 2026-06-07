@@ -22,7 +22,7 @@ query = st.text_input(
 
 if st.button("Run Query"):
     st.info(
-        "Pipeline not implemented yet. Week 1 focuses on architecture, failure taxonomy, and benchmark design."
+        "Pipeline not implemented yet. Current stage focuses on architecture, failure taxonomy, and benchmark design."
     )
 
 st.divider()
