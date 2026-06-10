@@ -16,10 +16,11 @@ query = st.text_input(
     "Why did enterprise revenue decline in APAC despite higher marketing spend?",
 )
 
-if st.button("Run Query"):
-    st.info(
-        "Pipeline not implemented yet. Current stage focuses on architecture, failure taxonomy, and benchmark design."
-    )
+col1, col2 = st.columns([1, 5])
+with col1:
+    run = st.button("Run Query")
+with col2:
+    show_trace = st.checkbox("Show trace", value=True)
 
 if run:
     with st.spinner("Processing query..."):
