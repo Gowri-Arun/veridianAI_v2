@@ -13,12 +13,25 @@ Veridian AI is an evaluation-driven enterprise query engine that converts ambigu
 
 **Status: In progress**
 
-Current stage (Week 3):
+Current stage (Week 4):
 - Intent classification (rule-based, 11 query types)
 - Semantic mapping (synonym normalization, canonical query generation)
 - BM25 retrieval (deterministic scoring, real-time ranking)
+- BM25 retrieval evaluation benchmark — 25 gold queries with Recall@K, Hit@K, MRR
 - `/api/query` pipeline wired end-to-end
 - Frontend trace display with intent, semantic mapping, and retrieval visualization
+
+**BM25 Baseline Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Average Recall@3 | 0.6500 |
+| Average Recall@5 | 0.7833 |
+| Average Recall@10 | 0.8533 |
+| Hit Rate@3 | 0.8800 |
+| Hit Rate@5 | 0.9200 |
+| Hit Rate@10 | 0.9200 |
+| MRR | 0.6500 |
 
 ## Why Veridian AI
 
@@ -29,18 +42,22 @@ Veridian AI separates the pipeline into ingestion, intent classification, semant
 ## System Overview
 
 ```
-Implemented (Week 3):
+Implemented (Week 4):
 User Question
 → Intent Classification
 → Semantic Mapping
 → BM25 Document Retrieval
+→ Retrieval Evaluation Benchmark
 → Structured API Response
 → Frontend Trace Display
 
-Planned (Weeks 4-5):
+Planned (Weeks 5-6):
+→ Vector Retrieval
+→ Hybrid Retrieval (BM25 + Vector)
 → SQL / Structured Data Reasoning
+→ Reranking
 → Evidence Collection
-→ Answer Generation
+→ Answer Synthesis
 → Verification
 → Evaluation Report
 ```
@@ -75,7 +92,7 @@ The architecture is modular and evaluation-first. Each component can be develope
 | `configs/` | Configuration files |
 | `.github/workflows/` | CI workflow definitions |
 
-## Pipeline Components (Week 3)
+## Pipeline Components (Week 4)
 
 ### Intent Classification (`app/agents/intent_agent.py`)
 Rule-based regex classifier recognizing 11 query types: `simple_document`, `simple_sql`, `metric_lookup`, `comparison`, `trend_analysis`, `hybrid_sql_document`, `root_cause_analysis`, `ambiguous`, `unanswerable`, `contradiction`, `adversarial`. Extracts metrics, dimensions, and filters from the query text.
@@ -87,6 +104,14 @@ Rule-based regex classifier recognizing 11 query types: `simple_document`, `simp
 ### BM25 Retrieval (`app/retrieval/`)
 - **BM25 Retriever** — deterministic scoring over 120 document chunks using `app/schemas/retrieval.py:RetrievedChunk`
 - **Retrieval Pipeline** — wrapper for the BM25 retriever
+
+### Retrieval Evaluation (`app/evaluation/`)
+- **Retrieval Metrics** — `recall_at_k`, `hit_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `expected_doc_coverage`
+- **Retrieval Evaluator** — runs BM25 against 25 gold queries, computes per-query and aggregate metrics, classifies failures
+
+### Benchmark (`benchmarks/`)
+- **`retrieval_gold.jsonl`** — 25 retrieval gold queries with expected document IDs, query type, difficulty, known traps
+- **`enterpriseqa_v0.jsonl`** — 24 enterprise QA benchmark queries
 
 ### Query API (`app/api/query_routes.py`)
 - `POST /api/query` — accepts `QueryRequest(query, top_k, include_trace)`, returns `QueryResponse` with intent classification, semantic mapping, retrieved documents, and execution trace
@@ -105,14 +130,20 @@ Rule-based regex classifier recognizing 11 query types: `simple_document`, `simp
 - **Semantic mapping** — synonym normalization and canonical query generation
 - **BM25 retrieval** — deterministic document scoring and ranking
 - **Query API** — real `/api/query` pipeline with trace support
+- **Retrieval evaluation benchmark** — 25 gold queries, Recall@K, Hit@K, MRR, failure classification
+- **Retrieval metrics** — `recall_at_k`, `hit_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `expected_doc_coverage`
+- **Retrieval evaluation runner** — per-query scoring, aggregate summary, JSON/CSV/report export
 
-### In Progress
-- SQL reasoning module (Week 4)
-- Query planning module (Week 4)
-- Analysis pipeline (Week 4)
-- Answer synthesis (Week 5)
-- Verification layer (Week 5)
-- End-to-end evaluation runner (Week 5)
+### In Progress / Planned
+- Vector retrieval (Week 5)
+- Hybrid retrieval (BM25 + vector) (Week 5)
+- SQL reasoning module (Week 5-6)
+- Query planning module (Week 5-6)
+- Analysis pipeline (Week 5-6)
+- Reranking (Week 6)
+- Answer synthesis (Week 6)
+- Verification layer (Week 6)
+- End-to-end evaluation dashboard (Week 6)
 
 ## Tech Stack
 
@@ -129,7 +160,10 @@ Rule-based regex classifier recognizing 11 query types: `simple_document`, `simp
 - BM25 scoring (deterministic, built-in)
 
 **Evaluation:**
-- (Planned for future weeks)
+- BM25 retrieval evaluation benchmark (25 gold queries)
+- Recall@K, Hit@K, MRR metrics
+- Retrieval failure classification (7 categories)
+- Reusable `scripts/run_retrieval_eval.py` runner
 
 **Data / Benchmark:**
 - JSONL
@@ -214,12 +248,15 @@ Veridian AI is built around evaluation, not demo quality. The system is designed
 - [x] Semantic mapping
 - [x] BM25 retrieval
 - [x] Query API
+- [x] BM25 retrieval evaluation benchmark
+- [ ] Vector retrieval
+- [ ] Hybrid retrieval (BM25 + vector)
 - [ ] SQL reasoning module
 - [ ] Query planner / analysis
+- [ ] Reranking
 - [ ] Answer synthesis
 - [ ] Verification layer
-- [ ] End-to-end evaluation runner
-- [ ] Polished demo interface
+- [ ] End-to-end evaluation dashboard
 
 ## Positioning
 
