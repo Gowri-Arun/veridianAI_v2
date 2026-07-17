@@ -111,7 +111,7 @@ class IntentAgent:
             q_lower,
         )
         has_document = re.search(
-            r"\b(what\s+is|define|definition|explain\s+metric|difference\s+between\s+\w+\s+and\s+\w+|describe|summarize)\b",
+            r"\b(what\s+is|define|definition|explain\s+metric|difference\s+between\s+\w+\s+and\s+\w+|describe|summarize|find|memo|document|report)\b",
             q_lower,
         )
         has_sql = re.search(
