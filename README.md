@@ -1,263 +1,163 @@
 # Veridian AI
 
-Veridian AI is an evaluation-driven enterprise query engine that converts ambiguous business questions into grounded analytical answers using intent classification, semantic mapping, retrieval, SQL reasoning, planning, verification, and evaluation. Designed around reproducibility, modular pipelines, and benchmark-driven development.
+Veridian AI is a deterministic enterprise analytics prototype built around a local synthetic warehouse and a small corpus of internal documents.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Streamlit-1.40+-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
-  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow" alt="Status">
-</p>
+**Current reality:** Veridian AI currently supports controlled deterministic analytical queries over a local DuckDB warehouse. It does not yet provide general-purpose text-to-SQL, LLM-generated answers, evidence synthesis, or verification.
 
-## Status
+## Implemented Architecture
 
-**Status: In progress**
-
-Current stage (Week 4):
-- Intent classification (rule-based, 11 query types)
-- Semantic mapping (synonym normalization, canonical query generation)
-- BM25 retrieval (deterministic scoring, real-time ranking)
-- BM25 retrieval evaluation benchmark — 25 gold queries with Recall@K, Hit@K, MRR
-- `/api/query` pipeline wired end-to-end
-- Frontend trace display with intent, semantic mapping, and retrieval visualization
-
-**BM25 Baseline Metrics:**
-
-| Metric | Value |
-|--------|-------|
-| Average Recall@3 | 0.6500 |
-| Average Recall@5 | 0.7833 |
-| Average Recall@10 | 0.8533 |
-| Hit Rate@3 | 0.8800 |
-| Hit Rate@5 | 0.9200 |
-| Hit Rate@10 | 0.9200 |
-| MRR | 0.6500 |
-
-## Why Veridian AI
-
-Enterprise question answering is difficult because business questions are often ambiguous, require evidence from both documents and structured data, and need grounded answers rather than fluent guesses. A system that cannot explain how it arrived at an answer or cite its sources is not suitable for enterprise use.
-
-Veridian AI separates the pipeline into ingestion, intent classification, semantic mapping, retrieval, SQL reasoning, planning, verification, and evaluation so that answers can be tested, measured, and improved systematically.
-
-## System Overview
-
-```
-Implemented (Week 4):
-User Question
-→ Intent Classification
-→ Semantic Mapping
-→ BM25 Document Retrieval
-→ Retrieval Evaluation Benchmark
-→ Structured API Response
-→ Frontend Trace Display
-
-Planned (Weeks 5-6):
-→ Vector Retrieval
-→ Hybrid Retrieval (BM25 + Vector)
-→ SQL / Structured Data Reasoning
-→ Reranking
-→ Evidence Collection
-→ Answer Synthesis
-→ Verification
-→ Evaluation Report
+```text
+User query
+-> FastAPI /api/query
+-> rule-based intent classification
+-> registry-backed semantic parsing
+-> semantic validation
+-> deterministic SQL planning when SQL is required
+-> trusted SQL compilation
+-> read-only SQL safety validation
+-> DuckDB execution
+-> optional BM25 document retrieval
+-> typed API response
+-> Streamlit trace/results display
 ```
 
-The architecture is modular and evaluation-first. Each component can be developed, tested, and benchmarked independently.
+For hybrid-style questions, the API returns both SQL results and retrieved document chunks. It explicitly returns `synthesis_status = "not_implemented"` and does not fabricate a final explanation.
 
-## What This Project Demonstrates
+## What Works
 
-- Building an AI system beyond a simple chatbot
-- Designing an evaluation-first architecture for enterprise question answering
-- Rule-based intent classification without relying on LLM calls
-- Semantic synonym mapping for canonical query normalization
-- BM25 deterministic retrieval over document chunks
-- Designed to combine retrieval over documents with structured SQL-style reasoning in later stages
-- Creating synthetic benchmark data for repeatable testing
-- Separating ingestion, retrieval, planning, execution, verification, and reporting
-- Using FastAPI, Streamlit, tests, Docker, and Makefile-based workflows
+- Synthetic structured data across 9 CSV tables.
+- 20 Markdown documents and 120 processed document chunks.
+- Local DuckDB warehouse at `data/warehouse/veridian.duckdb`.
+- CSV and Markdown ingestion, metadata extraction, and section-aware chunking.
+- BM25 retrieval with semantic query/filter boosts.
+- Retrieval evaluation with Recall@K, Hit Rate@K, and MRR.
+- Metric, dimension, and schema registries grounded in the actual warehouse.
+- Typed time normalization for Q1-Q4 2025.
+- Deterministic semantic validation with typed errors.
+- Deterministic SQL planning for a limited set of supported query shapes.
+- SQL compilation from trusted registry identifiers only.
+- Parameterized values and read-only DuckDB execution.
+- FastAPI and Streamlit integration for semantic parse, SQL plan, SQL, parameters, results, retrieved evidence, and trace.
 
-## Repository Structure
+## Supported Metrics
 
-| Path | Purpose |
-| --- | --- |
-| `app/` | Backend application code and API modules |
-| `frontend/` | Streamlit user interface |
-| `benchmarks/` | Benchmark schema and evaluation assets |
-| `data/` | Synthetic enterprise documents, tables, chunks, and metadata |
-| `docs/` | Architecture, project scope, failure taxonomy, and study notes |
-| `experiments/` | Experiment outputs and development runs |
-| `reports/` | Generated reports and analysis artifacts |
-| `scripts/` | Utility scripts for validation, ingestion, and setup |
-| `tests/` | Unit and integration tests |
-| `configs/` | Configuration files |
-| `.github/workflows/` | CI workflow definitions |
+| Metric | Table | Column | Default aggregation |
+|---|---|---|---|
+| `revenue` | `revenue` | `recognized_revenue` | `sum` |
+| `bookings` | `revenue` | `bookings` | `sum` |
+| `marketing_spend` | `marketing_spend` | `spend` | `sum` |
+| `churn` | `churn` | `churn_rate` | `avg` |
+| `customer_count` | `customers` | `customer_id` | `count` |
+| `support_tickets` | `support_tickets` | `ticket_id` | `count` |
+| `pipeline` | `sales_pipeline` | `pipeline_value` | `sum` |
+| `conversion_rate` | `sales_pipeline` | `conversion_rate` | `avg` |
+| `product_usage` | `product_usage` | `usage_score` | `avg` |
+| `subscriptions` | `subscriptions` | `subscription_id` | `count` |
+| `region_target` | `region_targets` | `revenue_target` | `sum` |
 
-## Pipeline Components (Week 4)
+## Supported Dimensions
 
-### Intent Classification (`app/agents/intent_agent.py`)
-Rule-based regex classifier recognizing 11 query types: `simple_document`, `simple_sql`, `metric_lookup`, `comparison`, `trend_analysis`, `hybrid_sql_document`, `root_cause_analysis`, `ambiguous`, `unanswerable`, `contradiction`, `adversarial`. Extracts metrics, dimensions, and filters from the query text.
+`quarter`, `region`, `segment`, `product`, `channel`, `industry`, `status`, and `severity`, with allowed values defined in `app/semantic_layer/dimension_registry.py`.
 
-### Semantic Mapping (`app/semantic_layer/`)
-- **Synonym Mapper** — normalizes raw query terms to canonical metrics (e.g., "sales" → `revenue`), regions, segments, and time periods
-- **Semantic Parser** — produces a `canonical_query`, mapped terms, extracted metrics/filters, and confusion warnings
+## Supported Query Shapes
 
-### BM25 Retrieval (`app/retrieval/`)
-- **BM25 Retriever** — deterministic scoring over 120 document chunks using `app/schemas/retrieval.py:RetrievedChunk`
-- **Retrieval Pipeline** — wrapper for the BM25 retriever
+- Single metric lookup: `What was enterprise revenue in APAC in Q4 2025?`
+- Grouped metric: `Show revenue by region in Q4 2025.`
+- Period comparison: `Compare APAC enterprise revenue in Q3 and Q4 2025.`
+- Absolute change: `How much did APAC enterprise revenue decline from Q3 to Q4 2025?`
+- Percentage change: `What was the percentage change in APAC enterprise revenue from Q3 to Q4 2025?`
+- Multiple independent metrics: `Compare revenue and marketing spend in APAC in Q4 2025.`
+- Top-N grouped metric: `Which regions had the highest revenue in Q4 2025?`
+- Count query: `How many enterprise customers are in APAC?`
 
-### Retrieval Evaluation (`app/evaluation/`)
-- **Retrieval Metrics** — `recall_at_k`, `hit_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `expected_doc_coverage`
-- **Retrieval Evaluator** — runs BM25 against 25 gold queries, computes per-query and aggregate metrics, classifies failures
+Unsupported query shapes return typed errors or unsupported planning results instead of arbitrary generated SQL.
 
-### Benchmark (`benchmarks/`)
-- **`retrieval_gold.jsonl`** — 25 retrieval gold queries with expected document IDs, query type, difficulty, known traps
-- **`enterpriseqa_v0.jsonl`** — 24 enterprise QA benchmark queries
+## SQL Safety Model
 
-### Query API (`app/api/query_routes.py`)
-- `POST /api/query` — accepts `QueryRequest(query, top_k, include_trace)`, returns `QueryResponse` with intent classification, semantic mapping, retrieved documents, and execution trace
+- SQL specs are generated from typed semantic output, never raw user text.
+- Table and column identifiers come only from trusted registries.
+- User values are passed as DuckDB parameters.
+- Only compiler-generated `SELECT` statements are accepted.
+- Safety validation rejects mutation, extension loading, file reads, comments, semicolons, multiple statements, unknown tables, and unsafe functions.
+- DuckDB is opened in read-only mode for runtime execution.
 
-## Current Progress
+## API Response
 
-### Completed
-- Project scope and architecture documentation
-- Failure taxonomy and benchmark schema
-- Synthetic enterprise benchmark dataset (120 chunks, 20 documents)
-- Document ingestion pipeline with chunking and metadata extraction
-- Schema snapshot generation
-- JSONL validation utility
-- Initial tests and CI scaffolding
-- **Intent classification** — rule-based with 11 query types
-- **Semantic mapping** — synonym normalization and canonical query generation
-- **BM25 retrieval** — deterministic document scoring and ranking
-- **Query API** — real `/api/query` pipeline with trace support
-- **Retrieval evaluation benchmark** — 25 gold queries, Recall@K, Hit@K, MRR, failure classification
-- **Retrieval metrics** — `recall_at_k`, `hit_at_k`, `reciprocal_rank`, `mean_reciprocal_rank`, `expected_doc_coverage`
-- **Retrieval evaluation runner** — per-query scoring, aggregate summary, JSON/CSV/report export
+`POST /api/query` returns:
 
-### In Progress / Planned
-- Vector retrieval (Week 5)
-- Hybrid retrieval (BM25 + vector) (Week 5)
-- SQL reasoning module (Week 5-6)
-- Query planning module (Week 5-6)
-- Analysis pipeline (Week 5-6)
-- Reranking (Week 6)
-- Answer synthesis (Week 6)
-- Verification layer (Week 6)
-- End-to-end evaluation dashboard (Week 6)
+- `intent`
+- `semantic_parse`
+- `sql_plan`
+- `compiled_queries`
+- `sql_results`
+- `comparison_results`
+- `retrieved_documents`
+- `warnings`
+- `errors`
+- `execution_trace`
+- `synthesis_status`
 
-## Tech Stack
+Legacy fields `semantic_mapping` and `trace` are retained for compatibility.
 
-**Backend:**
-- Python 3.11+
-- FastAPI
-- Pydantic
-- Uvicorn
+## Streamlit UI
 
-**Frontend:**
-- Streamlit
+Run the UI to see separate sections for query understanding, structured query plan, generated SQL, parameters, SQL results, retrieved evidence, execution trace, and synthesis status. Raw evidence is not presented as a final answer.
 
-**Retrieval / Search:**
-- BM25 scoring (deterministic, built-in)
+## Setup
 
-**Evaluation:**
-- BM25 retrieval evaluation benchmark (25 gold queries)
-- Recall@K, Hit@K, MRR metrics
-- Retrieval failure classification (7 categories)
-- Reusable `scripts/run_retrieval_eval.py` runner
+Create and activate a virtual environment.
 
-**Data / Benchmark:**
-- JSONL
-- Synthetic enterprise benchmark with narratives
-- YAML config files
+Windows PowerShell:
 
-**Engineering:**
-- Docker
-- docker-compose
-- Makefile
-- pytest
-- GitHub Actions
-
-## Quickstart
-
-```bash
-git clone https://github.com/Gowri-Arun/veridianAI_v2.git
-cd veridianAI_v2
+```powershell
 python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
 ```
 
-**Windows:**
+Unix/macOS:
 
 ```bash
-.venv\Scripts\activate
-```
-
-**macOS / Linux:**
-
-```bash
+python -m venv .venv
 source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
+
+Start the backend:
 
 ```bash
-pip install -r requirements.txt
+python -m uvicorn app.main:app --reload
 ```
 
-### Run tests
+Start the frontend:
 
 ```bash
-pytest
+python -m streamlit run frontend/streamlit_app.py
 ```
 
-### Start the API
+Optional backend URL override:
 
 ```bash
-uvicorn app.main:app --reload
+VERIDIAN_API_URL=http://127.0.0.1:8000 python -m streamlit run frontend/streamlit_app.py
 ```
 
-Open http://127.0.0.1:8000/health
-
-### Start the frontend
+Run tests and validation:
 
 ```bash
-streamlit run frontend/streamlit_app.py
+python -m pytest
+python -m compileall app frontend scripts tests
+python -m scripts.validate_week2_data
+python -m scripts.run_retrieval_eval
 ```
 
-## Development Workflow
+Docker Compose expects environment values from `.env`. If using Compose, copy `.env.example` to `.env` first.
 
-1. Run tests — `pytest`
-2. Start backend — `uvicorn app.main:app --reload`
-3. Start frontend — `streamlit run frontend/streamlit_app.py`
-4. Send queries via `POST /api/query`
+## Limitations
 
-## Evaluation Philosophy
-
-Veridian AI is built around evaluation, not demo quality. The system is designed to support:
-
-- **Answer grounding** — every claim should trace back to retrieved evidence or SQL results
-- **Failure taxonomy** — a structured classification of failure modes (retrieval, SQL, synthesis, citation, etc.)
-- **Benchmark examples** — curated queries with known traps, unanswerable cases, and adversarial inputs
-- **Reproducible test cases** — unit, integration, and regression tests for each component
-- **Planned verification layer** — deterministic checks for citations, numeric claims, contradictions, and SQL validity
-
-## Roadmap
-
-- [x] Repository foundation
-- [x] Synthetic enterprise dataset
-- [x] Ingestion pipeline
-- [x] Chunk and metadata generation
-- [x] Intent classification
-- [x] Semantic mapping
-- [x] BM25 retrieval
-- [x] Query API
-- [x] BM25 retrieval evaluation benchmark
-- [ ] Vector retrieval
-- [ ] Hybrid retrieval (BM25 + vector)
-- [ ] SQL reasoning module
-- [ ] Query planner / analysis
-- [ ] Reranking
-- [ ] Answer synthesis
-- [ ] Verification layer
-- [ ] End-to-end evaluation dashboard
-
-## Positioning
-
-This project is intended as a practical exploration of reliable enterprise AI systems, with emphasis on grounded answers, modular design, and measurable evaluation.
+- No LLM-generated SQL.
+- No OpenAI, Anthropic, LangChain, or LangGraph integration.
+- No vector retrieval, hybrid retrieval, or reranking.
+- No natural-language answer synthesis.
+- No hallucination verification or self-correction.
+- No arbitrary SQL execution endpoint.
+- No authentication or production deployment hardening.
