@@ -23,7 +23,7 @@ DIMENSION_PATTERNS: list[tuple[str, str]] = [
 
 ADVERSARIAL_PATTERNS = [
     r"ignore\s+(previous|all|the).*rules",
-    r"drop\s+table",
+    r"drop\s+(\w+\s+){0,3}table",
     r"delete\s+(from\s+)?\w+",
     r"show\s+(secrets?|keys?|passwords?)",
     r"reveal\s+(api\s*)?key",

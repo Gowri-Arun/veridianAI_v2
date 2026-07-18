@@ -16,6 +16,8 @@ from app.semantic_layer.dimension_registry import (
     PRODUCT_ALIASES,
     REGION_ALIASES,
     SEGMENT_ALIASES,
+    SEVERITY_ALIASES,
+    STATUS_ALIASES,
     DIMENSIONS,
 )
 from app.semantic_layer.metric_registry import METRICS, MetricDefinition, metric_synonym_lookup
@@ -33,6 +35,14 @@ class SemanticParser:
         warnings: list[SemanticWarning] = []
         errors: list[SemanticError] = []
         ambiguities: list[SemanticAmbiguity] = []
+
+        if _has_unsupported_shape(q_lower):
+            errors.append(
+                SemanticError(
+                    code="UNSUPPORTED_QUERY_SHAPE",
+                    message="This query shape is outside the supported deterministic SQL benchmark surface.",
+                )
+            )
 
         metrics, metric_terms, metric_warnings, metric_ambiguities = self._resolve_metrics(query)
         mapped_terms.update(metric_terms)
@@ -122,6 +132,15 @@ class SemanticParser:
                     found[canonical] = (metric, synonym)
                     mapped[synonym] = canonical
 
+        if "region_target" in found and found["region_target"][1] == "revenue target":
+            found.pop("revenue", None)
+        if re.search(r"\b(enterprise|smb|mid-market|midmarket|mid market)\s+customers\b", q_lower) and not re.search(
+            r"\b(customer count|number of customers|how many)\b", q_lower
+        ):
+            found.pop("customer_count", None)
+        elif found.get("customer_count") and not re.search(r"\b(customer count|number of customers|how many customers|customers are|customers in)\b", q_lower):
+            found.pop("customer_count", None)
+
         for canonical, metric in METRICS.items():
             for forbidden in metric.forbidden_confusions:
                 if canonical in found and re.search(rf"\b{re.escape(forbidden)}\b", q_lower):
@@ -169,6 +188,8 @@ class SemanticParser:
             "segment": SEGMENT_ALIASES,
             "product": PRODUCT_ALIASES,
             "channel": CHANNEL_ALIASES,
+            "status": STATUS_ALIASES,
+            "severity": SEVERITY_ALIASES,
         }
         for dimension, aliases in alias_groups.items():
             for alias, value in sorted(aliases.items(), key=lambda item: -len(item[0])):
@@ -241,3 +262,12 @@ def _apply_mapped_terms(query: str, mapped: dict[str, str]) -> str:
     for raw_term, canonical in sorted(mapped.items(), key=lambda item: -len(item[0])):
         q_lower = re.sub(rf"\b{re.escape(raw_term)}\b", str(canonical), q_lower)
     return " ".join(re.findall(r"[a-zA-Z0-9_ -]+", q_lower)).strip()
+
+
+def _has_unsupported_shape(q_lower: str) -> bool:
+    return bool(
+        re.search(
+            r"\b(join|correlate|correlation|forecast|predict|transaction|transactions|raw\s+sql|select\s+\*)\b",
+            q_lower,
+        )
+    )

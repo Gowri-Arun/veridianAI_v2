@@ -55,6 +55,19 @@ def test_safety_rejects_unsafe_sql():
         assert error is not None
 
 
+def test_safety_rejects_malicious_parameter_values():
+    compiled = compile_first("What was enterprise revenue in APAC in Q4 2025?")
+    compiled.parameters[0] = "APAC'); DROP TABLE revenue; --"
+
+    assert SQLSafetyValidator().validate(compiled) is not None
+
+
+def test_unsupported_shape_is_typed_before_sql_planning():
+    semantic = SemanticParser().parse_typed("Join support tickets to revenue by product in Q4 2025.")
+
+    assert any(error.code == "UNSUPPORTED_QUERY_SHAPE" for error in semantic.errors)
+
+
 def test_safety_allows_compiler_output():
     compiled = compile_first("Show revenue by region in Q4 2025.")
     assert SQLSafetyValidator().validate(compiled) is None

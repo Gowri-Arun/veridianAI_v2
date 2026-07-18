@@ -126,6 +126,17 @@ CHANNEL_ALIASES = {
     "content": "Content",
 }
 
+STATUS_ALIASES = {
+    "active": "Active",
+    "churned": "Churned",
+}
+
+SEVERITY_ALIASES = {
+    "high": "High",
+    "low": "Low",
+    "medium": "Medium",
+}
+
 
 def get_dimension(name: str) -> DimensionDefinition | None:
     return DIMENSIONS.get(name)
@@ -150,6 +161,8 @@ def normalize_categorical_value(dimension: str, value: str) -> str | None:
         "segment": SEGMENT_ALIASES,
         "product": PRODUCT_ALIASES,
         "channel": CHANNEL_ALIASES,
+        "status": STATUS_ALIASES,
+        "severity": SEVERITY_ALIASES,
     }
     if dimension in alias_maps:
         return alias_maps[dimension].get(value_lower)
