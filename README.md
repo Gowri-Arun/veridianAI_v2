@@ -148,9 +148,37 @@ python -m pytest
 python -m compileall app frontend scripts tests
 python -m scripts.validate_week2_data
 python -m scripts.run_retrieval_eval
+python -m scripts.validate_sql_benchmark
+python -m scripts.run_sql_eval
+python -m scripts.inspect_duckdb_schema
+```
+
+Week 6 benchmark outputs are written to:
+
+- `experiments/results/sql_eval_results.json`
+- `experiments/results/sql_eval_results.csv`
+- `reports/sql_benchmark_report.md`
+
+Environment checks and setup helpers:
+
+```bash
+python -m scripts.check_environment
+./scripts/bootstrap.sh
+```
+
+Windows PowerShell:
+
+```powershell
+.\scripts\bootstrap.ps1
 ```
 
 Docker Compose expects environment values from `.env`. If using Compose, copy `.env.example` to `.env` first.
+
+## Week 6 SQL Benchmark
+
+The SQL benchmark lives in `benchmarks/sql_gold.jsonl` and contains 57 deterministic cases across metric lookup, grouping, period comparison, absolute change, percentage change, multiple metrics, top-N, counts, ambiguity, unsupported shapes, and adversarial requests.
+
+The evaluator does not use an LLM judge and does not generate synthetic natural-language answers. It compares typed semantic parse fields, deterministic SQL plans, trusted identifiers, parameterization, read-only safety behavior, DuckDB execution, result shape, and comparison direction.
 
 ## Limitations
 
