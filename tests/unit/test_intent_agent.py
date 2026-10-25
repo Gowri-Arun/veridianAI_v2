@@ -17,6 +17,11 @@ class TestIntentAgent:
         assert result.requires_retrieval is False
         assert result.requires_sql is True
 
+    def test_count_request_requires_sql(self):
+        result = self.agent.classify("How many enterprise customers are in APAC?")
+        assert result.requires_sql is True
+        assert result.requires_clarification is False
+
     def test_metric_lookup(self):
         result = self.agent.classify("revenue in APAC for Q1")
         assert result.query_type == "metric_lookup"

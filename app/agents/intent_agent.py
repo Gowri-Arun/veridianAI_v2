@@ -23,7 +23,7 @@ DIMENSION_PATTERNS: list[tuple[str, str]] = [
 
 ADVERSARIAL_PATTERNS = [
     r"ignore\s+(previous|all|the).*rules",
-    r"drop\s+table",
+    r"drop\s+(\w+\s+){0,3}table",
     r"delete\s+(from\s+)?\w+",
     r"show\s+(secrets?|keys?|passwords?)",
     r"reveal\s+(api\s*)?key",
@@ -111,11 +111,11 @@ class IntentAgent:
             q_lower,
         )
         has_document = re.search(
-            r"\b(what\s+is|define|definition|explain\s+metric|difference\s+between\s+\w+\s+and\s+\w+|describe|summarize)\b",
+            r"\b(what\s+is|define|definition|explain\s+metric|difference\s+between\s+\w+\s+and\s+\w+|describe|summarize|find|memo|document|report)\b",
             q_lower,
         )
         has_sql = re.search(
-            r"\b(what\s+was|how\s+much|total|average|sum|count|revenue\s+in|churn\s+in|spend\s+in)\b",
+            r"\b(what\s+was|how\s+much|how\s+many|number\s+of|total|average|sum|count|revenue\s+in|churn\s+in|spend\s+in)\b",
             q_lower,
         )
 

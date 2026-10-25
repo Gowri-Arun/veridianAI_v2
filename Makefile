@@ -1,17 +1,34 @@
+PYTHON ?= python
+
 setup:
-	pip install -r requirements.txt
+	$(PYTHON) -m pip install -r requirements.txt
 
 api:
-	uvicorn app.main:app --reload
+	$(PYTHON) -m uvicorn app.main:app --reload
 
 ui:
-	streamlit run frontend/streamlit_app.py
+	$(PYTHON) -m streamlit run frontend/streamlit_app.py
 
 test:
-	pytest
+	$(PYTHON) -m pytest
 
 validate-benchmark:
-	python scripts/validate_jsonl.py
+	$(PYTHON) -m scripts.validate_jsonl
+
+check-env:
+	$(PYTHON) -m scripts.check_environment
+
+validate-data:
+	$(PYTHON) -m scripts.validate_week2_data
+
+eval-retrieval:
+	$(PYTHON) -m scripts.run_retrieval_eval
+
+validate-sql-benchmark:
+	$(PYTHON) -m scripts.validate_sql_benchmark
+
+eval-sql:
+	$(PYTHON) -m scripts.run_sql_eval
 
 format:
-	python -m compileall app
+	$(PYTHON) -m compileall app frontend scripts tests
