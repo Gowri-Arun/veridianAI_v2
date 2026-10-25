@@ -21,6 +21,7 @@ def test_customer_count_query():
     result = parse("How many enterprise customers are in APAC?")
     assert result.metrics[0].canonical_name == "customer_count"
     assert result.aggregation == "count"
+    assert result.requires_clarification is False
 
 
 def test_grouped_region_query():

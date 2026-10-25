@@ -138,7 +138,7 @@ class SemanticParser:
             r"\b(customer count|number of customers|how many)\b", q_lower
         ):
             found.pop("customer_count", None)
-        elif found.get("customer_count") and not re.search(r"\b(customer count|number of customers|how many customers|customers are|customers in)\b", q_lower):
+        elif found.get("customer_count") and not re.search(r"\b(customer count|number of customers|how many(?:\s+\w+){0,3}\s+customers|customers are|customers in)\b", q_lower):
             found.pop("customer_count", None)
 
         for canonical, metric in METRICS.items():

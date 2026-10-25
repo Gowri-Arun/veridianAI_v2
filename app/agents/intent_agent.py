@@ -115,7 +115,7 @@ class IntentAgent:
             q_lower,
         )
         has_sql = re.search(
-            r"\b(what\s+was|how\s+much|total|average|sum|count|revenue\s+in|churn\s+in|spend\s+in)\b",
+            r"\b(what\s+was|how\s+much|how\s+many|number\s+of|total|average|sum|count|revenue\s+in|churn\s+in|spend\s+in)\b",
             q_lower,
         )
 
